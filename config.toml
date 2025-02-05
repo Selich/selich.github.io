@@ -1,5 +1,5 @@
-title = "Website Name"
-baseURL = 'https://example.org'
+title = "Nikola Selic - Blog"
+baseURL = 'https://nikolaselic.me'
 languageCode = 'en-us'
 
 [params]
