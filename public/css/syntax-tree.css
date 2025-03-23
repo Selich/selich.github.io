@@ -86,6 +86,92 @@
   font-size: 18px;
 }
 
+/* Part of speech background colors */
+.node.pos-N text, .node.pos-noun text, .node.pos-NP text {
+  background-color: #FFE0B2; /* Light orange for nouns and noun phrases */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.node.pos-ADV text, .node.pos-adv text {
+  background-color: #FFCDD2; /* Light red for adverbs */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.node.pos-V text, .node.pos-verb text {
+  background-color: #BBDEFB; /* Light blue for verbs */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.node.pos-VP text {
+  background-color: #C8E6C9; /* Light green for verb phrases */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.node.pos-PRO text, .node.pos-pron text {
+  background-color: #FFF9C4; /* Light yellow for pronouns */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.node.pos-Intj text, .node.pos-intj text {
+  background-color: #FFCCE6; /* Light pink for interjections */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.node.pos-S text {
+  background-color: #B2EBF2; /* Light cyan for sentences */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Leaf node specific styling for parts of speech */
+.leaf-node.pos-N text, .leaf-node.pos-noun text, .leaf-node.pos-NP text {
+  background-color: #FFA726; /* More vibrant orange for leaf nodes */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leaf-node.pos-ADV text, .leaf-node.pos-adv text {
+  background-color: #EF5350; /* More vibrant red for leaf nodes */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leaf-node.pos-V text, .leaf-node.pos-verb text {
+  background-color: #42A5F5; /* More vibrant blue for leaf nodes */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leaf-node.pos-VP text {
+  background-color: #66BB6A; /* More vibrant green for verb phrases */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leaf-node.pos-PRO text, .leaf-node.pos-pron text {
+  background-color: #FFEE58; /* More vibrant yellow for leaf nodes */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leaf-node.pos-Intj text, .leaf-node.pos-intj text {
+  background-color: #FF69B4; /* Hot pink for interjections */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leaf-node.pos-S text {
+  background-color: #26C6DA; /* More vibrant cyan for sentences */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
 @media (prefers-color-scheme: dark) {
   #syntax-tree-container {
     background-color: white;

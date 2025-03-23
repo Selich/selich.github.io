@@ -3,7 +3,7 @@
 {{ define "main" }}
   <div class="about-container">
     <div class="profile-container">
-      <img src="/images/profile.jpg" alt="Profile Image" class="profile-image">
+      <img src="/images/profile2.jpg" alt="Profile Image" class="profile-image">
       <div class="social-links">
         {{ with .Params.social.github }}
         <a href="https://github.com/{{ . }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -20,6 +20,7 @@
         {{ with .Params.social.email }}
         <a href="mailto:{{ . }}" target="_blank" title="Email"><i class="far fa-envelope"></i></a>
         {{ end }}
+        <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
       </div>
     </div>
     <div class="bio-container">

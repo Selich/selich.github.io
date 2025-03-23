@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       children: [
         {
           name: "Intj",
-          children: [{ name: "Hello," }]
+          children: [{ name: "Hello" }]
         },
         {
           name: "NP",
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       children: [
         {
           name: "Intj",
-          children: [{ name: "Zdravo," }]
+          children: [{ name: "Zdravo" }]
         },
         {
           name: "NP",
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
       children: [
         {
           name: "Intj",
-          children: [{ name: "Hallo," }]
+          children: [{ name: "Hallo" }]
         },
         {
           name: "NP",
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
       children: [
         {
           name: "Intj",
-          children: [{ name: "你好，" }]
+          children: [{ name: "你好" }]
         },
         {
           name: "NP",
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
       children: [
         {
           name: "Intj",
-          children: [{ name: "Привет," }]
+          children: [{ name: "Привет" }]
         },
         {
           name: "NP",
@@ -240,12 +240,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create nodes group that will be on top of links
     const nodesGroup = svg.append("g").attr("class", "nodes-group");
     
+    // Helper function to determine part of speech class
+    function getPartOfSpeechClass(d) {
+      const nodeName = d.data.name;
+      
+      // Check if this is a specific part of speech node
+      if (nodeName === 'N') return 'pos-N';
+      if (nodeName === 'V') return 'pos-V';
+      if (nodeName === 'ADV' || nodeName === 'Adv') return 'pos-ADV';
+      if (nodeName === 'Pro' || nodeName === 'PRO') return 'pos-PRO';
+      if (nodeName === 'NP') return 'pos-NP';
+      if (nodeName === 'VP') return 'pos-VP';
+      if (nodeName === 'Intj' || nodeName === 'INTJ') return 'pos-Intj';
+      if (nodeName === 'S') return 'pos-S';
+      
+      // For leaf nodes, try to determine by parent
+      if (!d.children && d.parent) {
+        const parentName = d.parent.data.name;
+        if (parentName === 'N') return 'pos-N';
+        if (parentName === 'V') return 'pos-V';
+        if (parentName === 'ADV' || parentName === 'Adv') return 'pos-ADV';
+        if (parentName === 'Pro' || parentName === 'PRO') return 'pos-PRO';
+        if (parentName === 'NP') return 'pos-NP';
+        if (parentName === 'VP') return 'pos-VP';
+        if (parentName === 'Intj' || parentName === 'INTJ') return 'pos-Intj';
+        if (parentName === 'S') return 'pos-S';
+      }
+      
+      return '';
+    }
+    
     // Create nodes but keep them hidden initially
     const nodeGroups = nodesGroup.selectAll(".node")
       .data(root.descendants())
       .enter()
       .append("g")
-      .attr("class", "node")
+      .attr("class", d => {
+        const posClass = getPartOfSpeechClass(d);
+        return `node ${!d.children ? 'leaf-node' : ''} ${posClass}`;
+      })
       .attr("transform", d => `translate(${d.x},${d.y})`)
       .style("opacity", 0);
       
@@ -256,11 +289,63 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("stroke", "transparent")
       .attr("stroke-width", 2);
     
+    // Helper function to get background color based on part of speech
+    function getBackgroundColor(d) {
+      const nodeName = d.data.name;
+      const isLeaf = !d.children;
+      
+      // Determine color based on the part of speech
+      if (nodeName === 'N' || (isLeaf && d.parent && d.parent.data.name === 'N')) {
+        return isLeaf ? "#FFE0B2" : "#FFE0B2"; // Orange for nouns
+      }
+      if (nodeName === 'NP' || (isLeaf && d.parent && d.parent.data.name === 'NP')) {
+        return isLeaf ? "#FFE0B2" : "#FFE0B2"; // Same orange for noun phrases
+      }
+      if (nodeName === 'V' || (isLeaf && d.parent && d.parent.data.name === 'V')) {
+        return isLeaf ? "#BBDEFB" : "#BBDEFB"; // Blue for verbs
+      }
+      if (nodeName === 'VP' || (isLeaf && d.parent && d.parent.data.name === 'VP')) {
+        return isLeaf ? "#C8E6C9" : "#C8E6C9"; // Green for verb phrases
+      }
+      if (nodeName === 'ADV' || nodeName === 'Adv' || 
+          (isLeaf && d.parent && (d.parent.data.name === 'ADV' || d.parent.data.name === 'Adv'))) {
+        return isLeaf ? "#FFCDD2" : "#FFCDD2"; // Red for adverbs
+      }
+      if (nodeName === 'Pro' || nodeName === 'PRO' || 
+          (isLeaf && d.parent && (d.parent.data.name === 'Pro' || d.parent.data.name === 'PRO'))) {
+        return isLeaf ? "#FFF9C4" : "#FFF9C4"; // Yellow for pronouns
+      }
+      if (nodeName === 'Intj' || nodeName === 'INTJ' || 
+          (isLeaf && d.parent && (d.parent.data.name === 'Intj' || d.parent.data.name === 'INTJ'))) {
+        return isLeaf ? "#FFCCE6" : "#FFCCE6"; // Pink for interjections
+      }
+      if (nodeName === 'S') {
+        return isLeaf ? "#EF5350" : "#B2EBF2"; // Cyan for sentences
+      }
+      
+      // No specific background for other parts of speech
+      return "transparent";
+    }
+    
+    // Text background rectangles for POS highlighting
+    const textBgs = nodeGroups.append("rect")
+      .attr("class", "text-bg")
+      .attr("rx", 3) // Rounded corners
+      .attr("ry", 3)
+      .attr("fill", d => getBackgroundColor(d))
+      .attr("opacity", 0.9)
+      .attr("height", 0) // Will be set based on text dimensions
+      .attr("width", 0)  // Will be set based on text dimensions
+      .attr("x", 0)      // Will be adjusted based on text
+      .attr("y", 0);     // Will be adjusted based on text
+    
     // Add labels to nodes
-    nodeGroups.append("text")
+    const textNodes = nodeGroups.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
       .style("font-size", "14px") // Bigger font size
+      .attr("dominant-baseline", "middle") // Center text vertically
+      .style("padding", "2px 5px") // Add padding inside the text
       .text(d => d.data.name)
       .style("opacity", 0)
       .on("click", function(event, d) {
@@ -271,6 +356,22 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(url, '_blank');
       });
     
+    // Update rectangle dimensions based on text
+    textNodes.each(function(d) {
+      const textElement = this;
+      const bbox = textElement.getBBox();
+      const padding = 4; // Padding around text
+      
+      // Only show background if there's a specific POS background color
+      if (getBackgroundColor(d) !== "transparent") {
+        d3.select(this.parentNode).select("rect.text-bg")
+          .attr("x", bbox.x - padding)
+          .attr("y", bbox.y - padding)
+          .attr("width", bbox.width + padding * 2)
+          .attr("height", bbox.height + padding * 2);
+      }
+    });
+    
     // Find all leaf nodes that contain actual words
     const leafNodes = root.descendants().filter(d => !d.children);
     
@@ -280,7 +381,10 @@ document.addEventListener('DOMContentLoaded', function() {
       .data(leafNodes)
       .enter()
       .append("g")
-      .attr("class", "temp-word")
+      .attr("class", d => {
+        const posClass = getPartOfSpeechClass(d);
+        return `temp-word ${posClass}`;
+      })
       .attr("transform", (d, i) => {
         // Evenly space words across a narrower width to make them closer together
         const totalWords = leafNodes.length;
@@ -295,8 +399,20 @@ document.addEventListener('DOMContentLoaded', function() {
         return `translate(${x}, ${height - 20})`;
       });
     
+    // Add background rectangles for POS highlighting in temp words
+    tempWords.append("rect")
+      .attr("class", "text-bg")
+      .attr("rx", 3) // Rounded corners
+      .attr("ry", 3)
+      .attr("fill", d => getBackgroundColor(d))
+      .attr("opacity", 0.9)
+      .attr("height", 0) // Will be set based on text dimensions
+      .attr("width", 0)  // Will be set based on text dimensions
+      .attr("x", 0)      // Will be adjusted based on text
+      .attr("y", 0);     // Will be adjusted based on text
+    
     // Add the word text to each temp element
-    tempWords.append("text")
+    const tempTextNodes = tempWords.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
       .style("font-size", "28px")
@@ -306,6 +422,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const url = generateWiktionaryUrl(d.data.name);
         window.open(url, '_blank');
       });
+      
+    // Update rectangle dimensions based on text
+    tempTextNodes.each(function(d) {
+      const textElement = this;
+      const bbox = textElement.getBBox();
+      const padding = 6; // Slightly more padding for temp words since they're larger
+      
+      // Only show background if there's a specific POS background color
+      if (getBackgroundColor(d) !== "transparent") {
+        d3.select(this.parentNode).select("rect.text-bg")
+          .attr("x", bbox.x - padding)
+          .attr("y", bbox.y - padding)
+          .attr("width", bbox.width + padding * 2)
+          .attr("height", bbox.height + padding * 2);
+      }
+    });
     
     // Add background circles but keep them invisible initially
     tempWords.append("circle")
@@ -315,6 +447,10 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("stroke-width", 2)
       .style("opacity", 0) // Hide initially
       .lower(); // Make sure circle is behind text
+    
+    // Move the rectangles behind the text but in front of the circles
+    tempWords.selectAll("rect.text-bg").lower();
+    tempWords.selectAll("circle").lower();
     
     // Function to group nodes by depth level
     function groupNodesByDepth(nodes) {
@@ -347,25 +483,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ANIMATION SEQUENCE
     
-    // 1. First, show the temporary word elements (text only, no circles yet)
-    tempWords.style("opacity", 0)
-      .transition()
-      .duration(500)
-      .style("opacity", 1);
+    // 1. First, show ONLY the text of temporary word elements (no backgrounds yet)
+    tempWords.style("opacity", 1);
+    tempWords.select("text").style("opacity", 1);
+    // Keep background rectangles invisible initially
+    tempWords.select("rect.text-bg").style("opacity", 0);
     
     // 2. After a short delay, animate the temporary words to their positions in the tree
-    // But only change their horizontal position, keeping vertical position fixed
     tempWords.transition()
       .delay(1000)
       .duration(1200)
       .attr("transform", d => `translate(${d.x}, ${height - 20})`) // Keep y position fixed at height-20
       .on("end", function() {
-        // After words have moved to position, fade in their circles
-        tempWords.select("circle")
+        // After words have moved to position, NOW show the color backgrounds
+        tempWords.select("rect.text-bg")
           .transition()
-          .duration(400)
-          .style("opacity", 1)
-          .on("end", animateTreeStructure);
+          .duration(600)
+          .style("opacity", 0.8)
+          .on("end", function() {
+            // Then fade in the circles
+            tempWords.select("circle")
+              .transition()
+              .duration(600)
+              .style("opacity", 1)
+              .on("end", animateTreeStructure);
+          });
       });
     
     // 3. Next, build the rest of the tree structure from leaves to root
@@ -387,12 +529,21 @@ document.addEventListener('DOMContentLoaded', function() {
             .select("circle")
             .attr("r", 20);
           
+          // Fade in the text
           d3.selectAll(nodesByDepth[depth])
             .select("text")
             .transition()
             .delay(delay)
             .duration(600)
             .style("opacity", 1);
+          
+          // Fade in the background rectangles
+          d3.selectAll(nodesByDepth[depth])
+            .select("rect.text-bg")
+            .transition()
+            .delay(delay)
+            .duration(600)
+            .style("opacity", 0.9);
           
           delay += 300;
           finalNodeDelay = delay + 600; // Update final delay time
