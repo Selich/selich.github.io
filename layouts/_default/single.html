@@ -5,7 +5,9 @@
     <h1>{{ .Title }}</h1>
     
     <div class="article-meta">
-      {{ .Date.Format "January 2, 2006" }} · 
+      {{ if not .PublishDate.IsZero }}
+        {{ .Date.Format "January 2, 2006" }} · 
+      {{ end }}
       {{ .ReadingTime }} mins · 
       {{ countwords .Content }} words
     </div>

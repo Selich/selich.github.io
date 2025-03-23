@@ -1,87 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
     --background-color: #fff;
-    --text-color: #000;
-    --link-color: #0000ff;
-    --border-color: #ddd;
+    --text-color: #333;
+    --link-color: #0066cc;
+    --border-color: #e0e0e0;
     --code-bg-color: #f6f8fa;
-    --blockquote-color: #555;
-    --meta-text-color: #555;
+    --blockquote-color: #666;
+    --meta-text-color: #777;
+    --card-bg-color: #fff;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    --card-hover-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --accent-color: #f0f7ff;
+    --header-bg: #fff;
+    --active-link: #0066cc;
+    
+    /* VSCode theme colors */
+    --vscode-bg: #1e1e1e;
+    --vscode-fg: #d4d4d4;
+    --vscode-keyword: #569cd6;
+    --vscode-function: #dcdcaa;
+    --vscode-comment: #6a9955;
+    --vscode-string: #ce9178;
+    --vscode-number: #b5cea8;
+    --vscode-class: #4ec9b0;
+    --vscode-variable: #9cdcfe;
+    --vscode-property: #9cdcfe;
+    --vscode-operator: #d4d4d4;
+    --vscode-punctuation: #d4d4d4;
 }
 
 [data-theme="dark"] {
-    --background-color: #222;
-    --text-color: #eee;
-    --link-color: #809fff;
+    --background-color: #1a1a1a;
+    --text-color: #eaeaea;
+    --link-color: #7db3fa;
     --border-color: #444;
-    --code-bg-color: #333;
+    --code-bg-color: #2d2d2d;
     --blockquote-color: #aaa;
-    --meta-text-color: #aaa;
+    --meta-text-color: #999;
+    --card-bg-color: #252525;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    --card-hover-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    --accent-color: #1f2937;
+    --header-bg: #1a1a1a;
+    --active-link: #7db3fa;
+    
+    /* VSCode theme colors (these don't change in dark mode) */
+    --vscode-bg: #1e1e1e;
+    --vscode-fg: #d4d4d4;
+    --vscode-keyword: #569cd6;
+    --vscode-function: #dcdcaa;
+    --vscode-comment: #6a9955;
+    --vscode-string: #ce9178;
+    --vscode-number: #b5cea8;
+    --vscode-class: #4ec9b0;
+    --vscode-variable: #9cdcfe;
+    --vscode-property: #9cdcfe;
+    --vscode-operator: #d4d4d4;
+    --vscode-punctuation: #d4d4d4;
 }
 
 body {
-	font-family: "Source Serif 4", Georgia, serif;
+	font-family: "Source Sans 3", sans-serif;
 	font-optical-sizing: auto;
 	background: var(--background-color);
 	color: var(--text-color);
 	font-weight: 400;
-	max-width: 800px;
+	max-width: 860px;
 	margin: 0 auto;
-	padding: 20px;
-	line-height: 1.6;
+	padding: 0;
+	line-height: 1.7;
 	font-size: 18px;
 	transition: background-color 0.3s ease, color 0.3s ease;
+	letter-spacing: 0.01em;
 }
 
-nav {
-	text-align: center;
+/* Header styles */
+.site-header {
+	background: var(--header-bg);
+	padding: 12px 32px;
+	margin-bottom: 32px;
 	border-bottom: 1px solid var(--border-color);
-	padding-bottom: 15px;
-	margin-bottom: 30px;
 }
 
-nav ul {
+.header-content {
+	max-width: 860px;
+	margin: 0 auto;
+}
+
+.site-title {
+	font-family: "Source Sans 3", sans-serif;
+	font-weight: 700;
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+}
+
+.site-title a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.site-title a:hover {
+	color: var(--link-color);
+}
+
+/* Navigation styles */
+.main-nav {
+	display: flex;
+	justify-content: center;
+}
+
+.main-nav ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
-	justify-content: center;
-	gap: 20px;
+	gap: 24px;
+	flex-wrap: wrap;
 }
 
-nav ul li a {
-	color: var(--link-color);
+.main-nav ul li a {
+	color: var(--text-color);
 	text-decoration: none;
+	padding: 5px 0;
+	font-family: "Source Sans 3", sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	position: relative;
+	transition: color 0.2s ease;
+}
+
+.main-nav ul li a:hover {
+	color: var(--link-color);
+}
+
+.main-nav ul li a.active {
+	color: var(--active-link);
+	font-weight: 600;
+}
+
+.main-nav ul li a.active:after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--active-link);
+}
+
+main {
+	padding: 0 32px 32px 32px;
+}
+
+/* Dark mode toggle styles */
+.theme-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	margin-left: 10px;
+	font-size: 1.2em;
+	color: var(--text-color);
+}
+
+.theme-toggle:hover {
+	opacity: 0.8;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Source Sans 3", sans-serif;
 	font-weight: 600;
-	margin-top: 40px;
+	margin-top: 36px;
 	margin-bottom: 20px;
-	line-height: 1.2;
+	line-height: 1.3;
+	color: var(--text-color);
 }
 
 h1 {
-	font-size: 2.2em;
+	font-size: 2.4em;
+	margin-top: 0.5em;
+	margin-bottom: 0.7em;
+	font-weight: 700;
 }
 
 h2 {
 	font-size: 1.8em;
-	border-bottom: 1px solid #eee;
-	padding-bottom: 5px;
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 0.2em;
+	font-weight: 600;
 }
 
 h3 {
 	font-size: 1.4em;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 1.2em;
+	font-weight: 500;
 }
 
 a {
 	color: var(--link-color);
 	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 a:hover {
@@ -119,33 +243,56 @@ ul li {
 	margin-bottom: 30px;
 }
 
-/* Post list styling */
+/* Post list styling - Simple list design */
 .post-list {
-	margin-bottom: 40px;
+	margin-bottom: 48px;
 }
 
 .post-item {
-	margin-bottom: 30px;
+	margin-bottom: 32px;
+	padding-bottom: 32px;
+	border-bottom: 1px solid var(--border-color);
 }
 
-.post-item h3 {
+.post-item:last-child {
+	border-bottom: none;
+}
+
+.post-item h2 {
 	margin-top: 0;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 1.6em;
+	line-height: 1.3;
+	border-bottom: none;
+}
+
+.post-item h2 a {
+	text-decoration: none;
+	color: var(--link-color);
+	transition: color 0.2s;
+}
+
+.post-item h2 a:hover {
+	text-decoration: underline;
 }
 
 .post-item .article-meta {
-	margin-bottom: 10px;
+	margin-bottom: 14px;
+	font-size: 0.85em;
+	color: var(--meta-text-color);
 }
 
 .summary {
-	margin-top: 10px;
+	margin-top: 14px;
+	font-size: 0.95em;
+	line-height: 1.6;
 }
 
-/* Code blocks */
+/* Code blocks with improved styling */
 pre, code {
 	font-family: "JetBrains Mono", "Fira Code", monospace;
 	background-color: var(--code-bg-color);
-	border-radius: 3px;
+	border-radius: 4px;
 	padding: 2px 5px;
 	font-size: 0.9em;
 }
@@ -155,6 +302,7 @@ pre {
 	overflow: auto;
 	line-height: 1.45;
 	margin-bottom: 20px;
+	border: 1px solid var(--border-color);
 }
 
 pre code {
@@ -164,9 +312,11 @@ pre code {
 
 blockquote {
 	margin-left: 0;
-	padding-left: 20px;
-	border-left: 4px solid var(--border-color);
-	color: var(--blockquote-color);
+	padding: 1em 1.5em;
+	border-left: 4px solid var(--link-color);
+	background-color: var(--accent-color);
+	border-radius: 0 4px 4px 0;
+	margin-bottom: 1.5em;
 }
 
 /* Math rendering styles */
@@ -265,17 +415,207 @@ blockquote {
     color: var(--meta-text-color);
 }
 
-/* Dark mode toggle styles */
-.theme-toggle {
-    background: none;
+/* VSCode theme for code blocks */
+.vscode-theme {
+    background-color: var(--vscode-bg);
+    color: var(--vscode-fg);
+    border-radius: 8px;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    line-height: 1.5;
+    padding: 16px;
+    margin: 20px 0;
+    overflow-x: auto;
     border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-left: 10px;
-    font-size: 1.2em;
-    color: var(--text-color);
 }
 
-.theme-toggle:hover {
-    opacity: 0.8;
+.vscode-theme .keyword {
+    color: var(--vscode-keyword);
+}
+
+.vscode-theme .function {
+    color: var(--vscode-function);
+}
+
+.vscode-theme .comment {
+    color: var(--vscode-comment);
+    font-style: italic;
+}
+
+.vscode-theme .string {
+    color: var(--vscode-string);
+}
+
+.vscode-theme .number {
+    color: var(--vscode-number);
+}
+
+.vscode-theme .class {
+    color: var(--vscode-class);
+}
+
+.vscode-theme .variable {
+    color: var(--vscode-variable);
+}
+
+.vscode-theme .property {
+    color: var(--vscode-property);
+}
+
+.vscode-theme .operator, .vscode-theme .punctuation {
+    color: var(--vscode-punctuation);
+}
+
+.vscode-theme .linenumber {
+    color: #858585;
+    display: inline-block;
+    text-align: right;
+    margin-right: 16px;
+    width: 40px;
+    user-select: none;
+}
+
+/* Jupyter notebook-style code blocks */
+.jupyter-notebook {
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.9em;
+    line-height: 1.45;
+    background: white;
+}
+
+[data-theme="dark"] .jupyter-notebook {
+    border-color: #444;
+    background: #111;
+}
+
+.jupyter-cell {
+    position: relative;
+}
+
+.jupyter-input {
+    background-color: #f7f7f7;
+    border-left: 5px solid #2196F3;
+    padding: 12px 10px 12px 40px;
+    position: relative;
+}
+
+[data-theme="dark"] .jupyter-input {
+    background-color: #1e1e1e;
+    border-left-color: #2196F3;
+}
+
+.jupyter-output {
+    background-color: white;
+    padding: 10px 10px 10px 50px;
+    position: relative;
+}
+
+[data-theme="dark"] .jupyter-output {
+    background-color: #111;
+}
+
+.jupyter-input::before {
+    content: "In [1]:";
+    position: absolute;
+    left: 8px;
+    color: #2196F3;
+    font-weight: bold;
+    user-select: none;
+}
+
+.jupyter-output::before {
+    content: "Out[1]:";
+    position: absolute;
+    left: 8px;
+    color: #E91E63;
+    font-weight: bold;
+    user-select: none;
+}
+
+.jupyter-input pre, .jupyter-output pre {
+    margin: 0;
+    border: none;
+    background: transparent;
+    overflow-x: auto;
+    padding: 0;
+}
+
+.jupyter-input code {
+    background: transparent;
+    padding: 0;
+}
+
+.jupyter-output code {
+    background: transparent;
+    padding: 0;
+}
+
+.jupyter-output img {
+    max-width: 100%;
+    margin: 0;
+}
+
+.jupyter-output table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.jupyter-output th, .jupyter-output td {
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    text-align: left;
+}
+
+[data-theme="dark"] .jupyter-output th, [data-theme="dark"] .jupyter-output td {
+    border-color: #444;
+}
+
+.jupyter-output th {
+    background-color: #f0f0f0;
+}
+
+[data-theme="dark"] .jupyter-output th {
+    background-color: #2a2a2a;
+}
+
+/* For interactive buttons (placeholders for now) */
+.jupyter-buttons {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #cfcfcf;
+    display: flex;
+    align-items: center;
+}
+
+[data-theme="dark"] .jupyter-buttons {
+    background-color: #2a2a2a;
+    border-bottom-color: #444;
+}
+
+.jupyter-btn {
+    background: #f0f0f0;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    padding: 4px 8px;
+    margin-right: 5px;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #555;
+}
+
+[data-theme="dark"] .jupyter-btn {
+    background: #333;
+    border-color: #555;
+    color: #eee;
+}
+
+.jupyter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+[data-theme="dark"] .jupyter-btn:hover {
+    background-color: #444;
 }

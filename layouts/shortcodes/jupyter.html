@@ -1,0 +1,31 @@
+{{ $id := .Get "id" | default "1" }}
+{{ $input := .Get "input" | default true }}
+{{ $output := .Get "output" | default true }}
+{{ $lang := .Get "lang" | default "python" }}
+{{ $interactive := .Get "interactive" | default false }}
+
+<div class="jupyter-notebook">
+  {{ if eq $interactive "true" }}
+  <div class="jupyter-buttons">
+    <button class="jupyter-btn">Run</button>
+    <button class="jupyter-btn">Clear</button>
+  </div>
+  {{ end }}
+  
+  {{ if eq $input "true" }}
+  <div class="jupyter-cell">
+    <div class="jupyter-input" style="--cell-number: {{ $id }};">
+      <pre><code class="language-{{ $lang }}">{{ .Inner }}</code></pre>
+    </div>
+  </div>
+  {{ end }}
+  
+  {{ if eq $output "true" }}
+  {{ $output_content := .Get "output_content" }}
+  <div class="jupyter-cell">
+    <div class="jupyter-output" style="--cell-number: {{ $id }};">
+      <pre><code>{{ $output_content }}</code></pre>
+    </div>
+  </div>
+  {{ end }}
+</div> 

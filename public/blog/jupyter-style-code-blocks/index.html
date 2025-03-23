@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=52521&amp;path=livereload" data-no-instant defer></script>
+	<title>Jupyter-Style Code Blocks | Nikola Selic - Blog</title>
+	<link rel="canonical" href="http://localhost:52521/">
+	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Blog RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="How to use Jupyter notebook-style code blocks in your blog posts">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        
+    
+    <script src="/js/jupyter.js"></script>
+</head>
+<body>
+<header class="site-header">
+	<div class="header-content">
+		<nav class="main-nav">
+    <ul>
+        
+	<li><a href="/"><span class=menuname>Home</span></a></li>
+	<li><a href="/about/"><span class=menuname>About</span></a></li>
+	<li><a class="active" href="/blog/"><span class=menuname>Blog</span></a></li>
+	<li><a href="/services/"><span class=menuname>Services</span></a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+    </ul>
+</nav>
+</div>
+</header>
+<main>
+<article>
+
+  
+    <h1>Jupyter-Style Code Blocks</h1>
+    
+    <div class="article-meta">
+      
+        March 25, 2023 · 
+      
+      2 mins · 
+      326 words
+    </div>
+  
+  
+  <h1 id="jupyter-style-code-blocks">Jupyter-Style Code Blocks</h1>
+<p>This post demonstrates how to use Jupyter notebook-style code blocks in your blog posts, which make your code examples look more like interactive Jupyter notebooks.</p>
+<h2 id="basic-python-example">Basic Python Example</h2>
+<p>Here&rsquo;s a simple Python example showing both input and output:</p>
+
+
+
+
+
+
+<div class="jupyter-notebook">
+  
+  
+  
+  
+  
+</div> 
+<h2 id="data-analysis-example">Data Analysis Example</h2>
+<p>Here&rsquo;s a more complex example that resembles a typical data analysis workflow:</p>
+
+
+
+
+
+
+<div class="jupyter-notebook">
+  
+  
+  
+  
+  
+</div> 
+<h2 id="visualization-example">Visualization Example</h2>
+<p>For visualizations, you would typically see a plot as output:</p>
+
+
+
+
+
+
+<div class="jupyter-notebook">
+  
+  
+  
+  
+  
+  
+  <div class="jupyter-cell">
+    <div class="jupyter-output" style="--cell-number: 3;">
+      <pre><code></code></pre>
+    </div>
+  </div>
+  
+</div> 
+<p>The actual output would display an image of a sine wave plot.</p>
+<h2 id="machine-learning-example">Machine Learning Example</h2>
+<p>Here&rsquo;s an example of a machine learning code block:</p>
+
+
+
+
+
+
+<div class="jupyter-notebook">
+  
+  
+  
+  
+  
+</div> 
+<h2 id="interactive-elements">Interactive Elements</h2>
+<p>You can also add interactive elements to your code blocks (note that these are currently just visual placeholders):</p>
+
+
+
+
+
+
+<div class="jupyter-notebook">
+  
+  <div class="jupyter-buttons">
+    <button class="jupyter-btn">Run</button>
+    <button class="jupyter-btn">Clear</button>
+  </div>
+  
+  
+  
+  
+  
+</div> 
+<h2 id="how-to-use-these-code-blocks">How to Use These Code Blocks</h2>
+<p>To use a Jupyter-style code block in your posts, use the <code>jupyter</code> shortcode:</p>
+<pre tabindex="0"><code>{{&lt; jupyter lang=&#34;python&#34; output_content=&#34;Hello, World!&#34; &gt;}}
+print(&#34;Hello, World!&#34;)
+{{&lt; /jupyter &gt;}}
+</code></pre><h3 id="parameters">Parameters</h3>
+<ul>
+<li><code>id</code>: Cell number (default: &ldquo;1&rdquo;)</li>
+<li><code>lang</code>: Programming language (default: &ldquo;python&rdquo;)</li>
+<li><code>input</code>: Show input cell (default: true)</li>
+<li><code>output</code>: Show output cell (default: true)</li>
+<li><code>output_content</code>: Content to display in the output cell</li>
+<li><code>interactive</code>: Show interactive buttons (default: false)</li>
+</ul>
+<h2 id="making-truly-interactive-code-blocks">Making Truly Interactive Code Blocks</h2>
+<p>To enable truly interactive code execution, you would need to integrate one of these solutions:</p>
+<ol>
+<li><strong>Pyodide</strong>: Run Python code directly in the browser using WebAssembly</li>
+<li><strong>JupyterLite</strong>: A lightweight version of Jupyter that runs entirely in the browser</li>
+<li><strong>Observable</strong>: Interactive JavaScript notebooks that can be embedded</li>
+<li><strong>CodePen or JSFiddle</strong>: For HTML/CSS/JavaScript examples</li>
+</ol>
+<p>For a full implementation, you&rsquo;d need to add JavaScript that handles code execution and displaying results. This would be a more complex enhancement requiring additional development.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>These Jupyter-style code blocks enhance the appearance of your code examples, making them more familiar to data scientists and developers who work with notebooks. While they don&rsquo;t provide actual execution capabilities without additional JavaScript, they provide a clean, notebook-like presentation for your code examples.</p>
+<p>If you&rsquo;re interested in making them truly interactive, consider embedding JupyterLite or using Pyodide for browser-based Python execution.</p>
+
+
+<div id="nextprev">
+<a href="/blog/code-blocks-with-vscode-theme/"><div id="prevart">Previous:<br>Code Blocks with VSCode Theme</div></a>
+<a href="/blog/math-rendering-example/"><div id="nextart">Next:<br>Math Rendering Example</div></a>
+</div>
+
+</article>
+</main>
+
+<footer>
+    <a href="/rss">RSS</a> · 
+    <a href="https://x.com/nikola_selic">X (formerly Twitter)</a> · 
+    <a href="https://github.com/Selich">GitHub</a>
+</footer> 
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    
+    
+    themeToggle.addEventListener('click', () => {
+      let theme = 'light';
+      
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = 'dark';
+        themeToggle.textContent = '☀️';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+      
+      
+      localStorage.setItem('theme', theme);
+    });
+  });
+</script>
+</body>
+</html>

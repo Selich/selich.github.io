@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<title>Services | Nikola Selic - Blog</title>
 	<link rel="canonical" href="http://localhost:1313/">
@@ -16,22 +16,35 @@ Here are the professional services I offer.">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	
 	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	
+	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
 	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+        
+    
+    <script src="/js/jupyter.js"></script>
 </head>
 <body>
-<nav>
+<header class="site-header">
+	<div class="header-content">
+		<nav class="main-nav">
     <ul>
         
-	<li><a href="/"><span class=pre></span><span class=menuname>Home</span></a></li>
-	<li><a href="/about/"><span class=pre></span><span class=menuname>About</span></a></li>
-	<li><a href="/blog/"><span class=pre></span><span class=menuname>Blog</span></a></li>
-	<li><a class="menuactive" href="/services/"><span class=pre></span><span class=menuname>Services</span></a></li>
+	<li><a href="/"><span class=menuname>Home</span></a></li>
+	<li><a href="/about/"><span class=menuname>About</span></a></li>
+	<li><a href="/blog/"><span class=menuname>Blog</span></a></li>
+	<li><a class="active" href="/services/"><span class=menuname>Services</span></a></li>
         <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
     </ul>
 </nav>
+</div>
+</header>
 <main>
 <article>
 

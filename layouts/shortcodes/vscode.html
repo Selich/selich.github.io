@@ -1,0 +1,15 @@
+{{ $lang := .Get "lang" | default "" }}
+{{ $showLineNumbers := .Get "lineNumbers" | default false }}
+{{ $code := .Inner }}
+
+<pre class="vscode-theme" {{ with $lang }}data-language="{{ . }}"{{ end }}>
+{{- if $showLineNumbers -}}
+  {{- $lines := split $code "\n" -}}
+  {{- range $index, $line := $lines -}}
+    {{- $lineNumber := add $index 1 -}}
+    <span class="linenumber">{{ $lineNumber }}</span>{{ if eq $lang "javascript" }}{{ highlight $line "javascript" "" }}{{ else if eq $lang "python" }}{{ highlight $line "python" "" }}{{ else if eq $lang "go" }}{{ highlight $line "go" "" }}{{ else if eq $lang "css" }}{{ highlight $line "css" "" }}{{ else if eq $lang "html" }}{{ highlight $line "html" "" }}{{ else }}{{ $line }}{{ end }}
+  {{- end -}}
+{{- else -}}
+  {{- if eq $lang "javascript" }}{{ highlight $code "javascript" "" }}{{ else if eq $lang "python" }}{{ highlight $code "python" "" }}{{ else if eq $lang "go" }}{{ highlight $code "go" "" }}{{ else if eq $lang "css" }}{{ highlight $code "css" "" }}{{ else if eq $lang "html" }}{{ highlight $code "html" "" }}{{ else }}{{ $code }}{{ end -}}
+{{- end -}}
+</pre> 

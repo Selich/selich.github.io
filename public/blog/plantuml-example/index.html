@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=52314&amp;path=livereload" data-no-instant defer></script>
+	<title>Using PlantUML Diagrams Example | Nikola Selic - Blog</title>
+	<link rel="canonical" href="http://localhost:52314/">
+	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Blog RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Using PlantUML in Hugo
+PlantUML is a fantastic tool for creating diagrams using a simple text-based description language. This post demonstrates how to use PlantUML in your blog posts.
+Basic Sequence Diagram
+Here&rsquo;s a simple sequence diagram:
+
+
+
+
+
+
+  
+ 
+Class Diagram Example
+You can also create class diagrams:
+
+
+
+
+
+
+  
+ 
+Use Cases
+PlantUML is great for:
+
+Software architecture documentation
+Database schema design
+Sequence flows
+Class relationships
+State diagrams
+
+How It Works
+When you write a blog post, you can include PlantUML diagrams like this:">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+<nav>
+    <ul>
+        
+	<li><a href="/"><span class=pre></span><span class=menuname>Home</span></a></li>
+	<li><a href="/about/"><span class=pre></span><span class=menuname>About</span></a></li>
+	<li><a class="menuactive" href="/blog/"><span class=pre></span><span class=menuname>Blog</span></a></li>
+	<li><a href="/services/"><span class=pre></span><span class=menuname>Services</span></a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+    </ul>
+</nav>
+<main>
+<article>
+
+  
+    <h1>Using PlantUML Diagrams Example</h1>
+    
+    <div class="article-meta">
+      June 15, 2023 · 
+      1 mins · 
+      146 words
+    </div>
+  
+  
+  <h1 id="using-plantuml-in-hugo">Using PlantUML in Hugo</h1>
+<p>PlantUML is a fantastic tool for creating diagrams using a simple text-based description language. This post demonstrates how to use PlantUML in your blog posts.</p>
+<h2 id="basic-sequence-diagram">Basic Sequence Diagram</h2>
+<p>Here&rsquo;s a simple sequence diagram:</p>
+
+
+
+
+
+<div class="plantuml">
+  <img src="https://www.plantuml.com/plantuml/png/CkBzdGFydHVtbApBbGljZSAtPiBCb2I6IEF1dGhlbnRpY2F0aW9uIFJlcXVlc3QKQm9iIC0tPiBBbGljZTogQXV0aGVudGljYXRpb24gUmVzcG9uc2UKCkFsaWNlIC0-IEJvYjogQW5vdGhlciBhdXRoZW50aWNhdGlvbiBSZXF1ZXN0CkFsaWNlIDwtLSBCb2I6IEFub3RoZXIgYXV0aGVudGljYXRpb24gUmVzcG9uc2UKQGVuZHVtbAo" alt="PlantUML diagram">
+</div> 
+<h2 id="class-diagram-example">Class Diagram Example</h2>
+<p>You can also create class diagrams:</p>
+
+
+
+
+
+<div class="plantuml">
+  <img src="https://www.plantuml.com/plantuml/png/CkBzdGFydHVtbApjbGFzcyBDYXIgewogICtTdHJpbmcgbWFrZQogICtTdHJpbmcgbW9kZWwKICAraW50IHllYXIKICArc3RhcnQoKQogICtzdG9wKCkKfQoKY2xhc3MgRHJpdmVyIHsKICArU3RyaW5nIG5hbWUKICArU3RyaW5nIGxpY2Vuc2VOdW1iZXIKICArZHJpdmUoKQp9CgpEcml2ZXIgLS0gQ2FyIDogZHJpdmVzID4KQGVuZHVtbAo" alt="PlantUML diagram">
+</div> 
+<h2 id="use-cases">Use Cases</h2>
+<p>PlantUML is great for:</p>
+<ol>
+<li>Software architecture documentation</li>
+<li>Database schema design</li>
+<li>Sequence flows</li>
+<li>Class relationships</li>
+<li>State diagrams</li>
+</ol>
+<h2 id="how-it-works">How It Works</h2>
+<p>When you write a blog post, you can include PlantUML diagrams like this:</p>
+<pre tabindex="0"><code>{{&lt; plantuml &gt;}}
+@startuml
+Alice -&gt; Bob: Hello
+@enduml
+{{&lt; /plantuml &gt;}}
+</code></pre><p>The Hugo shortcode converts your PlantUML code into an encoded URL for the PlantUML server, which returns the rendered diagram as an image.</p>
+<h2 id="advanced-example-activity-diagram">Advanced Example: Activity Diagram</h2>
+
+
+
+
+
+<div class="plantuml">
+  <img src="https://www.plantuml.com/plantuml/png/CkBzdGFydHVtbApzdGFydAo6SW5pdGlhbGl6ZSBwcm9jZXNzOwppZiAoSXMgZGF0YSB2YWxpZD8pIHRoZW4gKHllcykKICA6UHJvY2VzcyBkYXRhOwogIGlmIChFbm91Z2ggcmVzb3VyY2VzPykgdGhlbiAoeWVzKQogICAgOkNvbXBsZXRlIHRhc2s7CiAgZWxzZSAobm8pCiAgICA6UmVxdWVzdCBtb3JlIHJlc291cmNlczsKICAgIDpXYWl0IGZvciByZXNvdXJjZXM7CiAgICA6Q29tcGxldGUgdGFzazsKICBlbmRpZgplbHNlIChubykKICA6TG9nIGVycm9yOwogIDpSZXF1ZXN0IG5ldyBkYXRhOwplbmRpZgo6RmluYWxpemUgcHJvY2VzczsKc3RvcApAZW5kdW1sCg" alt="PlantUML diagram">
+</div> 
+<p>This approach leverages the online PlantUML server to render your diagrams. For high-volume or private sites, you might want to consider setting up your own PlantUML server.</p>
+
+
+<div id="nextprev">
+<a href="/blog/math-rendering-example/"><div id="prevart">Previous:<br>Math Rendering Example</div></a>
+<a href="/autobiography/"><div id="nextart">Next:<br>Autobiography</div></a>
+</div>
+
+</article>
+</main>
+
+<footer>
+    <a href="/rss">RSS</a> · 
+    <a href="https://x.com/nikola_selic">X (formerly Twitter)</a> · 
+    <a href="https://github.com/Selich">GitHub</a>
+</footer> 
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    
+    
+    themeToggle.addEventListener('click', () => {
+      let theme = 'light';
+      
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = 'dark';
+        themeToggle.textContent = '☀️';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+      
+      
+      localStorage.setItem('theme', theme);
+    });
+  });
+</script>
+</body>
+</html>
