@@ -5,7 +5,7 @@ menu:
     weight: 1
 ---
 
-# Hello, I'm Nikola
+{{< syntax-tree >}}
 
 Hi, welcome to my website! I use this tiny part of the internet to share my thoughts about machine learning for systems, systems for ML, natural language processing, graph neural networks, and decentralized learning. I also plan on writing about history, philosophy, and linguistics.
 

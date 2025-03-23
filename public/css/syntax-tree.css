@@ -1,0 +1,119 @@
+#syntax-tree-container {
+  width: 100%;
+  height: 330px;
+  margin: 0px auto;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  display: block !important;
+  visibility: visible !important;
+  border: none !important;
+}
+
+.syntax-tree-wrapper {
+  width: 100%;
+  margin: 30px auto;
+  display: block !important;
+  visibility: visible !important;
+  background-color: white;
+  padding: 20px;
+}
+
+.syntax-tree-title {
+  text-align: center;
+  font-size: 24px;
+  color: #ccc;
+}
+
+.syntax-tree-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.node circle {
+  fill: #2d3748;
+  stroke: #63b3ed;
+  stroke-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.node:hover circle {
+  fill: #1a202c;
+  stroke: #90cdf4;
+  transform: scale(1.1);
+}
+
+.node text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  fill: #fff;
+  transition: all 0.3s ease;
+}
+
+.node:hover text {
+  /* font-weight: bold; */
+  font-size: 14px;
+}
+
+.link {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  stroke: #cbd5e0;
+  stroke-width: 3px;
+}
+
+.language-title {
+  fill: #90cdf4;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+
+.sentence-text {
+  fill: #cbd5e0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #syntax-tree-container {
+    background-color: white;
+  }
+  
+  .language-title {
+    fill: #1a365d;
+  }
+  
+  .sentence-text {
+    fill: #2a4365;
+  }
+  
+  .node circle {
+    fill: white;
+    stroke: steelblue;
+  }
+  
+  .node:hover circle {
+    fill: #e8f0fe;
+    stroke: #2c5282;
+  }
+  
+  .node text {
+    fill: #000;
+  }
+  
+  .link {
+    stroke: #000;
+  }
+  
+  .link:hover {
+    stroke: #444;
+  }
+} 

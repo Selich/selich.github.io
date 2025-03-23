@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53345&amp;path=livereload" data-no-instant defer></script>
+	<title>Exploring Linguistics: Syntax Trees Across Languages | Nikola Selic - Blog</title>
+	<link rel="canonical" href="http://localhost:53345/">
+	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Blog RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Syntax Trees: Visual Representation of Language Structure
+Syntax trees are a powerful tool used by linguists to visualize the grammatical structure of sentences. They show how words combine to form phrases, and how these phrases relate to each other within a sentence.
+Multilingual Introduction Animation
+Below is an interactive visualization showing how a simple introduction (&ldquo;Hello, I&rsquo;m Nikola&rdquo;) is structured across multiple languages. The animation cycles through English, Serbian, German, Chinese, and Russian, displaying both the sentence and its corresponding syntax tree.">
+	<meta name="keywords" content="linguistics, programming, d3js, visualization">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        
+    
+    <script src="/js/jupyter.js"></script>
+</head>
+<body>
+<header class="site-header">
+	<div class="header-content">
+		<nav class="main-nav">
+    <ul>
+        
+	<li><a href="/"><span class=menuname>Home</span></a></li>
+	<li><a href="/about/"><span class=menuname>About</span></a></li>
+	<li><a class="active" href="/blog/"><span class=menuname>Blog</span></a></li>
+	<li><a href="/services/"><span class=menuname>Services</span></a></li>
+	<li><a href="/tags/"><span class=menuname>Tags</span></a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+    </ul>
+</nav>
+</div>
+</header>
+<main>
+<article>
+
+  
+    <h1>Exploring Linguistics: Syntax Trees Across Languages</h1>
+    
+    <div class="article-meta">
+      
+        August 15, 2023 · 
+      
+      2 mins · 
+      349 words
+      
+      
+      <div class="post-tags">
+        
+          <a href="/tags/linguistics/" class="post-tag">#linguistics</a>
+        
+          <a href="/tags/programming/" class="post-tag">#programming</a>
+        
+          <a href="/tags/d3js/" class="post-tag">#d3js</a>
+        
+          <a href="/tags/visualization/" class="post-tag">#visualization</a>
+        
+      </div>
+      
+    </div>
+    
+    
+  
+  
+  <h1 id="syntax-trees-visual-representation-of-language-structure">Syntax Trees: Visual Representation of Language Structure</h1>
+<p>Syntax trees are a powerful tool used by linguists to visualize the grammatical structure of sentences. They show how words combine to form phrases, and how these phrases relate to each other within a sentence.</p>
+<h2 id="multilingual-introduction-animation">Multilingual Introduction Animation</h2>
+<p>Below is an interactive visualization showing how a simple introduction (&ldquo;Hello, I&rsquo;m Nikola&rdquo;) is structured across multiple languages. The animation cycles through English, Serbian, German, Chinese, and Russian, displaying both the sentence and its corresponding syntax tree.</p>
+<link rel="stylesheet" href="/css/syntax-tree.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/js/syntax-tree.js"></script>
+
+<div class="syntax-tree-wrapper">
+  
+  
+  
+  
+    <h2 class="syntax-tree-title">Multilingual Syntax Trees</h2>
+  
+  
+  
+    <p class="syntax-tree-subtitle">How &#39;Hello, I&#39;m Nikola&#39; is structured in different languages</p>
+  
+  
+  <div id="syntax-tree-container"></div>
+</div> 
+<h2 id="understanding-syntax-trees">Understanding Syntax Trees</h2>
+<p>Each syntax tree starts with a root node labeled &ldquo;S&rdquo; (sentence). From there, it branches into constituent parts:</p>
+<ul>
+<li><strong>NP</strong>: Noun Phrase (like &ldquo;I&rdquo; or &ldquo;Nikola&rdquo;)</li>
+<li><strong>VP</strong>: Verb Phrase (like &ldquo;am Nikola&rdquo;)</li>
+<li><strong>V</strong>: Verb (like &ldquo;am&rdquo;)</li>
+<li><strong>N</strong>: Noun</li>
+<li><strong>Pro</strong>: Pronoun</li>
+<li><strong>Intj</strong>: Interjection (like &ldquo;Hello&rdquo;)</li>
+</ul>
+<p>The structure varies across languages, revealing fascinating differences in how languages organize information:</p>
+<ul>
+<li>In English, Serbian, and German, we see a similar structure with interjection, subject pronoun, and verb phrase</li>
+<li>Chinese adds a final punctuation node</li>
+<li>Russian often omits the copula (&ldquo;am&rdquo;), leading to a different structure</li>
+</ul>
+<h2 id="implementation-details">Implementation Details</h2>
+<p>This visualization is built using:</p>
+<ul>
+<li><strong>D3.js</strong>: For creating the interactive tree visualization</li>
+<li><strong>SVG</strong>: For rendering the graphics</li>
+<li><strong>CSS Transitions</strong>: For smooth animations between languages</li>
+</ul>
+<p>The animation cycles automatically through each language every 5 seconds, with smooth transitions that fade out the old tree and fade in the new one.</p>
+<h2 id="linguistic-insights">Linguistic Insights</h2>
+<p>These syntax trees reveal important aspects of linguistic structure:</p>
+<ol>
+<li><strong>Universal patterns</strong>: All languages have hierarchical phrase structures</li>
+<li><strong>Language-specific differences</strong>: Word order and required elements vary</li>
+<li><strong>Typological relationships</strong>: Languages from the same family often have similar structures</li>
+</ol>
+<p>Syntax trees help us understand both the universal principles of human language and the unique characteristics of individual languages.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Visualizations like these help us appreciate the complex but systematic nature of human language. While all languages allow us to express the same basic greeting, each does so with its own structural fingerprint.</p>
+<p>If you&rsquo;re interested in learning more about linguistic structures across languages, I recommend exploring resources on comparative syntax and typology.</p>
+
+
+<div id="nextprev">
+<a href="/blog/math-rendering-example/"><div id="prevart">Previous:<br>Math Rendering Example</div></a>
+<a href="/autobiography/"><div id="nextart">Next:<br>Autobiography</div></a>
+</div>
+<div style="clear:both" class=taglist>Related<br><a id="tag_linguistics" href="http://localhost:53345/tags/linguistics">Linguistics</a> &middot; <a id="tag_programming" href="http://localhost:53345/tags/programming">Programming</a> &middot; <a id="tag_d3js" href="http://localhost:53345/tags/d3js">D3js</a> &middot; <a id="tag_visualization" href="http://localhost:53345/tags/visualization">Visualization</a></div>
+</article>
+</main>
+
+<footer>
+    <a href="/rss">RSS</a> · 
+    <a href="https://x.com/nikola_selic">X (formerly Twitter)</a> · 
+    <a href="https://github.com/Selich">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/nikola-selic">LinkedIn</a> · 
+    <a href="https://bsky.app/profile/nikolaselic.bsky.social">Bluesky</a>
+</footer> 
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    
+    
+    themeToggle.addEventListener('click', () => {
+      let theme = 'light';
+      
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = 'dark';
+        themeToggle.textContent = '☀️';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+      
+      
+      localStorage.setItem('theme', theme);
+    });
+  });
+</script>
+</body>
+</html>

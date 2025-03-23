@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/syntax-tree.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/js/syntax-tree.js"></script>
+
+<div class="syntax-tree-wrapper">
+  {{ $title := .Get "title" }}
+  {{ $subtitle := .Get "subtitle" }}
+  
+  {{ if $title }}
+    <h2 class="syntax-tree-title">{{ $title }}</h2>
+  {{ end }}
+  
+  {{ if $subtitle }}
+    <p class="syntax-tree-subtitle">{{ $subtitle }}</p>
+  {{ end }}
+  
+  <div id="syntax-tree-container"></div>
+</div> 

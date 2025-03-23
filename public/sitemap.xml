@@ -2,46 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:58387/tags/academic/</loc>
+    <loc>http://localhost:60841/tags/academic/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/blog/</loc>
+    <loc>http://localhost:60841/blog/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/tags/btw25/</loc>
+    <loc>http://localhost:60841/tags/btw25/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/tags/conference/</loc>
+    <loc>http://localhost:60841/tags/conference/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/tags/database/</loc>
+    <loc>http://localhost:60841/tags/database/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/</loc>
+    <loc>http://localhost:60841/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/blog/btw25-conference-experience-bamberg/</loc>
+    <loc>http://localhost:60841/blog/btw25-conference-experience-bamberg/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/tags/</loc>
+    <loc>http://localhost:60841/tags/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/blog/code-blocks-with-vscode-theme/</loc>
+    <loc>http://localhost:60841/autobiography/</loc>
+    <lastmod>2025-02-05T16:48:24+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/tags/d3js/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/blog/linguistic-trees/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/tags/linguistics/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/tags/programming/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/tags/visualization/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/blog/math-rendering-example/</loc>
+    <lastmod>2023-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/blog/jupyter-style-code-blocks/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:60841/blog/code-blocks-with-vscode-theme/</loc>
     <lastmod>2023-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/blog/new-blog-post/</loc>
+    <loc>http://localhost:60841/blog/new-blog-post/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58387/about/</loc>
+    <loc>http://localhost:60841/about/</loc>
   </url><url>
-    <loc>http://localhost:58387/blogroll/</loc>
+    <loc>http://localhost:60841/blogroll/</loc>
   </url><url>
-    <loc>http://localhost:58387/categories/</loc>
+    <loc>http://localhost:60841/categories/</loc>
   </url><url>
-    <loc>http://localhost:58387/cv/</loc>
+    <loc>http://localhost:60841/cv/</loc>
   </url><url>
-    <loc>http://localhost:58387/recipes/</loc>
+    <loc>http://localhost:60841/recipes/</loc>
   </url><url>
-    <loc>http://localhost:58387/services/</loc>
+    <loc>http://localhost:60841/services/</loc>
   </url>
 </urlset>
