@@ -34,5 +34,42 @@
 {{ block "footer" . }}
 {{ partial "footer.html" . }}
 {{ end }}
+
+<script>
+  // Dark mode functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference or use the system preference
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    // Apply the theme on page load
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    
+    // Toggle theme when the button is clicked
+    themeToggle.addEventListener('click', () => {
+      let theme = 'light';
+      
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = 'dark';
+        themeToggle.textContent = '☀️';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+      
+      // Save the preference
+      localStorage.setItem('theme', theme);
+    });
+  });
+</script>
 </body>
 </html>

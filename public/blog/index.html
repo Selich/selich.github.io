@@ -26,6 +26,7 @@ All my blog posts are listed below.">
 	<li><a href="/about/"><span class=pre></span><span class=menuname>About</span></a></li>
 	<li><a class="menuactive" href="/blog/"><span class=pre></span><span class=menuname>Blog</span></a></li>
 	<li><a href="/services/"><span class=pre></span><span class=menuname>Services</span></a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
     </ul>
 </nav>
 <main>
@@ -86,5 +87,42 @@ All my blog posts are listed below.">
     <a href="https://github.com/Selich">GitHub</a>
 </footer> 
 
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    
+    
+    themeToggle.addEventListener('click', () => {
+      let theme = 'light';
+      
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = 'dark';
+        themeToggle.textContent = '☀️';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+      
+      
+      localStorage.setItem('theme', theme);
+    });
+  });
+</script>
 </body>
 </html>

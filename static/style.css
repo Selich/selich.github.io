@@ -2,22 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --link-color: #0000ff;
+    --border-color: #ddd;
+    --code-bg-color: #f6f8fa;
+    --blockquote-color: #555;
+    --meta-text-color: #555;
+}
+
+[data-theme="dark"] {
+    --background-color: #222;
+    --text-color: #eee;
+    --link-color: #809fff;
+    --border-color: #444;
+    --code-bg-color: #333;
+    --blockquote-color: #aaa;
+    --meta-text-color: #aaa;
+}
+
 body {
 	font-family: "Source Serif 4", Georgia, serif;
 	font-optical-sizing: auto;
-	background: #fff;
-	color: #000;
+	background: var(--background-color);
+	color: var(--text-color);
 	font-weight: 400;
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
 	line-height: 1.6;
 	font-size: 18px;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav {
 	text-align: center;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid var(--border-color);
 	padding-bottom: 15px;
 	margin-bottom: 30px;
 }
@@ -32,7 +53,7 @@ nav ul {
 }
 
 nav ul li a {
-	color: #0000ff;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -59,7 +80,7 @@ h3 {
 }
 
 a {
-	color: #0000ff;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -76,7 +97,7 @@ footer {
 	text-align: center;
 	margin-top: 40px;
 	padding-top: 15px;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid var(--border-color);
 }
 
 footer a {
@@ -93,7 +114,7 @@ ul li {
 
 /* Article meta information */
 .article-meta {
-	color: #555;
+	color: var(--meta-text-color);
 	font-size: 0.9em;
 	margin-bottom: 30px;
 }
@@ -123,7 +144,7 @@ ul li {
 /* Code blocks */
 pre, code {
 	font-family: "JetBrains Mono", "Fira Code", monospace;
-	background-color: #f6f8fa;
+	background-color: var(--code-bg-color);
 	border-radius: 3px;
 	padding: 2px 5px;
 	font-size: 0.9em;
@@ -144,8 +165,8 @@ pre code {
 blockquote {
 	margin-left: 0;
 	padding-left: 20px;
-	border-left: 4px solid #ddd;
-	color: #555;
+	border-left: 4px solid var(--border-color);
+	color: var(--blockquote-color);
 }
 
 /* Math rendering styles */
@@ -179,4 +200,19 @@ blockquote {
 }
 #nextart, #prevart {
 	max-width: 33%;
+}
+
+/* Dark mode toggle styles */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
 }
