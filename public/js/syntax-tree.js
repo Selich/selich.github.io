@@ -163,6 +163,32 @@ document.addEventListener('DOMContentLoaded', function() {
     return result;
   }
 
+  // Helper function to generate Wiktionary URL
+  function generateWiktionaryUrl(word) {
+    // Remove commas, periods, etc. that might be in the word
+    const cleanWord = word.replace(/[,\.]/g, '');
+    return `https://en.wiktionary.org/wiki/${encodeURIComponent(cleanWord.toLowerCase())}`;
+  }
+
+  // Helper function to generate Wikipedia URL for grammar labels
+  function generateWikipediaUrl(label) {
+    // Map common grammar labels to their Wikipedia article names
+    const labelMap = {
+      "S": "Sentence_(linguistics)",
+      "NP": "Noun_phrase",
+      "VP": "Verb_phrase",
+      "V": "Verb",
+      "N": "Noun",
+      "Pro": "Pronoun",
+      "Intj": "Interjection",
+      "Punc": "Punctuation"
+    };
+    
+    // Use the mapping if available, otherwise just use the label
+    const articleName = labelMap[label] || label;
+    return `https://en.wikipedia.org/wiki/${articleName}`;
+  }
+
   // Function to update the tree with sentence transformation animation
   function updateTree(data) {
     // Convert data to hierarchy
@@ -236,7 +262,14 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("text-anchor", "middle")
       .style("font-size", "14px") // Bigger font size
       .text(d => d.data.name)
-      .style("opacity", 0);
+      .style("opacity", 0)
+      .on("click", function(event, d) {
+        // Use Wikipedia for grammar nodes (non-leaf nodes) and Wiktionary for leaf nodes
+        const url = d.children 
+          ? generateWikipediaUrl(d.data.name) 
+          : generateWiktionaryUrl(d.data.name);
+        window.open(url, '_blank');
+      });
     
     // Find all leaf nodes that contain actual words
     const leafNodes = root.descendants().filter(d => !d.children);
@@ -267,9 +300,12 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
       .style("font-size", "28px")
-      // .style("font-weight", "bold")
       .text(d => d.data.name)
-      .style("fill", "#000");
+      .style("fill", "#000")
+      .on("click", function(event, d) {
+        const url = generateWiktionaryUrl(d.data.name);
+        window.open(url, '_blank');
+      });
     
     // Add background circles but keep them invisible initially
     tempWords.append("circle")

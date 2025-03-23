@@ -32,6 +32,10 @@
   color: #999;
 }
 
+.node circle, .node text, .temp-word circle, .temp-word text {
+  cursor: pointer;
+}
+
 .node circle {
   fill: #2d3748;
   stroke: transparent;
