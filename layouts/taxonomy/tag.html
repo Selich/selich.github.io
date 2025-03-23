@@ -1,0 +1,51 @@
+{{ define "title" }}Tag: {{ .Title }}{{ end }}
+
+{{ define "main" }}
+<h1>Posts tagged with "{{ .Title }}"</h1>
+
+{{ if eq .Title "conference" }}
+<div class="tag-description">
+  <p>These posts are about conferences I've attended. Each conference post includes location maps to show where the event was held.</p>
+</div>
+{{ end }}
+
+<div class="post-list">
+  {{ range .Pages }}
+    <article class="post-item">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="article-meta">
+        {{ .Date.Format "January 2, 2006" }} · 
+        {{ .ReadingTime }} mins · 
+        {{ countwords .Content }} words
+        
+        {{ if .Params.tags }}
+        <div class="post-tags">
+          {{ range .Params.tags }}
+            <a href="/tags/{{ . | urlize }}/" class="post-tag">#{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      <div class="summary">
+        {{ .Summary }}
+        {{ if .Truncated }}
+          <a href="{{ .RelPermalink }}">Read more...</a>
+        {{ end }}
+      </div>
+      
+      {{ if and (in .Params.tags "conference") .Params.location }}
+        <div class="mini-location">
+          <p><strong>Location:</strong> {{ .Params.location.name }}</p>
+          <a href="https://www.google.com/maps?q={{ .Params.location.coords }}" target="_blank">
+            <img 
+              src="https://maps.googleapis.com/maps/api/staticmap?center={{ .Params.location.coords }}&zoom={{ .Params.location.zoom }}&size=400x200&maptype=roadmap&markers=color:red%7C{{ .Params.location.coords }}&key=AIzaSyDemKW-e-yxGY6MLOQ92CuRqolxYnnYUTU" 
+              alt="Map showing {{ .Params.location.name }}" 
+              class="mini-map-img"
+            />
+          </a>
+        </div>
+      {{ end }}
+    </article>
+  {{ end }}
+</div>
+{{ end }} 

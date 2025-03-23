@@ -1,0 +1,24 @@
+{{/* Get parameters or use values from the page's frontmatter */}}
+{{ $name := .Get "name" | default (.Page.Params.location.name) }}
+{{ $coords := .Get "coords" | default (.Page.Params.location.coords) }}
+{{ $zoom := .Get "zoom" | default (.Page.Params.location.zoom) | default 13 }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" | default "300px" }}
+{{ $border := .Get "border" | default "1px solid #ddd" }}
+{{ $borderRadius := .Get "borderRadius" | default "8px" }}
+
+{{ if $coords }}
+<div class="location-map" style="margin-bottom: 1.5rem;">
+  <h4 style="margin-bottom: 0.5rem;">{{ $name }}</h4>
+  <a href="https://www.google.com/maps?q={{ $coords }}&z={{ $zoom }}" target="_blank" title="View on Google Maps">
+    <img 
+      src="https://maps.googleapis.com/maps/api/staticmap?center={{ $coords }}&zoom={{ $zoom }}&size=600x300&maptype=roadmap&markers=color:red%7C{{ $coords }}&key=AIzaSyDemKW-e-yxGY6MLOQ92CuRqolxYnnYUTU" 
+      alt="Map showing {{ $name }}" 
+      style="width: {{ $width }}; height: {{ $height }}; object-fit: cover; border: {{ $border }}; border-radius: {{ $borderRadius }};"
+    />
+  </a>
+  <div style="text-align: right; font-size: 0.8em; margin-top: 0.25rem;">
+    <a href="https://www.google.com/maps?q={{ $coords }}&z={{ $zoom }}" target="_blank">View on Google Maps</a>
+  </div>
+</div>
+{{ end }} 

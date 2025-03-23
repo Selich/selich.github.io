@@ -2,7 +2,7 @@
 title: "Code Blocks with VSCode Theme"
 date: 2023-03-24
 description: "How to use the new VSCode-themed code blocks in your blog posts"
-draft: false
+draft: true
 ---
 
 # Beautiful Code Blocks with VSCode Theme

@@ -15,3 +15,8 @@ languageCode = 'en-us'
   nextprev = true
   taglist = true
   showrss = true
+
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 30

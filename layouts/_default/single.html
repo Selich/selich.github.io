@@ -10,7 +10,49 @@
       {{ end }}
       {{ .ReadingTime }} mins · 
       {{ countwords .Content }} words
+      
+      {{ if .Params.tags }}
+      <div class="post-tags">
+        {{ range .Params.tags }}
+          <a href="/tags/{{ . | urlize }}/" class="post-tag">#{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
     </div>
+    
+    {{ if and (in .Params.tags "conference") .Params.location }}
+      {{ if and .Params.location.name .Params.location.coords }}
+        <div class="conference-location">
+          <!-- {{ $countryZoom := 6 }}
+          <div class="location-maps">
+            <div class="map-container">
+              <h4>Country View</h4>
+              <a href="https://www.google.com/maps?q={{ .Params.location.coords }}&z={{ $countryZoom }}" target="_blank">
+                <img 
+                  src="https://maps.googleapis.com/maps/api/staticmap?center={{ .Params.location.coords }}&zoom={{ $countryZoom }}&size=600x300&maptype=roadmap&markers=color:red%7C{{ .Params.location.coords }}&key=AIzaSyDemKW-e-yxGY6MLOQ92CuRqolxYnnYUTU" 
+                  alt="Country map showing {{ .Params.location.name }}" 
+                  class="location-map-img"
+                />
+              </a>
+            </div>
+            <div class="map-container">
+              <h4>City View</h4>
+              <a href="https://www.google.com/maps?q={{ .Params.location.coords }}&z={{ .Params.location.zoom }}" target="_blank">
+                <img 
+                  src="https://maps.googleapis.com/maps/api/staticmap?center={{ .Params.location.coords }}&zoom={{ .Params.location.zoom }}&size=600x300&maptype=roadmap&markers=color:red%7C{{ .Params.location.coords }}&key=AIzaSyDemKW-e-yxGY6MLOQ92CuRqolxYnnYUTU" 
+                  alt="City map showing {{ .Params.location.name }}" 
+                  class="location-map-img"
+                />
+              </a>
+            </div>
+          </div> -->
+          <div class="map-caption">
+            <p>Conference location: <strong>{{ .Params.location.name }}</strong> 
+            <a href="https://www.google.com/maps?q={{ .Params.location.coords }}" target="_blank">(View on Google Maps)</a></p>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
   {{ end }}
   
   {{ .Content }}

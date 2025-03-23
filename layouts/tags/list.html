@@ -1,0 +1,18 @@
+{{ define "title" }}Tags{{ end }}
+
+{{ define "main" }}
+<h1>Tags</h1>
+<p>Browse all posts by tag:</p>
+
+<div class="tags-list">
+  {{ range .Data.Terms.Alphabetical }}
+    <div class="tag-item">
+      <a href="{{ .Page.RelPermalink }}" class="tag-link">
+        <span class="tag-name">#{{ .Page.Title }}</span>
+        <span class="tag-count">{{ .Count }}</span>
+      </a>
+    </div>
+  {{ end }}
+</div>
+
+{{ end }} 
