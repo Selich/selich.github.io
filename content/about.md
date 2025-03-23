@@ -1,8 +1,15 @@
 ---
 title: "About"
+layout: "about"
 menu:
   main:
     weight: 2
+social:
+  github: "Selich"
+  linkedin: "nikola-selic"
+  twitter: "nikola_selic"
+  bluesky: "nikola.bsky.social"
+  email: "selic.work@gmail.com"
 ---
 
 # About Me

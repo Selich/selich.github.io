@@ -202,6 +202,69 @@ blockquote {
 	max-width: 33%;
 }
 
+/* About page styles */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-container {
+    flex: 0 0 175px;
+}
+
+.profile-image {
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.bio-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bio-container h1 {
+    margin-top: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #666;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-links a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+    opacity: 1;
+}
+
+.timeline {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.timeline-item {
+    margin-bottom: 1rem;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--meta-text-color);
+}
+
 /* Dark mode toggle styles */
 .theme-toggle {
     background: none;

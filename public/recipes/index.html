@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53889&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<title>Recipes | Nikola Selic - Blog</title>
-	<link rel="canonical" href="http://localhost:53889/">
+	<link rel="canonical" href="http://localhost:1313/">
 	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Blog RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="/favicon.ico">
@@ -11,6 +11,9 @@ A collection of my favorite recipes.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
@@ -26,18 +29,13 @@ A collection of my favorite recipes.">
 	<li><a href="/about/"><span class=pre></span><span class=menuname>About</span></a></li>
 	<li><a href="/blog/"><span class=pre></span><span class=menuname>Blog</span></a></li>
 	<li><a href="/services/"><span class=pre></span><span class=menuname>Services</span></a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
     </ul>
 </nav>
 <main>
 <article>
 
-  <h1>Recipes</h1>
   
-  <div class="article-meta">
-    January 1, 0001 · 
-    1 mins · 
-    7 words
-  </div>
   
   <h1 id="recipes">Recipes</h1>
 <p>A collection of my favorite recipes.</p>
@@ -53,9 +51,46 @@ A collection of my favorite recipes.">
 
 <footer>
     <a href="/rss">RSS</a> · 
-    <a href="https://x.com/nikola_selic">Twitter</a> · 
+    <a href="https://x.com/nikola_selic">X (formerly Twitter)</a> · 
     <a href="https://github.com/Selich">GitHub</a>
 </footer> 
 
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    
+    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '🌙';
+    }
+    
+    
+    themeToggle.addEventListener('click', () => {
+      let theme = 'light';
+      
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = 'dark';
+        themeToggle.textContent = '☀️';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '🌙';
+      }
+      
+      
+      localStorage.setItem('theme', theme);
+    });
+  });
+</script>
 </body>
 </html>

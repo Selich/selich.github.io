@@ -1,0 +1,103 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+  <div class="about-container">
+    <div class="profile-container">
+      <img src="/images/profile.jpg" alt="Profile Image" class="profile-image">
+      <div class="social-links">
+        {{ with .Params.social.github }}
+        <a href="https://github.com/{{ . }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        {{ end }}
+        {{ with .Params.social.twitter }}
+        <a href="https://twitter.com/{{ . }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        {{ end }}
+        {{ with .Params.social.linkedin }}
+        <a href="https://linkedin.com/in/{{ . }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        {{ end }}
+        {{ with .Params.social.bluesky }}
+        <a href="https://bsky.app/profile/{{ . }}" target="_blank" title="Bluesky"><i class="fas fa-cloud"></i></a>
+        {{ end }}
+        {{ with .Params.social.email }}
+        <a href="mailto:{{ . }}" target="_blank" title="Email"><i class="far fa-envelope"></i></a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="bio-container">
+      <h1>About Me</h1>
+      <p>I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <h2>Education</h2>
+    
+    <div class="timeline-item">
+      <h3>Technical University of Munich</h3>
+      <p><strong>Master's degree, Informatics</strong><br>
+      <em>2021 - 2025</em></p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>Faculty of Technical Sciences, University of Novi Sad</h3>
+      <p><strong>Bachelor of Engineering with Honours (BE), Data Engineering</strong><br>
+      <em>Curriculum</em>: <a href="http://www.ftn.uns.ac.rs/416590128/information-engineering">Information Engineering Program</a><br>
+      <em>Bachelor Thesis</em>: Blockchain-based Federated Learning</p>
+    </div>
+    
+    <h2>Work Experience</h2>
+    
+    <div class="timeline-item">
+      <h3>Technical University of Munich</h3>
+      <p><strong>Teaching Assistant</strong><br>
+      <em>Dec 2024 - Present</em> · 4 months<br>
+      - Introduction to Informatics (SQL and Java)</p>
+      
+      <p><strong>Student Research Assistant</strong><br>
+      <em>Feb 2024 - Present</em> · 1 year 2 months</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>twinu</h3>
+      <p><strong>Core Developer</strong><br>
+      <em>Apr 2023 - Jan 2024</em> · 10 months<br>
+      Munich, Bavaria, Germany · Remote</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>Amazon Web Services (AWS)</h3>
+      <p><strong>Software Engineer Intern</strong><br>
+      <em>Sep 2022 - Feb 2023</em> · 6 months<br>
+      Dresden, Saxony, Germany · Hybrid<br>
+      Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>twinu</h3>
+      <p><strong>Core Developer</strong><br>
+      <em>Feb 2022 - Sep 2022</em> · 8 months<br>
+      Munich, Bavaria, Germany · Remote</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>KITRO</h3>
+      <p><strong>Software Developer</strong><br>
+      <em>Feb 2022 - Sep 2022</em> · 8 months<br>
+      Zurich, Switzerland · Remote<br>
+      Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>LambdaWorks</h3>
+      <p><strong>Software Engineer Intern</strong><br>
+      <em>Feb 2020 - May 2020</em> · 4 months<br>
+      Novi Sad, Vojvodina, Serbia</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h3>Typhoon HIL, Inc.</h3>
+      <p><strong>Machine Learning Engineer Intern</strong><br>
+      <em>Apr 2019 - Dec 2019</em> · 9 months<br>
+      Novi Sad, Vojvodina, Serbia</p>
+    </div>
+  </div>
+{{ end }} 
