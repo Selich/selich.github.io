@@ -8,6 +8,6 @@
         {{ range.Site.Menus.main.ByWeight }}{{ $base := path.Base .URL }}
 	<li><a {{ if or ( eq $sec $base ) ( eq $file $base ) ( and (eq $sec "") ( eq $file "_index") (eq $base "/") ) }}class="active" {{ end }}href="{{ .URL }}"><span class=menuname>{{ .Name }}</span></a></li>
         {{- end }}
-        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+        <!-- <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li> -->
     </ul>
 </nav>
