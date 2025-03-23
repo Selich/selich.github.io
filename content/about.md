@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Personal website of Nikola Selic, researcher and engineer focused on machine learning systems, NLP, graph neural networks, and decentralized learning approaches."
+description: "Hi, welcome to my website! I use this tiny part of the internet to share my thoughts about machine learning for systems, systems for ML, natural language processing, graph neural networks, and decentralized learning. I also plan on writing about history, philosophy, and linguistics."
 layout: "about"
 menu:
   main:
