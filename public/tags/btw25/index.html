@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60841&amp;path=livereload" data-no-instant defer></script>
-	<title>Btw25 | Nikola Selic - Blog</title>
-	<link rel="canonical" href="http://localhost:60841/">
-	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Blog RSS" href='/index.xml'>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=52521&amp;path=livereload" data-no-instant defer></script>
+	<title>Btw25 | Nikola Selic - Personal Website</title>
+	<link rel="canonical" href="http://localhost:52521/">
+	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Personal Website RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="/favicon.ico">
 	<meta name="description" content="">
@@ -40,7 +40,7 @@
 	<li><a href="/blog/"><span class=menuname>Blog</span></a></li>
 	<li><a href="/services/"><span class=menuname>Services</span></a></li>
 	<li><a class="active" href="/tags/"><span class=menuname>Tags</span></a></li>
-        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+        
     </ul>
 </nav>
 </div>
@@ -73,36 +73,34 @@
   
   document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
     
-    const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
-    
-    
-    if (currentTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      themeToggle.textContent = '☀️';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+    if (themeToggle) {
       themeToggle.textContent = '🌙';
     }
     
     
-    themeToggle.addEventListener('click', () => {
-      let theme = 'light';
-      
-      if (document.documentElement.getAttribute('data-theme') === 'light') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        theme = 'dark';
-        themeToggle.textContent = '☀️';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeToggle.textContent = '🌙';
-      }
-      
-      
-      localStorage.setItem('theme', theme);
-    });
+    localStorage.setItem('theme', 'light');
+    
+    
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        let theme = 'light';
+        
+        if (document.documentElement.getAttribute('data-theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          theme = 'dark';
+          themeToggle.textContent = '☀️';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          themeToggle.textContent = '🌙';
+        }
+        
+        
+        localStorage.setItem('theme', theme);
+      });
+    }
   });
 </script>
 </body>
