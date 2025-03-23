@@ -483,15 +483,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ANIMATION SEQUENCE
     
-    // 1. First, show ONLY the text of temporary word elements (no backgrounds yet)
-    tempWords.style("opacity", 1);
-    tempWords.select("text").style("opacity", 1);
-    // Keep background rectangles invisible initially
-    tempWords.select("rect.text-bg").style("opacity", 0);
+    // 1. First, fade in the text of temporary word elements smoothly
+    tempWords.style("opacity", 0); // Start invisible
+    tempWords.select("text").style("opacity", 0); // Start invisible
+    tempWords.select("rect.text-bg").style("opacity", 0); // Keep backgrounds invisible
+    
+    // Fade in the words smoothly
+    tempWords.transition()
+      .duration(800)
+      .style("opacity", 1);
+      
+    tempWords.select("text")
+      .transition()
+      .duration(800)
+      .style("opacity", 1);
     
     // 2. After a short delay, animate the temporary words to their positions in the tree
     tempWords.transition()
-      .delay(1000)
+      .delay(1500) // Delay a bit longer to allow the fade-in to complete
       .duration(1200)
       .attr("transform", d => `translate(${d.x}, ${height - 20})`) // Keep y position fixed at height-20
       .on("end", function() {
@@ -499,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tempWords.select("rect.text-bg")
           .transition()
           .duration(600)
-          .style("opacity", 0.8)
+          .style("opacity", 0.6) // Reduced opacity to make them less overwhelming
           .on("end", function() {
             // Then fade in the circles
             tempWords.select("circle")
