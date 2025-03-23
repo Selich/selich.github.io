@@ -1,36 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 body {
-	font-family: "Playfair Display", serif;
+	font-family: "Source Serif 4", Georgia, serif;
 	font-optical-sizing: auto;
-	background: #fff ;
-	color: #000 ;
-	font-weight: 400 ;
+	background: #fff;
+	color: #000;
+	font-weight: 400;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	line-height: 1.6;
+	font-size: 18px;
 }
 
-main {
-	max-width: 800px ;
-	margin: auto ;
+nav {
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+nav ul li a {
+	color: #0000ff;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Source Sans 3", sans-serif;
+	font-weight: 600;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.2em;
+}
+
+h2 {
+	font-size: 1.8em;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 5px;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+a {
+	color: #0000ff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 img {
-	max-width: 100% ;
-}
-
-header h1 {
-	text-align: center ;
-	opacity: 0.87 ;
+	max-width: 100%;
+	margin: 20px 0;
 }
 
 footer {
-	text-align: center ;
-	clear: both ;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 15px;
+	border-top: 1px solid #ddd;
+}
+
+footer a {
+	margin: 0 10px;
+}
+
+ul {
+	padding-left: 20px;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+/* Article meta information */
+.article-meta {
+	color: #555;
+	font-size: 0.9em;
+	margin-bottom: 30px;
+}
+
+/* Post list styling */
+.post-list {
+	margin-bottom: 40px;
+}
+
+.post-item {
+	margin-bottom: 30px;
+}
+
+.post-item h3 {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.post-item .article-meta {
+	margin-bottom: 10px;
+}
+
+.summary {
+	margin-top: 10px;
+}
+
+/* Code blocks */
+pre, code {
+	font-family: "JetBrains Mono", "Fira Code", monospace;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+	padding: 2px 5px;
+	font-size: 0.9em;
+}
+
+pre {
+	padding: 16px;
+	overflow: auto;
+	line-height: 1.45;
+	margin-bottom: 20px;
+}
+
+pre code {
+	background-color: transparent;
+	padding: 0;
+}
+
+blockquote {
+	margin-left: 0;
+	padding-left: 20px;
+	border-left: 4px solid #ddd;
+	color: #555;
+}
+
+/* Math rendering styles */
+.katex {
+	font-size: 1.1em !important;
+}
+
+.math-block {
+	overflow-x: auto;
+	margin: 1em 0;
+	text-align: center;
 }
 
 /* For TAGLIST.HTML */
 .taglist {
-	text-align: center ;
-	clear: both ;
+	text-align: center;
+	clear: both;
 }
 
 /* For NEXTPREV.HTML */
@@ -38,13 +170,13 @@ footer {
 	/* The container for both the previous and next articles. */
 }
 #prevart {
-	float: left ;
-	text-align: left ;
+	float: left;
+	text-align: left;
 }
 #nextart {
-	float: right ;
-	text-align: right ;
+	float: right;
+	text-align: right;
 }
-#nextart,#prevart {
-	max-width: 33% ;
+#nextart, #prevart {
+	max-width: 33%;
 }

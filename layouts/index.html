@@ -1,0 +1,20 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  
+  <h2>Latest posts</h2>
+  <div class="post-list">
+  {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+    {{ if not .Draft }}
+    <article class="post-item">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <div class="article-meta">
+        {{ .Date.Format "January 2, 2006" }} · 
+        {{ .ReadingTime }} mins
+      </div>
+    </article>
+    {{ end }}
+  {{ end }}
+  </div>
+{{ end }} 

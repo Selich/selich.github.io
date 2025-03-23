@@ -1,13 +1,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Nikola Selic - Blog</title>
-	<link>https://nikolaselic.me/categories/</link>
+	<link>http://localhost:53652/categories/</link>
 	<description>Recent content in Categories on Nikola Selic - Blog</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
     
-        <atom:link href="https://nikolaselic.me/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:53652/categories/index.xml" rel="self" type="application/rss+xml" />
 	
+	
+	<item>
+		<title>My Experience at BTW25 in Bamberg</title>
+		<link>http://localhost:53652/blog/btw25-conference-experience-bamberg/</link>
+		<pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:53652/blog/btw25-conference-experience-bamberg/</guid>
+		<description>&lt;p&gt;I had such a pleasant time at the &lt;a href=&#34;https://btw2025.uni-bamberg.de/&#34;&gt;BTW conference&lt;/a&gt; at &lt;a href=&#34;https://www.uni-bamberg.de/en/wiai/&#34;&gt;Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a&gt; in &lt;a href=&#34;https://www.bamberg.info/en/&#34;&gt;Bamberg&lt;/a&gt; this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href=&#34;https://www.cs.cit.tum.de/en/dasl/tumuchdata/&#34;&gt;TUMuchData team&lt;/a&gt; for the conference scholarship. Looking forward to the next one in &lt;a href=&#34;https://www.muenchen.de/en&#34;&gt;Munich&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href=&#34;https://fg-dbs.gi.de/&#34;&gt;Database and Information Systems Special Interest Group&lt;/a&gt; of the &lt;a href=&#34;https://gi.de/&#34;&gt;German Informatics Society (GI)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href=&#34;https://whc.unesco.org/en/list/624/&#34;&gt;UNESCO World Heritage Site&lt;/a&gt;. The iconic &lt;a href=&#34;https://en.wikipedia.org/wiki/Bamberg_Rathaus&#34;&gt;Old Town Hall&lt;/a&gt; built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>About</title>
+		<link>http://localhost:53652/about/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:53652/about/</guid>
+		<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
+&lt;p&gt;I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.&lt;/p&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;h3 id=&#34;technical-university-of-munich&#34;&gt;Technical University of Munich&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Master&amp;rsquo;s degree, Informatics&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;2021 - 2025&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;faculty-of-technical-sciences-university-of-novi-sad&#34;&gt;Faculty of Technical Sciences, University of Novi Sad&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bachelor of Engineering with Honours (BE), Data Engineering&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Curriculum&lt;/em&gt;: &lt;a href=&#34;http://www.ftn.uns.ac.rs/416590128/information-engineering&#34;&gt;Information Engineering Program&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Bachelor Thesis&lt;/em&gt;: Blockchain-based Federated Learning&lt;/p&gt;
+&lt;h2 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h2&gt;
+&lt;h3 id=&#34;technical-university-of-munich-1&#34;&gt;Technical University of Munich&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Teaching Assistant&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Dec 2024 - Present&lt;/em&gt; · 4 months&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Informatics (SQL and Java)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Student Research Assistant&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2024 - Present&lt;/em&gt; · 1 year 2 months&lt;/p&gt;
+&lt;h3 id=&#34;twinu&#34;&gt;twinu&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Apr 2023 - Jan 2024&lt;/em&gt; · 10 months&lt;br&gt;
+Munich, Bavaria, Germany · Remote&lt;/p&gt;
+&lt;h3 id=&#34;amazon-web-services-aws&#34;&gt;Amazon Web Services (AWS)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Sep 2022 - Feb 2023&lt;/em&gt; · 6 months&lt;br&gt;
+Dresden, Saxony, Germany · Hybrid&lt;br&gt;
+Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS&lt;/p&gt;
+&lt;h3 id=&#34;twinu-1&#34;&gt;twinu&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months&lt;br&gt;
+Munich, Bavaria, Germany · Remote&lt;/p&gt;
+&lt;h3 id=&#34;kitro&#34;&gt;KITRO&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Developer&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months&lt;br&gt;
+Zurich, Switzerland · Remote&lt;br&gt;
+Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision&lt;/p&gt;
+&lt;h3 id=&#34;lambdaworks&#34;&gt;LambdaWorks&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2020 - May 2020&lt;/em&gt; · 4 months&lt;br&gt;
+Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+&lt;h3 id=&#34;typhoon-hil-inc&#34;&gt;Typhoon HIL, Inc.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Machine Learning Engineer Intern&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Apr 2019 - Dec 2019&lt;/em&gt; · 9 months&lt;br&gt;
+Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Blogroll</title>
+		<link>http://localhost:53652/blogroll/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:53652/blogroll/</guid>
+		<description>&lt;h1 id=&#34;blogroll&#34;&gt;Blogroll&lt;/h1&gt;
+&lt;p&gt;A list of blogs I follow and recommend.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>CV</title>
+		<link>http://localhost:53652/cv/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:53652/cv/</guid>
+		<description>&lt;h1 id=&#34;my-cv&#34;&gt;My CV&lt;/h1&gt;
+&lt;p&gt;Professional experience and education details go here.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Recipes</title>
+		<link>http://localhost:53652/recipes/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:53652/recipes/</guid>
+		<description>&lt;h1 id=&#34;recipes&#34;&gt;Recipes&lt;/h1&gt;
+&lt;p&gt;A collection of my favorite recipes.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Services</title>
+		<link>http://localhost:53652/services/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:53652/services/</guid>
+		<description>&lt;h1 id=&#34;services&#34;&gt;Services&lt;/h1&gt;
+&lt;p&gt;Here are the professional services I offer.&lt;/p&gt;
+</description>
+	</item>
 	
 	</channel>
 </rss>
