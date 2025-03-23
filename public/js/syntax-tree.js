@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. First, show the temporary word elements (text only, no circles yet)
     tempWords.style("opacity", 0)
       .transition()
-      .duration(800)
+      .duration(500)
       .style("opacity", 1);
     
     // 2. After a short delay, animate the temporary words to their positions in the tree
@@ -377,8 +377,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Function to cycle through trees
   function cycleTree() {
-    currentTreeIndex = (currentTreeIndex + 1) % trees.length;
-    updateTree(trees[currentTreeIndex]);
+    // Fade out the entire tree
+    svg.selectAll(".nodes-group, .links-group, .temp-word")
+      .transition()
+      .duration(1000)
+      .style("opacity", 0)
+      .on("end", function() {
+        // After fade out is complete, update to the next tree
+        currentTreeIndex = (currentTreeIndex + 1) % trees.length;
+        updateTree(trees[currentTreeIndex]);
+      });
   }
   
   // Set timer to cycle trees every 8 seconds (give more time for complex animation)
