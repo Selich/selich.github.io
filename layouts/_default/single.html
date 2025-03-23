@@ -1,13 +1,5 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  
-  <div class="article-meta">
-    {{ .Date.Format "January 2, 2006" }} · 
-    {{ .ReadingTime }} mins · 
-    {{ countwords .Content }} words
-  </div>
-  
   {{ .Content }}
 {{ end }}
