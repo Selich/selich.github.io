@@ -1,5 +1,6 @@
 ---
 title: "Home"
+description: "Personal website of Nikola Selic, researcher and engineer focused on machine learning systems, NLP, graph neural networks, and decentralized learning approaches."
 menu:
   main:
     weight: 1
