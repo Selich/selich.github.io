@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       name: "S",
       language: "English",
-      text: "Hello, I'm Nikola",
+      text: "Hello, I am Nikola",
       children: [
         {
           name: "Intj",
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           name: "VP",
           children: [
-            { name: "V", children: [{ name: "'m" }] },
+            { name: "V", children: [{ name: "am" }] },
             { name: "NP", children: [{ name: "N", children: [{ name: "Nikola" }] }] }
           ]
         }
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       name: "S",
       language: "Chinese",
-      text: "你好，我叫Nikola。",
+      text: "你好，我叫Nikola",
       children: [
         {
           name: "Intj",
@@ -95,10 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: "NP", children: [{ name: "N", children: [{ name: "Nikola" }] }] }
           ]
         },
-        {
-          name: "Punc", 
-          children: [{ name: "。" }]
-        }
       ]
     },
     
@@ -231,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
     nodeGroups.append("circle")
       .attr("r", 0)
       .attr("fill", d => d.depth === 0 ? "#f0f4ff" : "#2d3748")  // Root node slightly different
-      .attr("stroke", "#63b3ed")
+      .attr("stroke", "transparent")
       .attr("stroke-width", 2);
     
     // Add labels to nodes
@@ -270,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tempWords.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .style("font-size", "24px")
+      .style("font-size", "28px")
       // .style("font-weight", "bold")
       .text(d => d.data.name)
       .style("fill", "#000");
@@ -279,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tempWords.append("circle")
       .attr("r", 40) // Increased from 30 to 40 for leaf nodes
       .attr("fill", "white")
-      .attr("stroke", "#63b3ed")
+      .attr("stroke", "transparent")
       .attr("stroke-width", 2)
       .style("opacity", 0) // Hide initially
       .lower(); // Make sure circle is behind text
@@ -339,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 3. Next, build the rest of the tree structure from leaves to root
     function animateTreeStructure() {
       // First animate the nodes, starting from deepest levels
-      let delay = 200;
+      let delay = 70;
       
       // Keep track of when all nodes are done animating
       let finalNodeDelay = delay;
