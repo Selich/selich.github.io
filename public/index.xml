@@ -1,39 +1,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Nikola Selic - Blog</title>
-	<link>http://localhost:53652/</link>
+	<link>http://localhost:53889/</link>
 	<description>Recent content in Home on Nikola Selic - Blog</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
 	<lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://localhost:53652/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:53889/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
 		<title>My Experience at BTW25 in Bamberg</title>
-		<link>http://localhost:53652/blog/btw25-conference-experience-bamberg/</link>
+		<link>http://localhost:53889/blog/btw25-conference-experience-bamberg/</link>
 		<pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:53652/blog/btw25-conference-experience-bamberg/</guid>
+		<guid>http://localhost:53889/blog/btw25-conference-experience-bamberg/</guid>
 		<description>&lt;p&gt;I had such a pleasant time at the &lt;a href=&#34;https://btw2025.uni-bamberg.de/&#34;&gt;BTW conference&lt;/a&gt; at &lt;a href=&#34;https://www.uni-bamberg.de/en/wiai/&#34;&gt;Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a&gt; in &lt;a href=&#34;https://www.bamberg.info/en/&#34;&gt;Bamberg&lt;/a&gt; this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href=&#34;https://www.cs.cit.tum.de/en/dasl/tumuchdata/&#34;&gt;TUMuchData team&lt;/a&gt; for the conference scholarship. Looking forward to the next one in &lt;a href=&#34;https://www.muenchen.de/en&#34;&gt;Munich&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53889/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53889/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53889/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href=&#34;https://fg-dbs.gi.de/&#34;&gt;Database and Information Systems Special Interest Group&lt;/a&gt; of the &lt;a href=&#34;https://gi.de/&#34;&gt;German Informatics Society (GI)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:53652/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:53889/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
 &lt;p&gt;One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href=&#34;https://whc.unesco.org/en/list/624/&#34;&gt;UNESCO World Heritage Site&lt;/a&gt;. The iconic &lt;a href=&#34;https://en.wikipedia.org/wiki/Bamberg_Rathaus&#34;&gt;Old Town Hall&lt;/a&gt; built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p&gt;
 </description>
 	</item>
 	
 	<item>
 		<title>About</title>
-		<link>http://localhost:53652/about/</link>
+		<link>http://localhost:53889/about/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:53652/about/</guid>
+		<guid>http://localhost:53889/about/</guid>
 		<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
 &lt;p&gt;I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.&lt;/p&gt;
 &lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
@@ -84,10 +84,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>Blogroll</title>
-		<link>http://localhost:53652/blogroll/</link>
+		<link>http://localhost:53889/blogroll/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:53652/blogroll/</guid>
+		<guid>http://localhost:53889/blogroll/</guid>
 		<description>&lt;h1 id=&#34;blogroll&#34;&gt;Blogroll&lt;/h1&gt;
 &lt;p&gt;A list of blogs I follow and recommend.&lt;/p&gt;
 </description>
@@ -95,10 +95,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>CV</title>
-		<link>http://localhost:53652/cv/</link>
+		<link>http://localhost:53889/cv/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:53652/cv/</guid>
+		<guid>http://localhost:53889/cv/</guid>
 		<description>&lt;h1 id=&#34;my-cv&#34;&gt;My CV&lt;/h1&gt;
 &lt;p&gt;Professional experience and education details go here.&lt;/p&gt;
 </description>
@@ -106,10 +106,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>Recipes</title>
-		<link>http://localhost:53652/recipes/</link>
+		<link>http://localhost:53889/recipes/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:53652/recipes/</guid>
+		<guid>http://localhost:53889/recipes/</guid>
 		<description>&lt;h1 id=&#34;recipes&#34;&gt;Recipes&lt;/h1&gt;
 &lt;p&gt;A collection of my favorite recipes.&lt;/p&gt;
 </description>
@@ -117,10 +117,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>Services</title>
-		<link>http://localhost:53652/services/</link>
+		<link>http://localhost:53889/services/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:53652/services/</guid>
+		<guid>http://localhost:53889/services/</guid>
 		<description>&lt;h1 id=&#34;services&#34;&gt;Services&lt;/h1&gt;
 &lt;p&gt;Here are the professional services I offer.&lt;/p&gt;
 </description>

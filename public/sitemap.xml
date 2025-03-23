@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:53652/blog/</loc>
+    <loc>http://localhost:53889/blog/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:53652/</loc>
+    <loc>http://localhost:53889/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:53652/blog/btw25-conference-experience-bamberg/</loc>
+    <loc>http://localhost:53889/blog/btw25-conference-experience-bamberg/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:53652/about/</loc>
+    <loc>http://localhost:53889/about/</loc>
   </url><url>
-    <loc>http://localhost:53652/blogroll/</loc>
+    <loc>http://localhost:53889/blogroll/</loc>
   </url><url>
-    <loc>http://localhost:53652/categories/</loc>
+    <loc>http://localhost:53889/categories/</loc>
   </url><url>
-    <loc>http://localhost:53652/cv/</loc>
+    <loc>http://localhost:53889/cv/</loc>
   </url><url>
-    <loc>http://localhost:53652/recipes/</loc>
+    <loc>http://localhost:53889/recipes/</loc>
   </url><url>
-    <loc>http://localhost:53652/services/</loc>
+    <loc>http://localhost:53889/services/</loc>
   </url><url>
-    <loc>http://localhost:53652/tags/</loc>
+    <loc>http://localhost:53889/tags/</loc>
   </url>
 </urlset>
