@@ -149,6 +149,15 @@ document.addEventListener('DOMContentLoaded', function() {
     .attr("y", height + 30)
     .attr("text-anchor", "middle")
     .attr("font-size", "16px");
+    
+  // Language indicator
+  const languageIndicator = svg.append("text")
+    .attr("class", "language-indicator")
+    .attr("x", width / 2)
+    .attr("y", height + 60)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "16px")
+    .attr("opacity", 0);
   
   // Create tree layout
   const treeLayout = d3.tree().size([width, height - 60]);
@@ -576,57 +585,70 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Function to cycle through trees
   function cycleTree() {
+    console.log("Cycling to next language, current index:", currentTreeIndex);
     // Clear any existing intervals to prevent multiple intervals
     if (cycleInterval) {
-      clearInterval(cycleInterval);
+      clearTimeout(cycleInterval);
       cycleInterval = null;
     }
     
-    // Fade out the entire tree with a slightly longer duration
+    // Start by showing which language is next
+    const nextLanguage = trees[(currentTreeIndex + 1) % trees.length].language;
+    console.log("Next language will be:", nextLanguage);
+    
+    // Fade out the entire tree
     svg.selectAll(".nodes-group, .links-group, .temp-word")
       .transition()
       .duration(1500)
       .style("opacity", 0)
       .on("end", function() {
-        // Remove old elements completely before building new tree
-        svg.selectAll(".nodes-group, .links-group, .temp-word").remove();
-        
-        // After fade out is complete, update to the next tree
-        currentTreeIndex = (currentTreeIndex + 1) % trees.length;
-        
-        // Show a brief "Loading next language" message
-        languageIndicator
-          .text(`Loading ${trees[currentTreeIndex].language}...`)
-          .transition()
-          .duration(800)
-          .attr("opacity", 1)
-          .transition()
-          .delay(1000)
-          .duration(800)
-          .attr("opacity", 0)
-          .on("end", function() {
-            // Start building the new tree
-            updateTree(trees[currentTreeIndex]);
-            
-            // Set timer for the next language (only after current animation completes)
-            cycleInterval = setTimeout(cycleTree, 9000);
-          });
+        // Only process once to avoid multiple callbacks
+        if (cycleInterval === null) {
+          console.log("Fade out complete, building new tree");
+          
+          // Remove old elements completely
+          svg.selectAll(".nodes-group, .links-group, .temp-word").remove();
+          
+          // Update to the next tree
+          currentTreeIndex = (currentTreeIndex + 1) % trees.length;
+          console.log("Current tree index is now:", currentTreeIndex);
+          
+          // Set flag to prevent multiple executions
+          cycleInterval = -1;
+          
+          // Simple direct approach - just update the tree
+          updateTree(trees[currentTreeIndex]);
+          
+          // Schedule next cycle
+          console.log("Scheduling next cycle in 15 seconds");
+          cycleInterval = setTimeout(cycleTree, 15000);
+        }
       });
   }
   
-  // Start the first cycle after initial tree is shown (wait longer for the first cycle)
-  cycleInterval = setTimeout(cycleTree, 10000);
+  // Start the first cycle after initial tree is shown
+  console.log("Initial tree (English) shown, scheduling first cycle in 15 seconds");
+  cycleInterval = setTimeout(cycleTree, 15000);
   
-  // Add safety check - if no cycling happens within 20 seconds, force a cycle
+  // Failsafe - force a cycle every 30 seconds if nothing is happening
   setInterval(function() {
+    console.log("Checking animation state...");
+    
+    // If there are no animation elements or we've been waiting too long
     const allElements = svg.selectAll(".nodes-group, .links-group, .temp-word").nodes();
-    if (allElements.length === 0) {
-      // If no elements exist, animation might be stuck
-      console.log("Animation appears stuck, restarting cycle");
+    const currentTime = new Date().getTime();
+    
+    // If no elements exist or it's been over 25 seconds since the last cycle
+    if (allElements.length === 0 || (cycleInterval !== null && cycleInterval !== -1)) {
+      console.log("Animation may be stuck, restarting cycle");
       if (cycleInterval) {
         clearTimeout(cycleInterval);
       }
-      cycleInterval = setTimeout(cycleTree, 1000);
+      cycleInterval = null;
+      cycleTree();
     }
-  }, 20000);
+  }, 30000);
+  
+  // Log to help debugging
+  console.log("Syntax tree initialized with " + trees.length + " languages");
 }); 
