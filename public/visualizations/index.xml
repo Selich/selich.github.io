@@ -1,0 +1,537 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>Nikola Selic - Personal Website</title>
+	<link>http://localhost:1313/visualizations/</link>
+	<description>Recent content in Visualizations on Nikola Selic - Personal Website</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+    
+        <atom:link href="http://localhost:1313/visualizations/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>My Experience at BTW25 in Bamberg</title>
+		<link>http://localhost:1313/blog/btw25-conference-experience-bamberg/</link>
+		<pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blog/btw25-conference-experience-bamberg/</guid>
+		<description>&lt;p&gt;I had such a pleasant time at the &lt;a href=&#34;https://btw2025.uni-bamberg.de/&#34;&gt;BTW conference&lt;/a&gt; at &lt;a href=&#34;https://www.uni-bamberg.de/en/wiai/&#34;&gt;Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a&gt; in &lt;a href=&#34;https://www.bamberg.info/en/&#34;&gt;Bamberg&lt;/a&gt; this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href=&#34;https://www.cs.cit.tum.de/en/dasl/tumuchdata/&#34;&gt;TUMuchData team&lt;/a&gt; for the conference scholarship. Looking forward to the next one in &lt;a href=&#34;https://www.muenchen.de/en&#34;&gt;Munich&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href=&#34;https://fg-dbs.gi.de/&#34;&gt;Database and Information Systems Special Interest Group&lt;/a&gt; of the &lt;a href=&#34;https://gi.de/&#34;&gt;German Informatics Society (GI)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href=&#34;https://whc.unesco.org/en/list/624/&#34;&gt;UNESCO World Heritage Site&lt;/a&gt;. The iconic &lt;a href=&#34;https://en.wikipedia.org/wiki/Bamberg_Rathaus&#34;&gt;Old Town Hall&lt;/a&gt; built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Autobiography</title>
+		<link>http://localhost:1313/autobiography/</link>
+		<pubDate>Wed, 05 Feb 2025 16:48:24 +0100</pubDate>
+		
+		<guid>http://localhost:1313/autobiography/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Exploring Linguistics: Syntax Trees Across Languages</title>
+		<link>http://localhost:1313/blog/linguistic-trees/</link>
+		<pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blog/linguistic-trees/</guid>
+		<description>&lt;h1 id=&#34;syntax-trees-visual-representation-of-language-structure&#34;&gt;Syntax Trees: Visual Representation of Language Structure&lt;/h1&gt;
+&lt;p&gt;Syntax trees are a powerful tool used by linguists to visualize the grammatical structure of sentences. They show how words combine to form phrases, and how these phrases relate to each other within a sentence.&lt;/p&gt;
+&lt;h2 id=&#34;multilingual-introduction-animation&#34;&gt;Multilingual Introduction Animation&lt;/h2&gt;
+&lt;p&gt;Below is an interactive visualization showing how a simple introduction (&amp;ldquo;Hello, I&amp;rsquo;m Nikola&amp;rdquo;) is structured across multiple languages. The animation cycles through English, Serbian, German, Chinese, and Russian, displaying both the sentence and its corresponding syntax tree.&lt;/p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/syntax-tree.css&#34;&gt;
+&lt;script src=&#34;https://d3js.org/d3.v7.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://localhost:1313/js/syntax-tree.js&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;syntax-tree-wrapper&#34;&gt;
+  
+  
+  
+  
+    &lt;h2 class=&#34;syntax-tree-title&#34;&gt;Multilingual Syntax Trees&lt;/h2&gt;
+  
+  
+  
+    &lt;p class=&#34;syntax-tree-subtitle&#34;&gt;How &amp;#39;Hello, I&amp;#39;m Nikola&amp;#39; is structured in different languages&lt;/p&gt;
+  
+  
+  &lt;div id=&#34;syntax-tree-container&#34;&gt;&lt;/div&gt;
+&lt;/div&gt; 
+&lt;h2 id=&#34;understanding-syntax-trees&#34;&gt;Understanding Syntax Trees&lt;/h2&gt;
+&lt;p&gt;Each syntax tree starts with a root node labeled &amp;ldquo;S&amp;rdquo; (sentence). From there, it branches into constituent parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NP&lt;/strong&gt;: Noun Phrase (like &amp;ldquo;I&amp;rdquo; or &amp;ldquo;Nikola&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VP&lt;/strong&gt;: Verb Phrase (like &amp;ldquo;am Nikola&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;V&lt;/strong&gt;: Verb (like &amp;ldquo;am&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;N&lt;/strong&gt;: Noun&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Pronoun&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intj&lt;/strong&gt;: Interjection (like &amp;ldquo;Hello&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The structure varies across languages, revealing fascinating differences in how languages organize information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In English, Serbian, and German, we see a similar structure with interjection, subject pronoun, and verb phrase&lt;/li&gt;
+&lt;li&gt;Chinese adds a final punctuation node&lt;/li&gt;
+&lt;li&gt;Russian often omits the copula (&amp;ldquo;am&amp;rdquo;), leading to a different structure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;implementation-details&#34;&gt;Implementation Details&lt;/h2&gt;
+&lt;p&gt;This visualization is built using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;D3.js&lt;/strong&gt;: For creating the interactive tree visualization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVG&lt;/strong&gt;: For rendering the graphics&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS Transitions&lt;/strong&gt;: For smooth animations between languages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The animation cycles automatically through each language every 5 seconds, with smooth transitions that fade out the old tree and fade in the new one.&lt;/p&gt;
+&lt;h2 id=&#34;linguistic-insights&#34;&gt;Linguistic Insights&lt;/h2&gt;
+&lt;p&gt;These syntax trees reveal important aspects of linguistic structure:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Universal patterns&lt;/strong&gt;: All languages have hierarchical phrase structures&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Language-specific differences&lt;/strong&gt;: Word order and required elements vary&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Typological relationships&lt;/strong&gt;: Languages from the same family often have similar structures&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Syntax trees help us understand both the universal principles of human language and the unique characteristics of individual languages.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Visualizations like these help us appreciate the complex but systematic nature of human language. While all languages allow us to express the same basic greeting, each does so with its own structural fingerprint.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in learning more about linguistic structures across languages, I recommend exploring resources on comparative syntax and typology.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Math Rendering Example</title>
+		<link>http://localhost:1313/blog/math-rendering-example/</link>
+		<pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blog/math-rendering-example/</guid>
+		<description>&lt;h1 id=&#34;math-rendering-example&#34;&gt;Math Rendering Example&lt;/h1&gt;
+&lt;p&gt;This post demonstrates how mathematical formulas are rendered on the blog.&lt;/p&gt;
+&lt;h2 id=&#34;inline-math&#34;&gt;Inline Math&lt;/h2&gt;
+&lt;p&gt;We can include inline math like this: $E = mc^2$ which should render nicely within the flow of text.&lt;/p&gt;
+&lt;h2 id=&#34;block-math&#34;&gt;Block Math&lt;/h2&gt;
+&lt;p&gt;For more complex formulas, we can use block math:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp;amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \
+\nabla \cdot \vec{\mathbf{E}} &amp;amp; = 4 \pi \rho \
+\nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp;amp; = \vec{\mathbf{0}} \
+\nabla \cdot \vec{\mathbf{B}} &amp;amp; = 0
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;the-knapsack-problem&#34;&gt;The Knapsack Problem&lt;/h2&gt;
+&lt;p&gt;The knapsack problem can be formulated as: given a set of $n$ items numbered from 1 up to $n$, each with a weight $w_i$ and a value $v_i$, along with a maximum weight capacity $W$, and $x_i$ being the number of copies of $i$,&lt;/p&gt;
+&lt;p&gt;$$\text{maximize} \sum_{i=1}^{n} v_i x_i$$&lt;/p&gt;
+&lt;p&gt;$$\text{subject to} \sum_{i=1}^{n} w_i x_i \leq W$$&lt;/p&gt;
+&lt;p&gt;Here we restrict the problem to $x_i \in {0, 1}$, ie we can only select one copy of each element $i$. This simple problem is known to be NP-complete, which means no algorithm solves it fast (where fast means in polynomial time).&lt;/p&gt;
+&lt;h2 id=&#34;code-example&#34;&gt;Code Example&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;solve_knapsack&lt;/span&gt;(values, weights, capacity):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(values)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Initialize the DP table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    dp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(capacity &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)] &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Fill the DP table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; w &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(capacity &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; weights[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; w:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                dp[i][w] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; max(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    values[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][w&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;weights[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][w]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                dp[i][w] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][w]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; dp[n][capacity]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This approach uses dynamic programming to solve the 0-1 knapsack problem in pseudo-polynomial time.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Jupyter-Style Code Blocks</title>
+		<link>http://localhost:1313/blog/jupyter-style-code-blocks/</link>
+		<pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blog/jupyter-style-code-blocks/</guid>
+		<description>&lt;h1 id=&#34;jupyter-style-code-blocks&#34;&gt;Jupyter-Style Code Blocks&lt;/h1&gt;
+&lt;p&gt;This post demonstrates how to use Jupyter notebook-style code blocks in your blog posts, which make your code examples look more like interactive Jupyter notebooks.&lt;/p&gt;
+&lt;h2 id=&#34;basic-python-example&#34;&gt;Basic Python Example&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a simple Python example showing both input and output:&lt;/p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;jupyter-notebook&#34;&gt;
+  
+  
+  
+  
+  
+&lt;/div&gt; 
+&lt;h2 id=&#34;data-analysis-example&#34;&gt;Data Analysis Example&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a more complex example that resembles a typical data analysis workflow:&lt;/p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;jupyter-notebook&#34;&gt;
+  
+  
+  
+  
+  
+&lt;/div&gt; 
+&lt;h2 id=&#34;visualization-example&#34;&gt;Visualization Example&lt;/h2&gt;
+&lt;p&gt;For visualizations, you would typically see a plot as output:&lt;/p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;jupyter-notebook&#34;&gt;
+  
+  
+  
+  
+  
+  
+  &lt;div class=&#34;jupyter-cell&#34;&gt;
+    &lt;div class=&#34;jupyter-output&#34; style=&#34;--cell-number: 3;&#34;&gt;
+      &lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+&lt;/div&gt; 
+&lt;p&gt;The actual output would display an image of a sine wave plot.&lt;/p&gt;
+&lt;h2 id=&#34;machine-learning-example&#34;&gt;Machine Learning Example&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of a machine learning code block:&lt;/p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;jupyter-notebook&#34;&gt;
+  
+  
+  
+  
+  
+&lt;/div&gt; 
+&lt;h2 id=&#34;interactive-elements&#34;&gt;Interactive Elements&lt;/h2&gt;
+&lt;p&gt;You can also add interactive elements to your code blocks (note that these are currently just visual placeholders):&lt;/p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;jupyter-notebook&#34;&gt;
+  
+  &lt;div class=&#34;jupyter-buttons&#34;&gt;
+    &lt;button class=&#34;jupyter-btn&#34;&gt;Run&lt;/button&gt;
+    &lt;button class=&#34;jupyter-btn&#34;&gt;Clear&lt;/button&gt;
+  &lt;/div&gt;
+  
+  
+  
+  
+  
+&lt;/div&gt; 
+&lt;h2 id=&#34;how-to-use-these-code-blocks&#34;&gt;How to Use These Code Blocks&lt;/h2&gt;
+&lt;p&gt;To use a Jupyter-style code block in your posts, use the &lt;code&gt;jupyter&lt;/code&gt; shortcode:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; jupyter lang=&amp;#34;python&amp;#34; output_content=&amp;#34;Hello, World!&amp;#34; &amp;gt;}}
+print(&amp;#34;Hello, World!&amp;#34;)
+{{&amp;lt; /jupyter &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;: Cell number (default: &amp;ldquo;1&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lang&lt;/code&gt;: Programming language (default: &amp;ldquo;python&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;input&lt;/code&gt;: Show input cell (default: true)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt;: Show output cell (default: true)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_content&lt;/code&gt;: Content to display in the output cell&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;interactive&lt;/code&gt;: Show interactive buttons (default: false)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;making-truly-interactive-code-blocks&#34;&gt;Making Truly Interactive Code Blocks&lt;/h2&gt;
+&lt;p&gt;To enable truly interactive code execution, you would need to integrate one of these solutions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Pyodide&lt;/strong&gt;: Run Python code directly in the browser using WebAssembly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JupyterLite&lt;/strong&gt;: A lightweight version of Jupyter that runs entirely in the browser&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Observable&lt;/strong&gt;: Interactive JavaScript notebooks that can be embedded&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CodePen or JSFiddle&lt;/strong&gt;: For HTML/CSS/JavaScript examples&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For a full implementation, you&amp;rsquo;d need to add JavaScript that handles code execution and displaying results. This would be a more complex enhancement requiring additional development.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;These Jupyter-style code blocks enhance the appearance of your code examples, making them more familiar to data scientists and developers who work with notebooks. While they don&amp;rsquo;t provide actual execution capabilities without additional JavaScript, they provide a clean, notebook-like presentation for your code examples.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in making them truly interactive, consider embedding JupyterLite or using Pyodide for browser-based Python execution.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Code Blocks with VSCode Theme</title>
+		<link>http://localhost:1313/blog/code-blocks-with-vscode-theme/</link>
+		<pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blog/code-blocks-with-vscode-theme/</guid>
+		<description>&lt;h1 id=&#34;beautiful-code-blocks-with-vscode-theme&#34;&gt;Beautiful Code Blocks with VSCode Theme&lt;/h1&gt;
+&lt;p&gt;This post demonstrates how to use the new VSCode-themed code blocks in your blog posts. These code blocks replicate the familiar VS Code dark theme, making your code examples more readable and visually appealing.&lt;/p&gt;
+&lt;h2 id=&#34;basic-usage&#34;&gt;Basic Usage&lt;/h2&gt;
+&lt;p&gt;To use the VSCode theme in your code blocks, use the &lt;code&gt;vscode&lt;/code&gt; shortcode:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; vscode lang=&amp;#34;javascript&amp;#34; &amp;gt;}}
+function greeting(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greeting(&amp;#39;World&amp;#39;));
+{{&amp;lt; /vscode &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will render as:&lt;/p&gt;
+
+
+
+
+&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;javascript&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;greeting&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;`Hello, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;!`&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;greeting&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;World&amp;#39;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
+&lt;h2 id=&#34;with-line-numbers&#34;&gt;With Line Numbers&lt;/h2&gt;
+&lt;p&gt;You can also enable line numbers for better readability, especially for longer code blocks:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; vscode lang=&amp;#34;python&amp;#34; lineNumbers=&amp;#34;true&amp;#34; &amp;gt;}}
+def fibonacci(n):
+    &amp;#34;&amp;#34;&amp;#34;Generate Fibonacci sequence up to n&amp;#34;&amp;#34;&amp;#34;
+    a, b = 0, 1
+    while a &amp;lt; n:
+        yield a
+        a, b = b, a + b
+
+# Print the first 10 Fibonacci numbers
+for num in fibonacci(100):
+    print(num)
+{{&amp;lt; /vscode &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will render as:&lt;/p&gt;
+
+
+
+
+&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;python&#34;&gt;&lt;span class=&#34;linenumber&#34;&gt;1&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;2&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(n):&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;3&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Generate Fibonacci sequence up to n&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;4&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    a, b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;5&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; n:&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;6&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;yield&lt;/span&gt; a&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;7&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        a, b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b, a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;8&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;9&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Print the first 10 Fibonacci numbers&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;10&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; fibonacci(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;11&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(num)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;12&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
+&lt;h2 id=&#34;supported-languages&#34;&gt;Supported Languages&lt;/h2&gt;
+&lt;p&gt;The VSCode theme currently supports syntax highlighting for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Go&lt;/li&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here&amp;rsquo;s an example with CSS:&lt;/p&gt;
+
+
+
+
+&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;css&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;container&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;flex&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;flex-direction&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;column&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;max-width&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;800&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;margin&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;card&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;background-color&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;#f8f8f8&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;border-radius&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;padding&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;margin-bottom&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; rgba(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Hover effect */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;card&lt;/span&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;hover&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;transform&lt;/span&gt;: translateY(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; rgba(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;transition&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ease&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
+&lt;h2 id=&#34;go-example&#34;&gt;Go Example&lt;/h2&gt;
+&lt;p&gt;And here&amp;rsquo;s a Go example with line numbers:&lt;/p&gt;
+
+
+
+
+&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;go&#34;&gt;&lt;span class=&#34;linenumber&#34;&gt;1&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;2&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;3&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;4&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;5&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;6&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;time&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;7&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;8&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;9&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;10&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Print current time&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;11&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The time is now:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Now&lt;/span&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;12&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;13&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Create a channel&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;14&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; make(&lt;span style=&#34;color:#66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;15&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;16&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Start a goroutine&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;17&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;18&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Sleep&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Second&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;19&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;ch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Goroutine completed!&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;20&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;21&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;22&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Wait for the goroutine to finish&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;23&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;msg&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ch&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;24&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;msg&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;25&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;26&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
+&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;
+&lt;p&gt;The VSCode theme styling is achieved through CSS variables that match VS Code&amp;rsquo;s default dark theme colors. These variables define colors for different code elements like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keywords&lt;/li&gt;
+&lt;li&gt;Functions&lt;/li&gt;
+&lt;li&gt;Comments&lt;/li&gt;
+&lt;li&gt;Strings&lt;/li&gt;
+&lt;li&gt;Numbers&lt;/li&gt;
+&lt;li&gt;Class names&lt;/li&gt;
+&lt;li&gt;Variables&lt;/li&gt;
+&lt;li&gt;Properties&lt;/li&gt;
+&lt;li&gt;Operators and punctuation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The syntax highlighting is powered by Hugo&amp;rsquo;s built-in syntax highlighter, while the VSCode-like appearance is provided by our custom CSS.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Using the VSCode theme for your code blocks makes your technical blog posts look more professional and improves readability. Feel free to use this in your own posts!&lt;/p&gt;
+&lt;p&gt;Remember to set &lt;code&gt;draft: false&lt;/code&gt; when you&amp;rsquo;re ready to publish this post.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>New Blog Post</title>
+		<link>http://localhost:1313/blog/new-blog-post/</link>
+		<pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blog/new-blog-post/</guid>
+		<description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;This is a placeholder for a new blog post. Feel free to edit this with your own content.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;To edit this post:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the file at &lt;code&gt;content/blog/new-blog-post.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Replace this content with your own&lt;/li&gt;
+&lt;li&gt;Update the front matter (title, date, description, etc.)&lt;/li&gt;
+&lt;li&gt;Remove the draft status when ready to publish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Happy blogging!&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>About</title>
+		<link>http://localhost:1313/about/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/about/</guid>
+		<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
+&lt;p&gt;I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.&lt;/p&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;h3 id=&#34;technical-university-of-munich&#34;&gt;Technical University of Munich&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Master&amp;rsquo;s degree, Informatics&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;2021 - 2025&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;faculty-of-technical-sciences-university-of-novi-sad&#34;&gt;Faculty of Technical Sciences, University of Novi Sad&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bachelor of Engineering with Honours (BE), Data Engineering&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Curriculum&lt;/em&gt;: &lt;a href=&#34;http://www.ftn.uns.ac.rs/416590128/information-engineering&#34;&gt;Information Engineering Program&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Bachelor Thesis&lt;/em&gt;: Blockchain-based Federated Learning&lt;/p&gt;
+&lt;h2 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h2&gt;
+&lt;h3 id=&#34;technical-university-of-munich-1&#34;&gt;Technical University of Munich&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Teaching Assistant&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Dec 2024 - Present&lt;/em&gt; · 4 months&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Informatics (SQL and Java)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Student Research Assistant&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2024 - Present&lt;/em&gt; · 1 year 2 months&lt;/p&gt;
+&lt;h3 id=&#34;twinu&#34;&gt;twinu&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Apr 2023 - Jan 2024&lt;/em&gt; · 10 months&lt;br&gt;
+Munich, Bavaria, Germany · Remote&lt;/p&gt;
+&lt;h3 id=&#34;amazon-web-services-aws&#34;&gt;Amazon Web Services (AWS)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Sep 2022 - Feb 2023&lt;/em&gt; · 6 months&lt;br&gt;
+Dresden, Saxony, Germany · Hybrid&lt;br&gt;
+Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS&lt;/p&gt;
+&lt;h3 id=&#34;twinu-1&#34;&gt;twinu&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months&lt;br&gt;
+Munich, Bavaria, Germany · Remote&lt;/p&gt;
+&lt;h3 id=&#34;kitro&#34;&gt;KITRO&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Developer&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months&lt;br&gt;
+Zurich, Switzerland · Remote&lt;br&gt;
+Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision&lt;/p&gt;
+&lt;h3 id=&#34;lambdaworks&#34;&gt;LambdaWorks&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Feb 2020 - May 2020&lt;/em&gt; · 4 months&lt;br&gt;
+Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+&lt;h3 id=&#34;typhoon-hil-inc&#34;&gt;Typhoon HIL, Inc.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Machine Learning Engineer Intern&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Apr 2019 - Dec 2019&lt;/em&gt; · 9 months&lt;br&gt;
+Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Blogroll</title>
+		<link>http://localhost:1313/blogroll/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/blogroll/</guid>
+		<description>&lt;h1 id=&#34;blogroll&#34;&gt;Blogroll&lt;/h1&gt;
+&lt;p&gt;A list of blogs I follow and recommend.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>CV</title>
+		<link>http://localhost:1313/cv/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/cv/</guid>
+		<description>&lt;h1 id=&#34;my-cv&#34;&gt;My CV&lt;/h1&gt;
+&lt;p&gt;Professional experience and education details go here.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Multilingual Syntax Tree</title>
+		<link>http://localhost:1313/visualizations/syntax-tree/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/visualizations/syntax-tree/</guid>
+		<description>&lt;p&gt;An interactive visualization of syntax trees in multiple languages. This visualization demonstrates the grammatical structure of the phrase &amp;ldquo;Hello, I am Nikola&amp;rdquo; in five different languages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;English: &amp;ldquo;Hello, I am Nikola&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Serbian: &amp;ldquo;Zdravo, ja sam Nikola&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;German: &amp;ldquo;Hallo, ich bin Nikola&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Chinese: &amp;ldquo;你好，我叫Nikola&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Russian: &amp;ldquo;Привет, я Никола&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The visualization automatically cycles through each language, showing how the same greeting is structured grammatically across different languages. Each node in the tree represents a grammatical component:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;S: Sentence&lt;/li&gt;
+&lt;li&gt;NP: Noun Phrase&lt;/li&gt;
+&lt;li&gt;VP: Verb Phrase&lt;/li&gt;
+&lt;li&gt;N: Noun&lt;/li&gt;
+&lt;li&gt;V: Verb&lt;/li&gt;
+&lt;li&gt;Pro: Pronoun&lt;/li&gt;
+&lt;li&gt;Intj: Interjection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Click on any node to learn more about its grammatical function.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Recipes</title>
+		<link>http://localhost:1313/recipes/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/recipes/</guid>
+		<description>&lt;h1 id=&#34;recipes&#34;&gt;Recipes&lt;/h1&gt;
+&lt;p&gt;A collection of my favorite recipes.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Services</title>
+		<link>http://localhost:1313/services/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1313/services/</guid>
+		<description>&lt;h1 id=&#34;services&#34;&gt;Services&lt;/h1&gt;
+&lt;p&gt;Here are the professional services I offer.&lt;/p&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>

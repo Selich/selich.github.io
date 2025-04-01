@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-	<title>Tags | Nikola Selic - Personal Website</title>
+	<title>Multilingual Syntax Tree | Nikola Selic - Personal Website</title>
 	<link rel="canonical" href="http://localhost:1313/">
 	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Personal Website RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="/favicon.ico">
-	<meta name="description" content="">
+	<meta name="description" content="An interactive visualization of syntax trees in multiple languages. This visualization demonstrates the grammatical structure of the phrase &ldquo;Hello, I am Nikola&rdquo; in five different languages:
+
+English: &ldquo;Hello, I am Nikola&rdquo;
+Serbian: &ldquo;Zdravo, ja sam Nikola&rdquo;
+German: &ldquo;Hallo, ich bin Nikola&rdquo;
+Chinese: &ldquo;你好，我叫Nikola&rdquo;
+Russian: &ldquo;Привет, я Никола&rdquo;
+
+The visualization automatically cycles through each language, showing how the same greeting is structured grammatically across different languages. Each node in the tree represents a grammatical component:">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
@@ -71,8 +79,8 @@
 	<li><a href="/about/"><span class=menuname>About</span></a></li>
 	<li><a href="/blog/"><span class=menuname>Blog</span></a></li>
 	<li><a href="/services/"><span class=menuname>Services</span></a></li>
-	<li><a class="active" href="/tags/"><span class=menuname>Tags</span></a></li>
-	<li><a href="/visualizations/"><span class=menuname>Visualizations</span></a></li>
+	<li><a href="/tags/"><span class=menuname>Tags</span></a></li>
+	<li><a class="active" href="/visualizations/"><span class=menuname>Visualizations</span></a></li>
         
     </ul>
 </nav>
@@ -81,70 +89,52 @@
 <main>
 <article>
 
-<h1>Tags</h1>
-<p>Browse all posts by tag:</p>
+<div class="visualization-single">
+    <h1>Multilingual Syntax Tree</h1>
+    
+    <div class="visualization-description">
+        <p>An interactive visualization of syntax trees in multiple languages. This visualization demonstrates the grammatical structure of the phrase &ldquo;Hello, I am Nikola&rdquo; in five different languages:</p>
+<ul>
+<li>English: &ldquo;Hello, I am Nikola&rdquo;</li>
+<li>Serbian: &ldquo;Zdravo, ja sam Nikola&rdquo;</li>
+<li>German: &ldquo;Hallo, ich bin Nikola&rdquo;</li>
+<li>Chinese: &ldquo;你好，我叫Nikola&rdquo;</li>
+<li>Russian: &ldquo;Привет, я Никола&rdquo;</li>
+</ul>
+<p>The visualization automatically cycles through each language, showing how the same greeting is structured grammatically across different languages. Each node in the tree represents a grammatical component:</p>
+<ul>
+<li>S: Sentence</li>
+<li>NP: Noun Phrase</li>
+<li>VP: Verb Phrase</li>
+<li>N: Noun</li>
+<li>V: Verb</li>
+<li>Pro: Pronoun</li>
+<li>Intj: Interjection</li>
+</ul>
+<p>Click on any node to learn more about its grammatical function.</p>
 
-<div class="tags-list">
-  
-    <div class="tag-item">
-      <a href="/tags/academic/" class="tag-link">
-        <span class="tag-name">#Academic</span>
-        <span class="tag-count">1</span>
-      </a>
     </div>
-  
-    <div class="tag-item">
-      <a href="/tags/btw25/" class="tag-link">
-        <span class="tag-name">#Btw25</span>
-        <span class="tag-count">1</span>
-      </a>
+
+    <div class="visualization-container">
+        <div id="visualization">
+            
+        </div>
+        <div id="languageIndicator"></div>
     </div>
-  
-    <div class="tag-item">
-      <a href="/tags/conference/" class="tag-link">
-        <span class="tag-name">#Conference</span>
-        <span class="tag-count">1</span>
-      </a>
-    </div>
-  
-    <div class="tag-item">
-      <a href="/tags/d3js/" class="tag-link">
-        <span class="tag-name">#D3js</span>
-        <span class="tag-count">1</span>
-      </a>
-    </div>
-  
-    <div class="tag-item">
-      <a href="/tags/database/" class="tag-link">
-        <span class="tag-name">#Database</span>
-        <span class="tag-count">1</span>
-      </a>
-    </div>
-  
-    <div class="tag-item">
-      <a href="/tags/linguistics/" class="tag-link">
-        <span class="tag-name">#Linguistics</span>
-        <span class="tag-count">1</span>
-      </a>
-    </div>
-  
-    <div class="tag-item">
-      <a href="/tags/programming/" class="tag-link">
-        <span class="tag-name">#Programming</span>
-        <span class="tag-count">1</span>
-      </a>
-    </div>
-  
-    <div class="tag-item">
-      <a href="/tags/visualization/" class="tag-link">
-        <span class="tag-name">#Visualization</span>
-        <span class="tag-count">1</span>
-      </a>
-    </div>
-  
+
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    
+    
+    <script src="/js/syntax-tree.js"></script>
+    
 </div>
 
-
+<div id="nextprev">
+<a href="/recipes/"><div id="prevart">Previous:<br>Recipes</div></a>
+<a href="/cv/"><div id="nextart">Next:<br>CV</div></a>
+</div>
 
 </article>
 </main>
