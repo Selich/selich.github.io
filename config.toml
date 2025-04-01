@@ -1,5 +1,5 @@
 title = "Nikola Selic - Personal Website"
-baseURL = 'https://nikolaselic.com'
+baseURL = 'https://nikolaselic.me'
 languageCode = 'en-us'
 
 [params]
