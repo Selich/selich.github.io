@@ -20,12 +20,13 @@ I write this blog to share my thoughts and experiences with the tech community. 
 ## Education
 
 ### Technical University of Munich
-**Master's degree, Informatics**  
+**Master's degree, Computer Science**  
+*Curriculum*: [Major: Machine Learning Minor: Databases, Security/Privacy](https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/)  
 *2021 - 2025*
 
 ### Faculty of Technical Sciences, University of Novi Sad
 **Bachelor of Engineering with Honours (BE), Data Engineering**  
-*Curriculum*: [Information Engineering Program](http://www.ftn.uns.ac.rs/416590128/information-engineering)  
+*Curriculum*: [Information Engineering Program](https://stari.ftn.uns.ac.rs/n515410363/information-engineering)  
 *Bachelor Thesis*: Blockchain-based Federated Learning
 
 ## Work Experience
