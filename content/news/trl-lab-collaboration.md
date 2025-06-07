@@ -1,6 +1,6 @@
 ---
 title: "Started Collaboration with TRL Lab on LLM Research"
-date: 2024-04-01
+date: 2025-04-01
 description: "Excited to announce my collaboration with the TRL Lab at University of Amsterdam on LLM research!"
 tags: ["collaboration", "research", "TRL Lab", "LLM", "embeddings", "NL2SQL", "foundation models"]
 ---
