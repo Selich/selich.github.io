@@ -120,16 +120,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   ];
 
-  // Set up dimensions
-  const margin = {top: 30, right: 10, bottom: 100, left: 10};
-  const width = 800 - margin.left - margin.right;
-  const height = 400 - margin.top - margin.bottom;
+  // Set up responsive dimensions
+  function getResponsiveDimensions() {
+    const container = document.getElementById('syntax-tree-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    
+    const margin = {top: 30, right: 10, bottom: 100, left: 10};
+    const width = containerWidth - margin.left - margin.right;
+    const height = containerHeight - margin.top - margin.bottom;
+    
+    return { margin, width, height };
+  }
   
-  // Create SVG container
-  const svg = d3.select("#syntax-tree-container")
+  let { margin, width, height } = getResponsiveDimensions();
+  
+  // Create SVG container with responsive viewBox
+  const container = d3.select("#syntax-tree-container");
+  const svg = container
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr("preserveAspectRatio", "xMidYMid meet")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
   
@@ -160,8 +173,39 @@ document.addEventListener('DOMContentLoaded', function() {
     .attr("opacity", 0);
   
   // Create tree layout
-  const treeLayout = d3.tree().size([width, height - 60]);
-
+  let treeLayout = d3.tree().size([width, height - 60]);
+  
+  // Resize handler for responsive behavior
+  function handleResize() {
+    const newDimensions = getResponsiveDimensions();
+    margin = newDimensions.margin;
+    width = newDimensions.width;
+    height = newDimensions.height;
+    
+    // Update SVG viewBox
+    container.select("svg")
+      .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`);
+    
+    // Update tree layout
+    treeLayout = d3.tree().size([width, height - 60]);
+    
+    // Update text positions
+    title.attr("x", width / 2);
+    sentenceText.attr("x", width / 2).attr("y", height + 30);
+    languageIndicator.attr("x", width / 2).attr("y", height + 60);
+    
+    // If there's a current tree displayed, redraw it
+    if (currentTreeIndex >= 0 && currentTreeIndex < trees.length) {
+      updateTree(trees[currentTreeIndex]);
+    }
+  }
+  
+  // Add resize event listener
+  window.addEventListener('resize', handleResize);
+  
+  // Track current tree for resize updates
+  let currentTreeIndex = 0;
+  
   // Function to extract leaf nodes and their text from the data
   function extractLeafNodes(node, result = []) {
     if (!node.children) {
@@ -577,8 +621,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Initialize with the first tree
-  let currentTreeIndex = 0;
-  let cycleInterval = null; // Store interval reference
+  currentTreeIndex = 0;
+  let cycleInterval = null;
   
   // Start with the first tree
   updateTree(trees[currentTreeIndex]);

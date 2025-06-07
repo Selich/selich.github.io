@@ -1,6 +1,6 @@
 #syntax-tree-container {
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin: 0px auto;
   border-radius: 8px;
   background-color: white;
@@ -11,8 +11,14 @@
   border: none !important;
 }
 
+#syntax-tree-container svg {
+  width: 100%;
+  height: 100%;
+}
+
 .syntax-tree-wrapper {
   width: 100%;
+  max-width: 1200px;
   margin: 30px auto;
   display: block !important;
   visibility: visible !important;
@@ -205,5 +211,42 @@
   
   .link:hover {
     stroke: #444;
+  }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  #syntax-tree-container {
+    height: 350px;
+  }
+  
+  .syntax-tree-wrapper {
+    padding: 15px;
+  }
+  
+  .syntax-tree-title {
+    font-size: 20px;
+  }
+  
+  .syntax-tree-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #syntax-tree-container {
+    height: 300px;
+  }
+  
+  .syntax-tree-wrapper {
+    padding: 10px;
+  }
+  
+  .syntax-tree-title {
+    font-size: 18px;
+  }
+  
+  .syntax-tree-subtitle {
+    font-size: 12px;
   }
 } 
