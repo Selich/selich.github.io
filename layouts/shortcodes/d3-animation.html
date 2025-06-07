@@ -1,0 +1,102 @@
+{{/* layouts/shortcodes/d3-animation.html */}}
+{{ $scriptName := .Get "script" }}
+{{ $title := .Get "title" | default "D3.js Animation" }}
+{{ $vbWidth := .Get "viewBoxWidth" | default 750 }}
+{{ $vbHeight := .Get "viewBoxHeight" | default 400 }}
+{{ $replayId := printf "replay-%s-%d" (replace $scriptName ".js" "") .Ordinal }}
+
+{{ $scriptPath := printf "/js/animations/%s" $scriptName }}
+
+{{/* Convert snake_case script name to PascalCase function name */}}
+{{ $baseName := replace $scriptName ".js" "" }}
+{{ $pascalBase := $baseName | replaceRE "_" " " | strings.Title | replaceRE " " "" }}
+{{ $funcName := printf "render%s" $pascalBase }}
+{{/* Let's check if the last part is already "Animation" */}}
+{{ if not (strings.HasSuffix $pascalBase "Animation") }}
+  {{ $funcName = printf "render%sAnimation" $pascalBase }}
+{{ end }}
+
+
+{{ if not $scriptName }}
+  {{ errorf "The 'script' parameter is missing for the d3-animation shortcode in %s" .Position }}
+{{ else }}
+  {{ $id := printf "d3-animation-%s-%d" $baseName .Ordinal }}
+
+  <div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+    <h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">{{ $title }}</h4>
+    <svg id="{{ $id }}" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 {{ $vbWidth }} {{ $vbHeight }}" preserveAspectRatio="xMidYMid meet">
+        <!-- SVG will be rendered here by D3 -->
+        <noscript>JavaScript and SVG support are required to view this D3.js animation.</noscript>
+    </svg>
+    <button id="{{ $replayId }}" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation</button>
+  </div>
+
+
+  <!-- Load D3.js library - Consider loading this globally in your base template -->
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+
+  <!-- Load Anime.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  <!-- Load the specific animation script -->
+  <script src="{{ $scriptPath }}" defer></script>
+
+  <!-- Trigger the animation using Intersection Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const containerSelector = "#{{ $id }}";
+      const replayButtonSelector = "#{{ $replayId }}";
+      const functionName = "{{ $funcName }}";
+      const scriptPath = "{{ $scriptPath }}";
+      const svgElement = document.querySelector(containerSelector);
+
+      if (!svgElement) {
+        console.error(`D3 container ${containerSelector} not found.`);
+        return;
+      }
+
+      const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+
+      if (!animationWrapper) {
+          console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+          return;
+      }
+
+      const observerOptions = {
+        root: null, // relative to document viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Target is visible, run the animation
+            console.log(`Animation ${functionName} intersecting, attempting to run.`);
+            if (typeof window[functionName] === 'function') {
+              try {
+                // Pass both container and replay button IDs to the function
+                window[functionName](containerSelector, replayButtonSelector);
+              } catch (error) {
+                console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+                const container = document.querySelector(containerSelector);
+                if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}</text>`;
+              }
+            } else {
+              console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+              const container = document.querySelector(containerSelector);
+              if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.</text>`;
+            }
+            // Stop observing the element after animation runs once
+            observer.unobserve(entry.target);
+            console.log(`Observer stopped for ${functionName}`);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      observer.observe(animationWrapper);
+
+    });
+  </script>
+{{ end }} 

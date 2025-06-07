@@ -11,6 +11,8 @@ location:
 
 I had such a pleasant time at the [BTW conference](https://btw2025.uni-bamberg.de/) at [Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)](https://www.uni-bamberg.de/en/wiai/) in [Bamberg](https://www.bamberg.info/en/) this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the [TUMuchData team](https://www.cs.cit.tum.de/en/dasl/tumuchdata/) for the conference scholarship. Looking forward to the next one in [Munich](https://www.muenchen.de/en).
 
+{{/* {{< d3-animation script="movingCircle.js" >}} */}}
+
 <!-- 
 Note: Please save the shared images to the following paths to match the post:
 1. Coffee bike image -> static/images/btw25/coffee-bike.jpg

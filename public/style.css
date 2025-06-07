@@ -781,3 +781,32 @@ blockquote {
     background: rgba(255, 255, 255, 0.05);
   }
 }
+
+/* Mermaid Diagram Styling */
+.mermaid-diagram-wrapper {
+  margin: 2em auto; /* Center the diagram block with some vertical space */
+  text-align: center; /* Center the SVG within the wrapper */
+  overflow-x: auto; /* Add horizontal scroll for very wide diagrams on small screens */
+}
+
+.mermaid-diagram-wrapper svg {
+  max-width: 100%; /* Ensure SVG scales down */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Better layout control */
+  margin: 0 auto; /* Center SVG if wrapper is wider */
+}
+
+/* Optional: Style for sequence diagrams which can get wide */
+.mermaid-diagram-wrapper .sequenceDiagram text {
+    /* Adjust font size if needed for sequence diagrams */
+    /* font-size: 12px; */ 
+}
+
+/* Ensure mermaid background matches site (if needed) */
+[data-theme="light"] .mermaid-diagram-wrapper svg {
+    /* background-color: #ffffff; /* Or your light theme background */
+}
+
+[data-theme="dark"] .mermaid-diagram-wrapper svg {
+     /* background-color: #282c34; /* Or your dark theme background */
+}

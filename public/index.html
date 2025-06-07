@@ -73,7 +73,6 @@
 	<li><a href="/blog/"><span class=menuname>Blog</span></a></li>
 	<li><a href="/services/"><span class=menuname>Services</span></a></li>
 	<li><a href="/tags/"><span class=menuname>Tags</span></a></li>
-	<li><a href="/visualizations/"><span class=menuname>Visualizations</span></a></li>
         
     </ul>
 </nav>
@@ -101,25 +100,59 @@
 <p>If you want to hire me here you have my <a href="/cv">CV</a>.</p>
 
   
+  <h2>Latest news</h2>
+  <div class="post-list">
+  
+    
+    <article class="post-item">
+      <div class="article-content">
+        <p>Excited to announce that I started working as a <strong>Teaching Assistant</strong> for Introduction to Informatics (SQL and Java) at Technical University of Munich!</p>
+
+      </div>
+      <div class="article-meta">
+        December 1, 2024
+      </div>
+    </article>
+    
+  
+    
+    <article class="post-item">
+      <div class="article-content">
+        <p>Excited to announce that I&rsquo;ve started working with the <strong>TRL Lab</strong> at University of Amsterdam on LLM research!</p>
+<p>I&rsquo;m working as a research student with <a href="https://www.madelonhulsebos.com">Prof. Madelon Hulsebos</a> and <a href="https://www.daniel-gomm.com">Daniel Gomm</a> on generative AI and information retrieval for structured data, exploring areas like NL2SQL and foundation model applications. Looking forward to visiting Amsterdam during this collaboration and contributing to the lab&rsquo;s research on advancing how we work with data and AI systems.</p>
+<p>You can find more about the lab and team at <a href="https://trl-lab.github.io/people/">TRL Lab People</a>.</p>
+
+      </div>
+      <div class="article-meta">
+        April 1, 2024
+      </div>
+    </article>
+    
+  
+  </div>
+  <p><a href="/news/">See more</a></p>
+  
   <h2>Latest posts</h2>
   <div class="post-list">
+  
+    
+    <article class="post-item">
+      <h3><a href="/blog/ai_dreams_up_databases_crush4sql/">AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos?</a></h3>
+      <div class="article-meta">
+        April 14, 2025 · 
+        11 mins
+      </div>
+    </article>
+    
   
     
     <article class="post-item">
       <h3><a href="/blog/btw25-conference-experience-bamberg/">My Experience at BTW25 in Bamberg</a></h3>
       <div class="article-meta">
         March 10, 2025 · 
-        1 mins
+        2 mins
       </div>
     </article>
-    
-  
-    
-  
-    
-  
-    
-  
     
   
   </div>
@@ -171,6 +204,35 @@
       });
     }
   });
+</script>
+
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  
+  
+  const rootStyle = getComputedStyle(document.documentElement);
+
+  mermaid.initialize({ 
+      startOnLoad: true, 
+      theme: 'base', 
+      themeVariables: {
+        
+        primaryColor: rootStyle.getPropertyValue('--accent-color').trim() || '#f0f7ff',
+        primaryTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        primaryBorderColor: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        lineColor: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        secondaryColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        tertiaryColor: rootStyle.getPropertyValue('--background-color').trim() || '#fff',
+        
+        nodeBorder: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        mainBkg: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        actorBorder: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        actorTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        labelBoxBkgColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa', 
+        fontSize: '14px' 
+      }
+  }); 
 </script>
 </body>
 </html>

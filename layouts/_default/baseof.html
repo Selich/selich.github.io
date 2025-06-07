@@ -117,5 +117,34 @@
     }
   });
 </script>
+
+<!-- Mermaid.js Import and Initialization (Corrected URL + Theming) -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  
+  // Get computed style for root element to access CSS variables
+  const rootStyle = getComputedStyle(document.documentElement);
+
+  mermaid.initialize({ 
+      startOnLoad: true, 
+      theme: 'base', // Use base theme and apply variables for better control
+      themeVariables: {
+        // Primary colors from your CSS vars (light mode defaults)
+        primaryColor: rootStyle.getPropertyValue('--accent-color').trim() || '#f0f7ff',
+        primaryTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        primaryBorderColor: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        lineColor: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        secondaryColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        tertiaryColor: rootStyle.getPropertyValue('--background-color').trim() || '#fff',
+        // Specific overrides if needed
+        nodeBorder: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        mainBkg: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        actorBorder: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        actorTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        labelBoxBkgColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa', // Background for labels
+        fontSize: '14px' // Slightly larger font size
+      }
+  }); 
+</script>
 </body>
 </html>

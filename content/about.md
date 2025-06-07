@@ -31,43 +31,72 @@ I write this blog to share my thoughts and experiences with the tech community. 
 
 ## Work Experience
 
-### Technical University of Munich
-**Teaching Assistant**  
-*Dec 2024 - Present* · 4 months  
-- Introduction to Informatics (SQL and Java)
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" alt="Technical University of Munich Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Teaching Assistant</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Technical University of Munich</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Dec 2024 - Present · 4 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em;">Introduction to Informatics (SQL and Java)</p>
+  </div>
+</div>
 
-**Student Research Assistant**  
-*Feb 2024 - Present* · 1 year 2 months
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" alt="Technical University of Munich Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Student Research Assistant</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Technical University of Munich</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Feb 2024 - Present · 1 year 2 months</p>
+  </div>
+</div>
 
 ### twinu
-**Core Developer**  
-*Apr 2023 - Jan 2024* · 10 months  
+**Core Developer**
+*Apr 2023 - Jan 2024* · 10 months
 Munich, Bavaria, Germany · Remote
 
-### Amazon Web Services (AWS)
-**Software Engineer Intern**  
-*Sep 2022 - Feb 2023* · 6 months  
-Dresden, Saxony, Germany · Hybrid  
-Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services (AWS) Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Software Engineer Intern</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Amazon Web Services (AWS)</strong> · Internship</p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Sep 2022 - Feb 2023 · 6 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Dresden, Saxony, Germany · Hybrid</p>
+    <p style="margin-top: 0; margin-bottom: 0; font-size: 0.9em;">Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS</p>
+  </div>
+</div>
 
 ### twinu
-**Core Developer**  
-*Feb 2022 - Sep 2022* · 8 months  
+**Core Developer**
+*Feb 2022 - Sep 2022* · 8 months
 Munich, Bavaria, Germany · Remote
 
-### KITRO
-**Software Developer**  
-*Feb 2022 - Sep 2022* · 8 months  
-Zurich, Switzerland · Remote  
-Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://assets-global.website-files.com/62556985827691ddcbe8f689/62556dc71fd98539f45170f3_KITRO_logo_black.svg" alt="KITRO Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Software Developer</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>KITRO</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Feb 2022 - Sep 2022 · 8 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Zurich, Switzerland · Remote</p>
+    <p style="margin-top: 0; margin-bottom: 0; font-size: 0.9em;">Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision</p>
+  </div>
+</div>
 
 ### LambdaWorks
-**Software Engineer Intern**  
-*Feb 2020 - May 2020* · 4 months  
+**Software Engineer Intern**
+*Feb 2020 - May 2020* · 4 months
 Novi Sad, Vojvodina, Serbia
 
 ### Typhoon HIL, Inc.
-**Machine Learning Engineer Intern**  
-*Apr 2019 - Dec 2019* · 9 months  
+**Machine Learning Engineer Intern**
+*Apr 2019 - Dec 2019* · 9 months
 Novi Sad, Vojvodina, Serbia
 

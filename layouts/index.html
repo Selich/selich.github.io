@@ -3,6 +3,23 @@
 {{ define "main" }}
   {{ .Content }}
   
+  <h2>Latest news</h2>
+  <div class="post-list">
+  {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+    {{ if not .Draft }}
+    <article class="post-item">
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+      <div class="article-meta">
+        {{ .Date.Format "January 2, 2006" }}
+      </div>
+    </article>
+    {{ end }}
+  {{ end }}
+  </div>
+  <p><a href="/news/">See more</a></p>
+  
   <h2>Latest posts</h2>
   <div class="post-list">
   {{ range first 5 (where .Site.RegularPages "Section" "blog") }}

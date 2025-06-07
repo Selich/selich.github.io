@@ -1,509 +1,385 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-	<title>Nikola Selic - Personal Website</title>
-	<link>http://localhost:1313/categories/</link>
-	<description>Recent content in Categories on Nikola Selic - Personal Website</description>
-	<generator>Hugo -- gohugo.io</generator>
-	<language>en-us</language>
-    
-        <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-	
-	
-	<item>
-		<title>My Experience at BTW25 in Bamberg</title>
-		<link>http://localhost:1313/blog/btw25-conference-experience-bamberg/</link>
-		<pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blog/btw25-conference-experience-bamberg/</guid>
-		<description>&lt;p&gt;I had such a pleasant time at the &lt;a href=&#34;https://btw2025.uni-bamberg.de/&#34;&gt;BTW conference&lt;/a&gt; at &lt;a href=&#34;https://www.uni-bamberg.de/en/wiai/&#34;&gt;Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a&gt; in &lt;a href=&#34;https://www.bamberg.info/en/&#34;&gt;Bamberg&lt;/a&gt; this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href=&#34;https://www.cs.cit.tum.de/en/dasl/tumuchdata/&#34;&gt;TUMuchData team&lt;/a&gt; for the conference scholarship. Looking forward to the next one in &lt;a href=&#34;https://www.muenchen.de/en&#34;&gt;Munich&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href=&#34;https://fg-dbs.gi.de/&#34;&gt;Database and Information Systems Special Interest Group&lt;/a&gt; of the &lt;a href=&#34;https://gi.de/&#34;&gt;German Informatics Society (GI)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
-&lt;p&gt;One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href=&#34;https://whc.unesco.org/en/list/624/&#34;&gt;UNESCO World Heritage Site&lt;/a&gt;. The iconic &lt;a href=&#34;https://en.wikipedia.org/wiki/Bamberg_Rathaus&#34;&gt;Old Town Hall&lt;/a&gt; built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Autobiography</title>
-		<link>http://localhost:1313/autobiography/</link>
-		<pubDate>Wed, 05 Feb 2025 16:48:24 +0100</pubDate>
-		
-		<guid>http://localhost:1313/autobiography/</guid>
-		<description></description>
-	</item>
-	
-	<item>
-		<title>Exploring Linguistics: Syntax Trees Across Languages</title>
-		<link>http://localhost:1313/blog/linguistic-trees/</link>
-		<pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blog/linguistic-trees/</guid>
-		<description>&lt;h1 id=&#34;syntax-trees-visual-representation-of-language-structure&#34;&gt;Syntax Trees: Visual Representation of Language Structure&lt;/h1&gt;
-&lt;p&gt;Syntax trees are a powerful tool used by linguists to visualize the grammatical structure of sentences. They show how words combine to form phrases, and how these phrases relate to each other within a sentence.&lt;/p&gt;
-&lt;h2 id=&#34;multilingual-introduction-animation&#34;&gt;Multilingual Introduction Animation&lt;/h2&gt;
-&lt;p&gt;Below is an interactive visualization showing how a simple introduction (&amp;ldquo;Hello, I&amp;rsquo;m Nikola&amp;rdquo;) is structured across multiple languages. The animation cycles through English, Serbian, German, Chinese, and Russian, displaying both the sentence and its corresponding syntax tree.&lt;/p&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/syntax-tree.css&#34;&gt;
-&lt;script src=&#34;https://d3js.org/d3.v7.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://localhost:1313/js/syntax-tree.js&#34;&gt;&lt;/script&gt;
-
-&lt;div class=&#34;syntax-tree-wrapper&#34;&gt;
-  
-  
-  
-  
-    &lt;h2 class=&#34;syntax-tree-title&#34;&gt;Multilingual Syntax Trees&lt;/h2&gt;
-  
-  
-  
-    &lt;p class=&#34;syntax-tree-subtitle&#34;&gt;How &amp;#39;Hello, I&amp;#39;m Nikola&amp;#39; is structured in different languages&lt;/p&gt;
-  
-  
-  &lt;div id=&#34;syntax-tree-container&#34;&gt;&lt;/div&gt;
-&lt;/div&gt; 
-&lt;h2 id=&#34;understanding-syntax-trees&#34;&gt;Understanding Syntax Trees&lt;/h2&gt;
-&lt;p&gt;Each syntax tree starts with a root node labeled &amp;ldquo;S&amp;rdquo; (sentence). From there, it branches into constituent parts:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NP&lt;/strong&gt;: Noun Phrase (like &amp;ldquo;I&amp;rdquo; or &amp;ldquo;Nikola&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VP&lt;/strong&gt;: Verb Phrase (like &amp;ldquo;am Nikola&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;V&lt;/strong&gt;: Verb (like &amp;ldquo;am&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;N&lt;/strong&gt;: Noun&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Pronoun&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Intj&lt;/strong&gt;: Interjection (like &amp;ldquo;Hello&amp;rdquo;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The structure varies across languages, revealing fascinating differences in how languages organize information:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In English, Serbian, and German, we see a similar structure with interjection, subject pronoun, and verb phrase&lt;/li&gt;
-&lt;li&gt;Chinese adds a final punctuation node&lt;/li&gt;
-&lt;li&gt;Russian often omits the copula (&amp;ldquo;am&amp;rdquo;), leading to a different structure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;implementation-details&#34;&gt;Implementation Details&lt;/h2&gt;
-&lt;p&gt;This visualization is built using:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;D3.js&lt;/strong&gt;: For creating the interactive tree visualization&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SVG&lt;/strong&gt;: For rendering the graphics&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CSS Transitions&lt;/strong&gt;: For smooth animations between languages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The animation cycles automatically through each language every 5 seconds, with smooth transitions that fade out the old tree and fade in the new one.&lt;/p&gt;
-&lt;h2 id=&#34;linguistic-insights&#34;&gt;Linguistic Insights&lt;/h2&gt;
-&lt;p&gt;These syntax trees reveal important aspects of linguistic structure:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Universal patterns&lt;/strong&gt;: All languages have hierarchical phrase structures&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Language-specific differences&lt;/strong&gt;: Word order and required elements vary&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Typological relationships&lt;/strong&gt;: Languages from the same family often have similar structures&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Syntax trees help us understand both the universal principles of human language and the unique characteristics of individual languages.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Visualizations like these help us appreciate the complex but systematic nature of human language. While all languages allow us to express the same basic greeting, each does so with its own structural fingerprint.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in learning more about linguistic structures across languages, I recommend exploring resources on comparative syntax and typology.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Math Rendering Example</title>
-		<link>http://localhost:1313/blog/math-rendering-example/</link>
-		<pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blog/math-rendering-example/</guid>
-		<description>&lt;h1 id=&#34;math-rendering-example&#34;&gt;Math Rendering Example&lt;/h1&gt;
-&lt;p&gt;This post demonstrates how mathematical formulas are rendered on the blog.&lt;/p&gt;
-&lt;h2 id=&#34;inline-math&#34;&gt;Inline Math&lt;/h2&gt;
-&lt;p&gt;We can include inline math like this: $E = mc^2$ which should render nicely within the flow of text.&lt;/p&gt;
-&lt;h2 id=&#34;block-math&#34;&gt;Block Math&lt;/h2&gt;
-&lt;p&gt;For more complex formulas, we can use block math:&lt;/p&gt;
-&lt;p&gt;$$
-\begin{aligned}
-\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp;amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \
-\nabla \cdot \vec{\mathbf{E}} &amp;amp; = 4 \pi \rho \
-\nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp;amp; = \vec{\mathbf{0}} \
-\nabla \cdot \vec{\mathbf{B}} &amp;amp; = 0
-\end{aligned}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;the-knapsack-problem&#34;&gt;The Knapsack Problem&lt;/h2&gt;
-&lt;p&gt;The knapsack problem can be formulated as: given a set of $n$ items numbered from 1 up to $n$, each with a weight $w_i$ and a value $v_i$, along with a maximum weight capacity $W$, and $x_i$ being the number of copies of $i$,&lt;/p&gt;
-&lt;p&gt;$$\text{maximize} \sum_{i=1}^{n} v_i x_i$$&lt;/p&gt;
-&lt;p&gt;$$\text{subject to} \sum_{i=1}^{n} w_i x_i \leq W$$&lt;/p&gt;
-&lt;p&gt;Here we restrict the problem to $x_i \in {0, 1}$, ie we can only select one copy of each element $i$. This simple problem is known to be NP-complete, which means no algorithm solves it fast (where fast means in polynomial time).&lt;/p&gt;
-&lt;h2 id=&#34;code-example&#34;&gt;Code Example&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;solve_knapsack&lt;/span&gt;(values, weights, capacity):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(values)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Initialize the DP table&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    dp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(capacity &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)] &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Fill the DP table&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; w &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(capacity &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; weights[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; w:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                dp[i][w] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; max(
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    values[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][w&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;weights[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][w]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                )
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                dp[i][w] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][w]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; dp[n][capacity]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This approach uses dynamic programming to solve the 0-1 knapsack problem in pseudo-polynomial time.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Jupyter-Style Code Blocks</title>
-		<link>http://localhost:1313/blog/jupyter-style-code-blocks/</link>
-		<pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blog/jupyter-style-code-blocks/</guid>
-		<description>&lt;h1 id=&#34;jupyter-style-code-blocks&#34;&gt;Jupyter-Style Code Blocks&lt;/h1&gt;
-&lt;p&gt;This post demonstrates how to use Jupyter notebook-style code blocks in your blog posts, which make your code examples look more like interactive Jupyter notebooks.&lt;/p&gt;
-&lt;h2 id=&#34;basic-python-example&#34;&gt;Basic Python Example&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s a simple Python example showing both input and output:&lt;/p&gt;
-
-
-
-
-
-
-&lt;div class=&#34;jupyter-notebook&#34;&gt;
-  
-  
-  
-  
-  
-&lt;/div&gt; 
-&lt;h2 id=&#34;data-analysis-example&#34;&gt;Data Analysis Example&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s a more complex example that resembles a typical data analysis workflow:&lt;/p&gt;
-
-
-
-
-
-
-&lt;div class=&#34;jupyter-notebook&#34;&gt;
-  
-  
-  
-  
-  
-&lt;/div&gt; 
-&lt;h2 id=&#34;visualization-example&#34;&gt;Visualization Example&lt;/h2&gt;
-&lt;p&gt;For visualizations, you would typically see a plot as output:&lt;/p&gt;
-
-
-
-
-
-
-&lt;div class=&#34;jupyter-notebook&#34;&gt;
-  
-  
-  
-  
-  
-  
-  &lt;div class=&#34;jupyter-cell&#34;&gt;
-    &lt;div class=&#34;jupyter-output&#34; style=&#34;--cell-number: 3;&#34;&gt;
-      &lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-&lt;/div&gt; 
-&lt;p&gt;The actual output would display an image of a sine wave plot.&lt;/p&gt;
-&lt;h2 id=&#34;machine-learning-example&#34;&gt;Machine Learning Example&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s an example of a machine learning code block:&lt;/p&gt;
-
-
-
-
-
-
-&lt;div class=&#34;jupyter-notebook&#34;&gt;
-  
-  
-  
-  
-  
-&lt;/div&gt; 
-&lt;h2 id=&#34;interactive-elements&#34;&gt;Interactive Elements&lt;/h2&gt;
-&lt;p&gt;You can also add interactive elements to your code blocks (note that these are currently just visual placeholders):&lt;/p&gt;
-
-
-
-
-
-
-&lt;div class=&#34;jupyter-notebook&#34;&gt;
-  
-  &lt;div class=&#34;jupyter-buttons&#34;&gt;
-    &lt;button class=&#34;jupyter-btn&#34;&gt;Run&lt;/button&gt;
-    &lt;button class=&#34;jupyter-btn&#34;&gt;Clear&lt;/button&gt;
-  &lt;/div&gt;
-  
-  
-  
-  
-  
-&lt;/div&gt; 
-&lt;h2 id=&#34;how-to-use-these-code-blocks&#34;&gt;How to Use These Code Blocks&lt;/h2&gt;
-&lt;p&gt;To use a Jupyter-style code block in your posts, use the &lt;code&gt;jupyter&lt;/code&gt; shortcode:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; jupyter lang=&amp;#34;python&amp;#34; output_content=&amp;#34;Hello, World!&amp;#34; &amp;gt;}}
-print(&amp;#34;Hello, World!&amp;#34;)
-{{&amp;lt; /jupyter &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;id&lt;/code&gt;: Cell number (default: &amp;ldquo;1&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lang&lt;/code&gt;: Programming language (default: &amp;ldquo;python&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;input&lt;/code&gt;: Show input cell (default: true)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output&lt;/code&gt;: Show output cell (default: true)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_content&lt;/code&gt;: Content to display in the output cell&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;interactive&lt;/code&gt;: Show interactive buttons (default: false)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;making-truly-interactive-code-blocks&#34;&gt;Making Truly Interactive Code Blocks&lt;/h2&gt;
-&lt;p&gt;To enable truly interactive code execution, you would need to integrate one of these solutions:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Pyodide&lt;/strong&gt;: Run Python code directly in the browser using WebAssembly&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JupyterLite&lt;/strong&gt;: A lightweight version of Jupyter that runs entirely in the browser&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Observable&lt;/strong&gt;: Interactive JavaScript notebooks that can be embedded&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CodePen or JSFiddle&lt;/strong&gt;: For HTML/CSS/JavaScript examples&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For a full implementation, you&amp;rsquo;d need to add JavaScript that handles code execution and displaying results. This would be a more complex enhancement requiring additional development.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;These Jupyter-style code blocks enhance the appearance of your code examples, making them more familiar to data scientists and developers who work with notebooks. While they don&amp;rsquo;t provide actual execution capabilities without additional JavaScript, they provide a clean, notebook-like presentation for your code examples.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in making them truly interactive, consider embedding JupyterLite or using Pyodide for browser-based Python execution.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Code Blocks with VSCode Theme</title>
-		<link>http://localhost:1313/blog/code-blocks-with-vscode-theme/</link>
-		<pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blog/code-blocks-with-vscode-theme/</guid>
-		<description>&lt;h1 id=&#34;beautiful-code-blocks-with-vscode-theme&#34;&gt;Beautiful Code Blocks with VSCode Theme&lt;/h1&gt;
-&lt;p&gt;This post demonstrates how to use the new VSCode-themed code blocks in your blog posts. These code blocks replicate the familiar VS Code dark theme, making your code examples more readable and visually appealing.&lt;/p&gt;
-&lt;h2 id=&#34;basic-usage&#34;&gt;Basic Usage&lt;/h2&gt;
-&lt;p&gt;To use the VSCode theme in your code blocks, use the &lt;code&gt;vscode&lt;/code&gt; shortcode:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; vscode lang=&amp;#34;javascript&amp;#34; &amp;gt;}}
-function greeting(name) {
-  return `Hello, ${name}!`;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nikola Selic - Personal Website</title><link>https://nikolaselic.me/categories/</link><description>Recent content in Categories on Nikola Selic - Personal Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://nikolaselic.me/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos?</title><link>https://nikolaselic.me/blog/ai_dreams_up_databases_crush4sql/</link><pubDate>Mon, 14 Apr 2025 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/blog/ai_dreams_up_databases_crush4sql/</guid><description>&lt;p>Talking to massive, complex databases in plain English? It&amp;rsquo;s a dream for many, but it highlights a fundamental challenge: translating messy, ambiguous human thought into the rigid logic required by SQL. User questions carry intent and context, while databases demand precision. When databases swell to thousands of tables, simply feeding the entire structure to a Language Model (LLM) becomes impractical, making this translation even harder.&lt;/p>
+&lt;p>What if, instead of just translating keywords to code, the AI engaged in a more &lt;em>linguistic&lt;/em> act, a kind of storytelling? A fascinating paper from EMNLP 2023, &lt;a href="https://aclanthology.org/2023.emnlp-main.868/">CRUSH4SQL&lt;/a> [1], explores such an approach. It tackles the scaling problem with a counter-intuitive twist: letting the LLM &lt;em>dream&lt;/em> up a simplified schema—a metaphor spun from the query itself—to bridge the gap between fluid user questions and the database&amp;rsquo;s complex reality.&lt;/p>
+&lt;h2 id="how-the-dream-works-the-crush4sql-method">How the Dream Works: The CRUSH4SQL Method&lt;/h2>
+&lt;p>The core idea behind CRUSH4SQL is pretty neat, turning hallucination—often seen as a bug—into a deliberate linguistic strategy, a form of guided dreaming:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Ask the LLM to Dream:&lt;/strong>
+&lt;ul>
+&lt;li>Given the user&amp;rsquo;s question and a few examples (few-shot prompting), the LLM is asked to &lt;em>imagine&lt;/em> and narrate the &lt;em>simplest possible&lt;/em> database story (schema) that could answer it.&lt;/li>
+&lt;li>Crucially, the LLM performs this task &lt;em>without&lt;/em> accessing the actual database structure.&lt;/li>
+&lt;li>&lt;strong>Example:&lt;/strong>
+&lt;ul>
+&lt;li>User Question: &lt;code>&amp;quot;Count the number of members in the Bootup Baltimore Club older than 18&amp;quot;&lt;/code>&lt;/li>
+&lt;li>LLM Hallucinates: &lt;code>Club(Name, id, description, location), member_of_club(club id, student id), Student(id, age)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The AI crafts this fictional schema, a concise narrative of what the relevant data &lt;em>might&lt;/em> look like.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;div class="mermaid-diagram-wrapper">
+&lt;pre class="mermaid">
+sequenceDiagram
+participant UQ as User Question
+participant LDS as Large Database Schema
+participant VH as Visual Highlighting
+participant EO as Explanation Overlay
+UQ->>LDS: Appears with text "Count members..."
+LDS-->>VH: Highlighting sweeps across schema
+VH-->>LDS: Difficulty pinpointing elements
+LDS-->>VH: Briefly dims/fades
+VH->>LDS: Highlights Relevant Subset: "club(...)", ...
+Note right of LDS: Text explains difficulty
+%% Explanation Overlay interaction needs clarification, using Note for now
+%% EO-->>LDS: Text appears explaining difficulty...
+&lt;/pre>
+&lt;/div>
+&lt;ol start="2">
+&lt;li>&lt;strong>Use the Dream as a Map:&lt;/strong> Take this &amp;ldquo;hallucinated&amp;rdquo; story—the schema—and turn its key elements (like &lt;code>Club.Name&lt;/code>, &lt;code>Student.age&lt;/code>) into &lt;a href="https://www.elastic.co/what-is/vector-embedding">vector embeddings&lt;/a>, capturing their semantic essence.&lt;/li>
+&lt;/ol>
+&lt;div class="mermaid-diagram-wrapper">
+&lt;pre class="mermaid">
+sequenceDiagram
+participant UQ as User Question
+participant LLM as Large Language Model
+participant HS as Hallucinated Schema
+participant EO as Explanation Overlay
+UQ->>LLM: Question "Count members..." is input
+LLM-->>HS: Generates: "Club(Name)", ...
+Note right of HS: Text explains LLM generates hypothetical schema
+%% EO-->>HS: Text explains LLM generates...
+&lt;/pre>
+&lt;/div>
+&lt;ol start="3">
+&lt;li>&lt;strong>Find Matching Reality:&lt;/strong> Use these dream-vectors as probes in a &lt;a href="https://www.pinecone.io/learn/what-is-similarity-search/">vector similarity search&lt;/a> against an index of your &lt;em>real&lt;/em> database schema elements. The goal is to retrieve a small &lt;em>subset&lt;/em> of actual tables and columns that best &lt;em>collectively match&lt;/em> the structure the LLM dreamed up, using a specific objective function (detailed as Eqn. 6 in the paper) that balances coverage and schema graph connectivity within a budget B.&lt;/li>
+&lt;/ol>
+&lt;div class="mermaid-diagram-wrapper">
+&lt;pre class="mermaid">
+graph TD
+A["Hallucinated Schema&lt;br/>(Club.Name, member_of_club.id, ...)"] --> B{Iterate through Elements};
+B -- "For each element" --> C[Generate Embedding];
+C --> D[Dense Retrieval vs Actual Schema Embeddings];
+D --> E{Matches Found?};
+E -- Yes --> F[Highlight Matching Elements];
+F --> G[Form Candidate Set];
+E -- No --> B;
+G --> H[Explanation: Embeddings used for dense retrieval];
+&lt;/pre>
+&lt;/div>
+&lt;figure>&lt;img src="https://nikolaselic.me/images/blog/crush4sql/image.png"
+alt="Figure 1 from Kothyari et al. (2023): Illustration of the CRUSH4SQL workflow, showing the prompt, hallucinated schema K(x), real schema D, collective objective, retrieved subset R(x), and downstream Text2SQL system.">&lt;figcaption>
+&lt;p>Figure 1 from Kothyari et al. (2023): Illustration of the CRUSH4SQL workflow, showing the prompt, hallucinated schema K(x), real schema D, collective objective, retrieved subset R(x), and downstream Text2SQL system.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;strong>Putting it Together:&lt;/strong> The retrieved subset then enables the final step:&lt;/p>
+&lt;div class="mermaid-diagram-wrapper">
+&lt;pre class="mermaid">
+graph TD
+A[Candidate Set] --> B{Evaluate Relevance &amp; Connectivity};
+B -- "Score &amp; Link Elements" --> C[Prioritize Relevant &amp; Connected];
+C --> D["Final Subset&lt;br/>(High Recall, Connected)"];
+D --> E[Explanation: Collective retrieval uses relationships];
+&lt;/pre>
+&lt;/div>
+&lt;p>In essence, the hallucinated schema acts as a linguistic bridge or a focused metaphor. It translates the user&amp;rsquo;s potentially vague question into a simplified, hypothetical structure. This structure, born from the LLM&amp;rsquo;s guided imagination (illustrated in Figure 1 above), provides a pragmatic map—even if not initially &amp;ldquo;true&amp;rdquo;—for navigating the complex reality of the actual data. It flips the script, harnessing the LLM&amp;rsquo;s narrative tendency to find the right data needles in a giant haystack. (While the paper provides examples of retrieved schema elements, it&amp;rsquo;s worth noting that visualizing the final generated SQL query would further clarify the end-to-end impact.)&lt;/p>
+&lt;h2 id="the-dreams-potential-what-the-paper-reported">The Dream&amp;rsquo;s Potential: What the Paper Reported&lt;/h2>
+&lt;p>The CRUSH4SQL paper doesn&amp;rsquo;t just propose a quirky idea; it demonstrates how this controlled dreaming yields significant results through its specific two-stage process:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>The Initial Dream (Hallucination):&lt;/strong> First, the LLM acts like a rapid prototyper, dreaming up a minimal, idealized database schema based &lt;em>only&lt;/em> on the user&amp;rsquo;s question (guided by a few examples). This isn&amp;rsquo;t random hallucination; it&amp;rsquo;s a focused imaginative leap to capture the core structure needed, creating a semantic blueprint.&lt;/li>
+&lt;li>&lt;strong>Connecting Dream to Reality (Collective Retrieval):&lt;/strong> Second, this dream-schema isn&amp;rsquo;t the final answer, but a &lt;em>guide&lt;/em>. Its elements become semantic probes used to collectively retrieve a small, relevant subset of the &lt;em>actual&lt;/em> database schema. This retrieval aims to find real tables and columns that best &amp;ldquo;fulfill&amp;rdquo; the dream&amp;rsquo;s structure, overcoming the challenge of feeding enormous, unwieldy schemas to downstream models.&lt;/li>
+&lt;li>&lt;strong>Testing Grounds for Big Dreams (New Benchmarks):&lt;/strong> To prove this worked on truly complex data landscapes, the authors created new benchmarks with thousands of schema elements: &lt;strong>SpiderUnion&lt;/strong> (4,502 elements), &lt;strong>BirdUnion&lt;/strong> (798), and the real-world &lt;strong>SocialDB&lt;/strong> (a massive 17,844 elements).&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Reported Performance Boosts:&lt;/strong>&lt;/p>
+&lt;p>The core promise is that this dream-guided retrieval is more effective. On their new benchmarks, CRUSH4SQL significantly outperformed prior methods in recalling the necessary &amp;ldquo;gold&amp;rdquo; schema elements, especially when aiming for small, efficient schema subsets:&lt;/p>
+&lt;ul>
+&lt;li>On &lt;strong>SpiderUnion&lt;/strong>, the dream-guided approach recalled &lt;strong>83%&lt;/strong> of needed columns (vs. 77% for the best alternative) with a budget of just ten columns.&lt;/li>
+&lt;li>On &lt;strong>BirdUnion&lt;/strong>, it hit &lt;strong>76%&lt;/strong> recall (vs. 56%) under similar constraints.&lt;/li>
+&lt;li>On the massive, real-world &lt;strong>SocialDB&lt;/strong>, it recalled &lt;strong>58%&lt;/strong> of the necessary &lt;em>tables&lt;/em> (vs. 49%).&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Downstream Impact and Prompting:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Better Dreams, Better SQL:&lt;/strong> This improved ability to find the right schema pieces reportedly led directly to more accurate SQL generation when the retrieved subset was passed to a Text-to-SQL model like RESDSQL.&lt;/li>
+&lt;li>&lt;strong>The Right Kind of Dream:&lt;/strong> Crucially, experiments showed that prompting the LLM to specifically dream up a &lt;em>schema&lt;/em> worked better than asking it to break down the question in other ways (like identifying variables or relations). The &lt;em>structural&lt;/em> nature of the dream was key.&lt;/li>
+&lt;/ul>
+&lt;p>These compelling results, especially the measured improvements in finding the right data within vast schemas, painted a picture of AI&amp;rsquo;s &amp;ldquo;dreams&amp;rdquo; as a potentially powerful tool. This striking potential motivated an attempt to replicate this linguistic strategy.&lt;/p>
+&lt;h2 id="an-experiment-putting-the-dream-to-the-test">An Experiment: Putting the Dream to the Test&lt;/h2>
+&lt;p>Intrigued by the paper&amp;rsquo;s findings, an experiment was conducted to try this dream-like approach. The baseline system took the user&amp;rsquo;s query, embedded it directly using vectors, and searched for similar table embeddings in the schema index. This direct approach was then swapped with the CRUSH4SQL-inspired hallucination process.
+image.png
+Here&amp;rsquo;s a look at the two approaches compared:&lt;/p>
+&lt;p>&lt;strong>1. Direct Query Embedding:&lt;/strong> The user&amp;rsquo;s query is directly converted into a vector to find relevant tables.&lt;/p>
+&lt;div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+&lt;h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">Direct Query Embedding Approach&lt;/h4>
+&lt;svg id="d3-animation-direct_retrieval_animation-5" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 900 400" preserveAspectRatio="xMidYMid meet">
+&lt;noscript>JavaScript and SVG support are required to view this D3.js animation.&lt;/noscript>
+&lt;/svg>
+&lt;button id="replay-direct_retrieval_animation-5" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation&lt;/button>
+&lt;/div>
+&lt;script src="https://d3js.org/d3.v7.min.js" defer>&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer>&lt;/script>
+&lt;script src="https://nikolaselic.me/js/animations/direct_retrieval_animation.js" defer>&lt;/script>
+&lt;script>
+document.addEventListener('DOMContentLoaded', function() {
+const containerSelector = "#d3-animation-direct_retrieval_animation-5";
+const replayButtonSelector = "#replay-direct_retrieval_animation-5";
+const functionName = "renderDirectRetrievalAnimation";
+const scriptPath = "\/js\/animations\/direct_retrieval_animation.js";
+const svgElement = document.querySelector(containerSelector);
+if (!svgElement) {
+console.error(`D3 container ${containerSelector} not found.`);
+return;
 }
-
-console.log(greeting(&amp;#39;World&amp;#39;));
-{{&amp;lt; /vscode &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will render as:&lt;/p&gt;
-
-
-
-
-&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;javascript&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;greeting&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;`Hello, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;!`&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;greeting&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;World&amp;#39;&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
-&lt;h2 id=&#34;with-line-numbers&#34;&gt;With Line Numbers&lt;/h2&gt;
-&lt;p&gt;You can also enable line numbers for better readability, especially for longer code blocks:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; vscode lang=&amp;#34;python&amp;#34; lineNumbers=&amp;#34;true&amp;#34; &amp;gt;}}
-def fibonacci(n):
-    &amp;#34;&amp;#34;&amp;#34;Generate Fibonacci sequence up to n&amp;#34;&amp;#34;&amp;#34;
-    a, b = 0, 1
-    while a &amp;lt; n:
-        yield a
-        a, b = b, a + b
-
-# Print the first 10 Fibonacci numbers
-for num in fibonacci(100):
-    print(num)
-{{&amp;lt; /vscode &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will render as:&lt;/p&gt;
-
-
-
-
-&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;python&#34;&gt;&lt;span class=&#34;linenumber&#34;&gt;1&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;2&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(n):&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;3&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Generate Fibonacci sequence up to n&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;4&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    a, b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;5&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; n:&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;6&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;yield&lt;/span&gt; a&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;7&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        a, b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b, a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;8&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;9&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Print the first 10 Fibonacci numbers&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;10&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; fibonacci(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;11&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(num)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;12&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
-&lt;h2 id=&#34;supported-languages&#34;&gt;Supported Languages&lt;/h2&gt;
-&lt;p&gt;The VSCode theme currently supports syntax highlighting for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JavaScript&lt;/li&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Go&lt;/li&gt;
-&lt;li&gt;HTML&lt;/li&gt;
-&lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here&amp;rsquo;s an example with CSS:&lt;/p&gt;
-
-
-
-
-&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;css&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;container&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;flex&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;flex-direction&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;column&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;max-width&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;800&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;margin&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;card&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;background-color&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;#f8f8f8&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;border-radius&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;padding&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;margin-bottom&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; rgba(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Hover effect */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;card&lt;/span&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;hover&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;transform&lt;/span&gt;: translateY(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; rgba(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;transition&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ease&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
-&lt;h2 id=&#34;go-example&#34;&gt;Go Example&lt;/h2&gt;
-&lt;p&gt;And here&amp;rsquo;s a Go example with line numbers:&lt;/p&gt;
-
-
-
-
-&lt;pre class=&#34;vscode-theme&#34; data-language=&#34;go&#34;&gt;&lt;span class=&#34;linenumber&#34;&gt;1&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;2&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;3&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;4&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;5&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;6&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;time&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;7&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;8&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;9&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;10&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Print current time&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;11&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The time is now:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Now&lt;/span&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;12&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;13&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Create a channel&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;14&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; make(&lt;span style=&#34;color:#66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;15&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;16&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Start a goroutine&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;17&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;18&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Sleep&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Second&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;19&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;ch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Goroutine completed!&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;20&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;21&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;22&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Wait for the goroutine to finish&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;23&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;msg&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ch&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;24&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;msg&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;25&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&#34;linenumber&#34;&gt;26&lt;/span&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt; 
-&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;
-&lt;p&gt;The VSCode theme styling is achieved through CSS variables that match VS Code&amp;rsquo;s default dark theme colors. These variables define colors for different code elements like:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Keywords&lt;/li&gt;
-&lt;li&gt;Functions&lt;/li&gt;
-&lt;li&gt;Comments&lt;/li&gt;
-&lt;li&gt;Strings&lt;/li&gt;
-&lt;li&gt;Numbers&lt;/li&gt;
-&lt;li&gt;Class names&lt;/li&gt;
-&lt;li&gt;Variables&lt;/li&gt;
-&lt;li&gt;Properties&lt;/li&gt;
-&lt;li&gt;Operators and punctuation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The syntax highlighting is powered by Hugo&amp;rsquo;s built-in syntax highlighter, while the VSCode-like appearance is provided by our custom CSS.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Using the VSCode theme for your code blocks makes your technical blog posts look more professional and improves readability. Feel free to use this in your own posts!&lt;/p&gt;
-&lt;p&gt;Remember to set &lt;code&gt;draft: false&lt;/code&gt; when you&amp;rsquo;re ready to publish this post.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>New Blog Post</title>
-		<link>http://localhost:1313/blog/new-blog-post/</link>
-		<pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blog/new-blog-post/</guid>
-		<description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
-&lt;p&gt;This is a placeholder for a new blog post. Feel free to edit this with your own content.&lt;/p&gt;
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;To edit this post:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Open the file at &lt;code&gt;content/blog/new-blog-post.md&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Replace this content with your own&lt;/li&gt;
-&lt;li&gt;Update the front matter (title, date, description, etc.)&lt;/li&gt;
-&lt;li&gt;Remove the draft status when ready to publish&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Happy blogging!&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>About</title>
-		<link>http://localhost:1313/about/</link>
-		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/about/</guid>
-		<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
-&lt;p&gt;I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.&lt;/p&gt;
-&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
-&lt;h3 id=&#34;technical-university-of-munich&#34;&gt;Technical University of Munich&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Master&amp;rsquo;s degree, Informatics&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;2021 - 2025&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;faculty-of-technical-sciences-university-of-novi-sad&#34;&gt;Faculty of Technical Sciences, University of Novi Sad&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Bachelor of Engineering with Honours (BE), Data Engineering&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Curriculum&lt;/em&gt;: &lt;a href=&#34;http://www.ftn.uns.ac.rs/416590128/information-engineering&#34;&gt;Information Engineering Program&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Bachelor Thesis&lt;/em&gt;: Blockchain-based Federated Learning&lt;/p&gt;
-&lt;h2 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h2&gt;
-&lt;h3 id=&#34;technical-university-of-munich-1&#34;&gt;Technical University of Munich&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Teaching Assistant&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Dec 2024 - Present&lt;/em&gt; · 4 months&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Introduction to Informatics (SQL and Java)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Student Research Assistant&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Feb 2024 - Present&lt;/em&gt; · 1 year 2 months&lt;/p&gt;
-&lt;h3 id=&#34;twinu&#34;&gt;twinu&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Apr 2023 - Jan 2024&lt;/em&gt; · 10 months&lt;br&gt;
-Munich, Bavaria, Germany · Remote&lt;/p&gt;
-&lt;h3 id=&#34;amazon-web-services-aws&#34;&gt;Amazon Web Services (AWS)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Sep 2022 - Feb 2023&lt;/em&gt; · 6 months&lt;br&gt;
-Dresden, Saxony, Germany · Hybrid&lt;br&gt;
-Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS&lt;/p&gt;
-&lt;h3 id=&#34;twinu-1&#34;&gt;twinu&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months&lt;br&gt;
-Munich, Bavaria, Germany · Remote&lt;/p&gt;
-&lt;h3 id=&#34;kitro&#34;&gt;KITRO&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Software Developer&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months&lt;br&gt;
-Zurich, Switzerland · Remote&lt;br&gt;
-Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision&lt;/p&gt;
-&lt;h3 id=&#34;lambdaworks&#34;&gt;LambdaWorks&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Feb 2020 - May 2020&lt;/em&gt; · 4 months&lt;br&gt;
-Novi Sad, Vojvodina, Serbia&lt;/p&gt;
-&lt;h3 id=&#34;typhoon-hil-inc&#34;&gt;Typhoon HIL, Inc.&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Machine Learning Engineer Intern&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Apr 2019 - Dec 2019&lt;/em&gt; · 9 months&lt;br&gt;
-Novi Sad, Vojvodina, Serbia&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Blogroll</title>
-		<link>http://localhost:1313/blogroll/</link>
-		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/blogroll/</guid>
-		<description>&lt;h1 id=&#34;blogroll&#34;&gt;Blogroll&lt;/h1&gt;
-&lt;p&gt;A list of blogs I follow and recommend.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>CV</title>
-		<link>http://localhost:1313/cv/</link>
-		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/cv/</guid>
-		<description>&lt;h1 id=&#34;my-cv&#34;&gt;My CV&lt;/h1&gt;
-&lt;p&gt;Professional experience and education details go here.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Recipes</title>
-		<link>http://localhost:1313/recipes/</link>
-		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/recipes/</guid>
-		<description>&lt;h1 id=&#34;recipes&#34;&gt;Recipes&lt;/h1&gt;
-&lt;p&gt;A collection of my favorite recipes.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Services</title>
-		<link>http://localhost:1313/services/</link>
-		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-		
-		<guid>http://localhost:1313/services/</guid>
-		<description>&lt;h1 id=&#34;services&#34;&gt;Services&lt;/h1&gt;
-&lt;p&gt;Here are the professional services I offer.&lt;/p&gt;
-</description>
-	</item>
-	
-	</channel>
-</rss>
+const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+if (!animationWrapper) {
+console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+return;
+}
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+const observerCallback = (entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+console.log(`Animation ${functionName} intersecting, attempting to run.`);
+if (typeof window[functionName] === 'function') {
+try {
+window[functionName](containerSelector, replayButtonSelector);
+} catch (error) {
+console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+const container = document.querySelector(containerSelector);
+if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}&lt;/text>`;
+}
+} else {
+console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+const container = document.querySelector(containerSelector);
+if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.&lt;/text>`;
+}
+observer.unobserve(entry.target);
+console.log(`Observer stopped for ${functionName}`);
+}
+});
+};
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+observer.observe(animationWrapper);
+});
+&lt;/script>
+&lt;p>&lt;strong>2. Schema Hallucination:&lt;/strong> The LLM first generates its &lt;em>imagined&lt;/em>, potential schema from the query (guided by few-shot examples), and &lt;em>that&lt;/em> schema is embedded to retrieve a relevant subset of real tables.&lt;/p>
+&lt;div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+&lt;h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">Schema Hallucination Approach&lt;/h4>
+&lt;svg id="d3-animation-hallucination_retrieval_animation-7" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 750 800" preserveAspectRatio="xMidYMid meet">
+&lt;noscript>JavaScript and SVG support are required to view this D3.js animation.&lt;/noscript>
+&lt;/svg>
+&lt;button id="replay-hallucination_retrieval_animation-7" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation&lt;/button>
+&lt;/div>
+&lt;script src="https://d3js.org/d3.v7.min.js" defer>&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer>&lt;/script>
+&lt;script src="https://nikolaselic.me/js/animations/hallucination_retrieval_animation.js" defer>&lt;/script>
+&lt;script>
+document.addEventListener('DOMContentLoaded', function() {
+const containerSelector = "#d3-animation-hallucination_retrieval_animation-7";
+const replayButtonSelector = "#replay-hallucination_retrieval_animation-7";
+const functionName = "renderHallucinationRetrievalAnimation";
+const scriptPath = "\/js\/animations\/hallucination_retrieval_animation.js";
+const svgElement = document.querySelector(containerSelector);
+if (!svgElement) {
+console.error(`D3 container ${containerSelector} not found.`);
+return;
+}
+const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+if (!animationWrapper) {
+console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+return;
+}
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+const observerCallback = (entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+console.log(`Animation ${functionName} intersecting, attempting to run.`);
+if (typeof window[functionName] === 'function') {
+try {
+window[functionName](containerSelector, replayButtonSelector);
+} catch (error) {
+console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+const container = document.querySelector(containerSelector);
+if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}&lt;/text>`;
+}
+} else {
+console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+const container = document.querySelector(containerSelector);
+if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.&lt;/text>`;
+}
+observer.unobserve(entry.target);
+console.log(`Observer stopped for ${functionName}`);
+}
+});
+};
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+observer.observe(animationWrapper);
+});
+&lt;/script>
+&lt;p>&lt;strong>The Setup:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Embedding Model:&lt;/strong> &lt;code>msmarco-distilbert-base-v4&lt;/code> (SentenceTransformer) for both query and schema/table embeddings.&lt;/li>
+&lt;li>&lt;strong>Hallucination Engine:&lt;/strong> A locally hosted &lt;code>llama3.1:latest&lt;/code> via Ollama, prompted with few-shot examples inspired by the original paper.&lt;/li>
+&lt;li>&lt;strong>Test Data:&lt;/strong> First 50 examples from the &lt;a href="https://yale-lily.github.io/spider">Spider 1.0&lt;/a> dev set.&lt;/li>
+&lt;li>&lt;strong>Metrics:&lt;/strong> Precision@5 and Recall@10.&lt;/li>
+&lt;/ul>
+&lt;h2 id="waking-up-unexpected-results">Waking Up: Unexpected Results&lt;/h2>
+&lt;p>Connecting to the local LLM to generate the dreams was smooth, but the retrieval results? Not quite the dream that might be expected based on the paper.&lt;/p>
+&lt;pre tabindex="0">&lt;code>--- Evaluation Summary (50 examples processed) ---
+Average Metrics:
+Method QueryID DB_ID P@1 P@3 P@5 R@5 R@10 R@20 CR@10 CR@20 ReciprocalRank
+Direct Query 24.50 107.22 0.4000 0.5533 0.5880 0.5880 0.7478 0.8740 0.5800 0.7600 0.5313
+Hallucinated Schema 24.50 107.22 0.1400 0.2867 0.3240 0.3240 0.4489 0.5900 0.2800 0.4400 0.2295
+&lt;/code>&lt;/pre>&lt;p>&lt;em>(Results from running dense_retrieval.py on first 50 dev examples)&lt;/em>&lt;/p>
+&lt;p>The straightforward, direct query embedding method actually performed much better in this setup than the schema hallucination approach inspired by CRUSH4SQL.&lt;/p>
+&lt;h2 id="why-the-disappointing-results-verbose-dreams">Why the Disappointing Results? Verbose Dreams&lt;/h2>
+&lt;p>A quick look at the LLM&amp;rsquo;s output quickly revealed the likely culprit. The LLM was prompted to dream up a clean, minimal schema structure (like &lt;code>Customer(id, name, address)&lt;/code>). Instead, the &lt;code>llama3.1&lt;/code> instance provided the entire backstory of its imagined database, complete with lengthy narrative explanations:&lt;/p>
+&lt;pre tabindex="0">&lt;code># Example Hallucinated Output from llama3.1:latest for &amp;#34;find customer names and addresses&amp;#34;
+Hallucinated Schema: Here is a minimal schema for a relational database that can answer the given natural language questions:
+**Database Schema:**
+```sql
+CREATE TABLE Customer (
+id INT PRIMARY KEY,
+name VARCHAR(255),
+address VARCHAR(255)
+);
+&lt;/code>&lt;/pre>&lt;p>This schema has two tables:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Customer&lt;/code>: stores information about customers&amp;hellip;&lt;/li>
+&lt;li>&lt;code>Instructor&lt;/code>: stores information about instructors&amp;hellip;
+&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>Embedding this entire rambling explanation, complete with &lt;code>CREATE TABLE&lt;/code> statements and descriptive paragraphs, likely muddied the waters. The resulting vector ended up representing the surrounding textual narrative more than the core schema structure needed for effective similarity search.&lt;/p>
+&lt;h2 id="next-steps-refining-the-dream">Next Steps: Refining the Dream&lt;/h2>
+&lt;p>This little experiment serves as a great reminder that a compelling theoretical idea like CRUSH4SQL needs careful implementation. Getting the LLM to dream &lt;em>productively&lt;/em>—outputting just the concise, structural metaphor—is key. It also highlights a fascinating aspect of modern LLMs: their internal &amp;lsquo;guesses&amp;rsquo; or &amp;lsquo;dreams&amp;rsquo;, even if not perfectly formed, &lt;em>can&lt;/em> be useful tools for navigating complexity, but they need to be channeled correctly. The challenge lies in harnessing this mechanistic creativity: guiding the AI to provide the useful schema structure rather than the full, rambling story.&lt;/p>
+&lt;p>Where to go from here? Potential next steps for refining this dream-based approach include:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Better Prompting:&lt;/strong> The prompts used in the paper (see examples in its Appendix) could be modified. Can prompts be crafted that more strictly enforce the desired output format (e.g., &lt;code>Table(Col1, Col2)&lt;/code>) across different query types or LLMs? Experimenting with the number and style of in-context examples seems crucial.&lt;/li>
+&lt;li>&lt;strong>Smarter Parsing:&lt;/strong> The LLM output (even if prompted for structure) might still contain extra text. Developing robust parsing logic (e.g., using regular expressions or structured parsing libraries) to reliably extract &lt;em>only&lt;/em> the schema definition (&lt;code>t.c1&lt;/code> format elements) before embedding is essential for implementation.&lt;/li>
+&lt;li>&lt;strong>Model Tinkering &amp;amp; Parameters:&lt;/strong> Different LLMs might have different hallucination tendencies. Beyond model choice, adjusting generation parameters could be key. For instance, using a lower &lt;code>temperature&lt;/code> (the paper mentions temp=0 for some experiments for reproducibility) might yield cleaner, more focused, and deterministic dreams.&lt;/li>
+&lt;/ol>
+&lt;p>It&amp;rsquo;s all part of the fun (and sometimes frustration) of experimenting with LLMs. The potential of the dream-based approach remains intriguing, but unlocking it requires persistence and refinement. Further visualizations, like comparing effective vs. verbose hallucinations or mapping the embedding space, could also aid understanding.&lt;/p>
+&lt;h2 id="crush4sql-in-the-broader-landscape">CRUSH4SQL in the Broader Landscape&lt;/h2>
+&lt;p>It&amp;rsquo;s helpful to place CRUSH4SQL in the context of other Text-to-SQL techniques:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>vs. Dense Passage Retrieval (DPR):&lt;/strong> Unlike methods that directly retrieve schema elements or documentation based on the query embedding alone, CRUSH uses the &lt;em>hallucinated schema&lt;/em> as an intermediate representation for retrieval probes.&lt;/li>
+&lt;li>&lt;strong>vs. Question Decomposition:&lt;/strong> Some methods break the user question into sub-questions for retrieval. CRUSH differs by generating a holistic target &lt;em>schema structure&lt;/em> first.&lt;/li>
+&lt;li>&lt;strong>vs. Fine-Tuning:&lt;/strong> Approaches involving fine-tuning large models on specific schemas can be powerful but may require significant training data and struggle with adapting to new or rapidly changing databases. CRUSH, being retrieval-based, could potentially offer more adaptability.&lt;/li>
+&lt;li>&lt;strong>vs. Other Retrieval Augmentation:&lt;/strong> Methods like MURRE explore multi-hop retrieval and iterative refinement. CRUSH offers a unique take by using hallucination to define the initial target for a collective retrieval step, rather than solely relying on iterative query-based steps.&lt;/li>
+&lt;li>&lt;strong>Relation to Chain-of-Thought (CoT):&lt;/strong> While CRUSH doesn&amp;rsquo;t explicitly generate a step-by-step reasoning chain like typical CoT prompting, the hallucination phase &lt;em>implicitly&lt;/em> involves the LLM reasoning about the necessary schema structure. The subsequent collective retrieval step then acts upon this implicitly reasoned structure.&lt;/li>
+&lt;/ul>
+&lt;p>Understanding these distinctions highlights CRUSH4SQL&amp;rsquo;s novel contribution: using controlled hallucination as a specific mechanism to guide schema subset retrieval for large databases.&lt;/p>
+&lt;h2 id="conclusion-the-dream-needs-careful-guidance">Conclusion: The Dream Needs Careful Guidance&lt;/h2>
+&lt;p>Ultimately, the experiment served as a practical reality check on an exciting theoretical concept. While the idea of leveraging LLM hallucination as a linguistic bridge to navigate complex schemas remains compelling, the results highlight a critical bottleneck: &lt;strong>controlling the nature of the dream.&lt;/strong> The CRUSH4SQL approach, as reported in the paper, hinges on the LLM generating a clean, concise, structural metaphor—not a verbose narrative.&lt;/p>
+&lt;p>The local Llama 3.1 model used in this specific setup acted more like an over-enthusiastic storyteller than a precise architect, drowning the useful signal (the dream schema) in noise (explanatory text). This doesn&amp;rsquo;t invalidate the core CRUSH4SQL idea, but it underscores the crucial role of implementation details: prompt engineering, output parsing, and potentially model selection or fine-tuning are paramount.&lt;/p>
+&lt;p>Looking ahead, the path involves figuring out how to refine this process. Can the LLM be forced to dream more productively with stricter prompts? Can the essential structure be reliably extracted from its output? Or is a different kind of model needed altogether? Text-to-SQL over large databases remains a significant challenge. While harnessing AI&amp;rsquo;s &amp;ldquo;dreams&amp;rdquo; offers a tantalizing path, it&amp;rsquo;s clear that significant engineering and refinement are needed to turn those dreams into consistently reliable results.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>[1] Kothyari, Mayank, et al. &amp;ldquo;CRUSH4SQL: Collective Retrieval Using Schema Hallucination For Text2SQL.&amp;rdquo; &lt;em>Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing&lt;/em>. Association for Computational Linguistics, 2023. (&lt;a href="https://aclanthology.org/2023.emnlp-main.868/">ACL Anthology&lt;/a>, &lt;a href="https://arxiv.org/abs/2311.01173">arXiv&lt;/a>)&lt;/p></description></item><item><title>My Experience at BTW25 in Bamberg</title><link>https://nikolaselic.me/blog/btw25-conference-experience-bamberg/</link><pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/blog/btw25-conference-experience-bamberg/</guid><description>&lt;p>I had such a pleasant time at the &lt;a href="https://btw2025.uni-bamberg.de/">BTW conference&lt;/a> at &lt;a href="https://www.uni-bamberg.de/en/wiai/">Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a> in &lt;a href="https://www.bamberg.info/en/">Bamberg&lt;/a> this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href="https://www.cs.cit.tum.de/en/dasl/tumuchdata/">TUMuchData team&lt;/a> for the conference scholarship. Looking forward to the next one in &lt;a href="https://www.muenchen.de/en">Munich&lt;/a>.&lt;/p>
+&lt;p>{{/*
+&lt;div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+&lt;h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">D3.js Animation&lt;/h4>
+&lt;svg id="d3-animation-movingCircle-0" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 750 400" preserveAspectRatio="xMidYMid meet">
+&lt;noscript>JavaScript and SVG support are required to view this D3.js animation.&lt;/noscript>
+&lt;/svg>
+&lt;button id="replay-movingCircle-0" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation&lt;/button>
+&lt;/div>
+&lt;script src="https://d3js.org/d3.v7.min.js" defer>&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer>&lt;/script>
+&lt;script src="https://nikolaselic.me/js/animations/movingCircle.js" defer>&lt;/script>
+&lt;script>
+document.addEventListener('DOMContentLoaded', function() {
+const containerSelector = "#d3-animation-movingCircle-0";
+const replayButtonSelector = "#replay-movingCircle-0";
+const functionName = "renderMovingCircleAnimation";
+const scriptPath = "\/js\/animations\/movingCircle.js";
+const svgElement = document.querySelector(containerSelector);
+if (!svgElement) {
+console.error(`D3 container ${containerSelector} not found.`);
+return;
+}
+const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+if (!animationWrapper) {
+console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+return;
+}
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+const observerCallback = (entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+console.log(`Animation ${functionName} intersecting, attempting to run.`);
+if (typeof window[functionName] === 'function') {
+try {
+window[functionName](containerSelector, replayButtonSelector);
+} catch (error) {
+console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+const container = document.querySelector(containerSelector);
+if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}&lt;/text>`;
+}
+} else {
+console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+const container = document.querySelector(containerSelector);
+if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.&lt;/text>`;
+}
+observer.unobserve(entry.target);
+console.log(`Observer stopped for ${functionName}`);
+}
+});
+};
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+observer.observe(animationWrapper);
+});
+&lt;/script>
+*/}}&lt;/p>
+&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/coffee-bike.jpg" alt="Coffee bike at the conference venue">&lt;/p>
+&lt;p>The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p>
+&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/poster-session.jpg" alt="Conference hall with poster presentations">&lt;/p>
+&lt;p>The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p>
+&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/conference-badge.jpg" alt="BTW25 Conference Badge">&lt;/p>
+&lt;p>The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href="https://fg-dbs.gi.de/">Database and Information Systems Special Interest Group&lt;/a> of the &lt;a href="https://gi.de/">German Informatics Society (GI)&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/bamberg-old-town-hall.jpg" alt="Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)">&lt;/p>
+&lt;p>One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href="https://whc.unesco.org/en/list/624/">UNESCO World Heritage Site&lt;/a>. The iconic &lt;a href="https://en.wikipedia.org/wiki/Bamberg_Rathaus">Old Town Hall&lt;/a> built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p></description></item><item><title>Started new role as Teaching Assistant at TUM</title><link>https://nikolaselic.me/news/teaching-assistant-tum/</link><pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/news/teaching-assistant-tum/</guid><description>&lt;p>Excited to announce that I started working as a &lt;strong>Teaching Assistant&lt;/strong> for Introduction to Informatics (SQL and Java) at Technical University of Munich!&lt;/p></description></item><item><title>About</title><link>https://nikolaselic.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/about/</guid><description>&lt;h1 id="about-me">About Me&lt;/h1>
+&lt;p>I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.&lt;/p>
+&lt;h2 id="education">Education&lt;/h2>
+&lt;h3 id="technical-university-of-munich">Technical University of Munich&lt;/h3>
+&lt;p>&lt;strong>Master&amp;rsquo;s degree, Computer Science&lt;/strong>&lt;br>
+&lt;em>Curriculum&lt;/em>: &lt;a href="https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/">Major: Machine Learning Minor: Databases, Security/Privacy&lt;/a>&lt;br>
+&lt;em>2021 - 2025&lt;/em>&lt;/p>
+&lt;h3 id="faculty-of-technical-sciences-university-of-novi-sad">Faculty of Technical Sciences, University of Novi Sad&lt;/h3>
+&lt;p>&lt;strong>Bachelor of Engineering with Honours (BE), Data Engineering&lt;/strong>&lt;br>
+&lt;em>Curriculum&lt;/em>: &lt;a href="https://stari.ftn.uns.ac.rs/n515410363/information-engineering">Information Engineering Program&lt;/a>&lt;br>
+&lt;em>Bachelor Thesis&lt;/em>: Blockchain-based Federated Learning&lt;/p>
+&lt;h2 id="work-experience">Work Experience&lt;/h2>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h3 id="twinu">twinu&lt;/h3>
+&lt;p>&lt;strong>Core Developer&lt;/strong>
+&lt;em>Apr 2023 - Jan 2024&lt;/em> · 10 months
+Munich, Bavaria, Germany · Remote&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h3 id="twinu-1">twinu&lt;/h3>
+&lt;p>&lt;strong>Core Developer&lt;/strong>
+&lt;em>Feb 2022 - Sep 2022&lt;/em> · 8 months
+Munich, Bavaria, Germany · Remote&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h3 id="lambdaworks">LambdaWorks&lt;/h3>
+&lt;p>&lt;strong>Software Engineer Intern&lt;/strong>
+&lt;em>Feb 2020 - May 2020&lt;/em> · 4 months
+Novi Sad, Vojvodina, Serbia&lt;/p>
+&lt;h3 id="typhoon-hil-inc">Typhoon HIL, Inc.&lt;/h3>
+&lt;p>&lt;strong>Machine Learning Engineer Intern&lt;/strong>
+&lt;em>Apr 2019 - Dec 2019&lt;/em> · 9 months
+Novi Sad, Vojvodina, Serbia&lt;/p></description></item><item><title>Blogroll</title><link>https://nikolaselic.me/blogroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/blogroll/</guid><description>&lt;h1 id="blogroll">Blogroll&lt;/h1>
+&lt;p>A list of blogs I follow and recommend.&lt;/p></description></item><item><title>CV</title><link>https://nikolaselic.me/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/cv/</guid><description>&lt;h1 id="my-cv">My CV&lt;/h1>
+&lt;p>Professional experience and education details go here.&lt;/p></description></item><item><title>Recipes</title><link>https://nikolaselic.me/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/recipes/</guid><description>&lt;h1 id="recipes">Recipes&lt;/h1>
+&lt;p>A collection of my favorite recipes.&lt;/p></description></item><item><title>Services</title><link>https://nikolaselic.me/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/services/</guid><description>&lt;h1 id="services">Services&lt;/h1>
+&lt;p>Here are the professional services I offer.&lt;/p></description></item></channel></rss>
