@@ -12,6 +12,10 @@
       <div class="article-meta">
         {{ .Date.Format "January 2, 2006" }}
       </div>
+      <div class="post-summary">
+        {{ .Summary }}
+      </div>
+      <p><a href="{{ .RelPermalink }}">Read more →</a></p>
     </article>
     {{ end }}
   {{ end }}
@@ -28,6 +32,10 @@
         {{ .Date.Format "January 2, 2006" }} · 
         {{ math.Round (div (countwords .Content) 200.0) }} mins
       </div>
+      <div class="post-summary">
+        {{ .Summary }}
+      </div>
+      <p><a href="{{ .RelPermalink }}">Read more →</a></p>
     </article>
     {{ end }}
   {{ end }}
