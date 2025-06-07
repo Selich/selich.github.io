@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Hi, welcome to my website! I use this tiny part of the internet to share my thoughts about machine learning for systems, systems for ML, natural language processing, graph neural networks, and decentralized learning. I also plan on writing about history, philosophy, and linguistics."
+description: "Hi, welcome to my website! I use this tiny part of the internet to share my thoughts about ML4Systems, LLMs, security and privacy. I also plan on writing about history, philosophy, and linguistics."
 layout: "about"
 menu:
   main:
@@ -15,7 +15,7 @@ social:
 
 # About Me
 
-I write this blog to share my thoughts and experiences with the tech community. My focus areas include machine learning for systems optimization, building systems for ML workflows, natural language processing, graph neural networks, and decentralized learning approaches like federated learning.
+I write this blog to share my thoughts and experiences with the tech community. My focus areas include ML4Systems, LLMs, security and privacy research, with interests in systems optimization and machine learning workflows.
 
 ## Education
 
