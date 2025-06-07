@@ -16,6 +16,11 @@ languageCode = 'en-us'
   taglist = true
   showrss = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [[menu.main]]
 name = "Tags"
 url = "/tags/"
