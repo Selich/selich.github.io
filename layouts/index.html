@@ -4,18 +4,18 @@
   {{ .Content }}
   
   <h2>Latest news</h2>
-  <div class="post-list">
+  <div class="news-list">
   {{ range first 3 (where .Site.RegularPages "Section" "news") }}
     {{ if not .Draft }}
-    <article class="post-item">
+    <article class="news-item">
       <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      <div class="article-meta">
+      <div class="news-meta">
         {{ .Date.Format "January 2, 2006" }}
       </div>
-      <div class="post-summary">
+      <div class="news-summary">
         {{ .Summary }}
       </div>
-      <p><a href="{{ .RelPermalink }}">Read more →</a></p>
+      <p class="read-more"><a href="{{ .RelPermalink }}">Read more →</a></p>
     </article>
     {{ end }}
   {{ end }}

@@ -1,104 +1,238 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nikola Selic - Personal Website</title><link>https://nikolaselic.me/blog/</link><description>Recent content in Blog on Nikola Selic - Personal Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 14 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://nikolaselic.me/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Started Collaboration with TRL Lab on LLM Research</title><link>https://nikolaselic.me/news/trl-lab-collaboration/</link><pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/news/trl-lab-collaboration/</guid><description>&lt;p>Excited to announce that I&amp;rsquo;ve started working with the &lt;strong>TRL Lab&lt;/strong> at University of Amsterdam on LLM research! Working as a research student with &lt;a href="https://www.madelonhulsebos.com">Prof. Madelon Hulsebos&lt;/a> and &lt;a href="https://www.daniel-gomm.com">Daniel Gomm&lt;/a> on generative AI and information retrieval for structured data. Looking forward to visiting Amsterdam during this collaboration!&lt;/p>
-&lt;p>You can find more about the lab and team at &lt;a href="https://trl-lab.github.io/people/">TRL Lab People&lt;/a>.&lt;/p></description></item><item><title>My Experience at BTW25 in Bamberg</title><link>https://nikolaselic.me/blog/btw25-conference-experience-bamberg/</link><pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/blog/btw25-conference-experience-bamberg/</guid><description>&lt;p>I had such a pleasant time at the &lt;a href="https://btw2025.uni-bamberg.de/">BTW conference&lt;/a> at &lt;a href="https://www.uni-bamberg.de/en/wiai/">Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a> in &lt;a href="https://www.bamberg.info/en/">Bamberg&lt;/a> this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href="https://www.cs.cit.tum.de/en/dasl/tumuchdata/">TUMuchData team&lt;/a> for the conference scholarship. Looking forward to the next one in &lt;a href="https://www.muenchen.de/en">Munich&lt;/a>.&lt;/p>
-&lt;p>{{/*
-&lt;div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
-&lt;h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">D3.js Animation&lt;/h4>
-&lt;svg id="d3-animation-movingCircle-0" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 750 400" preserveAspectRatio="xMidYMid meet">
-&lt;noscript>JavaScript and SVG support are required to view this D3.js animation.&lt;/noscript>
-&lt;/svg>
-&lt;button id="replay-movingCircle-0" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation&lt;/button>
-&lt;/div>
-&lt;script src="https://d3js.org/d3.v7.min.js" defer>&lt;/script>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer>&lt;/script>
-&lt;script src="https://nikolaselic.me/js/animations/movingCircle.js" defer>&lt;/script>
-&lt;script>
-document.addEventListener('DOMContentLoaded', function() {
-const containerSelector = "#d3-animation-movingCircle-0";
-const replayButtonSelector = "#replay-movingCircle-0";
-const functionName = "renderMovingCircleAnimation";
-const scriptPath = "\/js\/animations\/movingCircle.js";
-const svgElement = document.querySelector(containerSelector);
-if (!svgElement) {
-console.error(`D3 container ${containerSelector} not found.`);
-return;
-}
-const animationWrapper = svgElement.closest('.d3-animation-wrapper');
-if (!animationWrapper) {
-console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
-return;
-}
-const observerOptions = {
-root: null,
-rootMargin: '0px',
-threshold: 0.1
-};
-const observerCallback = (entries, observer) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-console.log(`Animation ${functionName} intersecting, attempting to run.`);
-if (typeof window[functionName] === 'function') {
-try {
-window[functionName](containerSelector, replayButtonSelector);
-} catch (error) {
-console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
-const container = document.querySelector(containerSelector);
-if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}&lt;/text>`;
-}
-} else {
-console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
-const container = document.querySelector(containerSelector);
-if (container) container.innerHTML = `&lt;text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.&lt;/text>`;
-}
-observer.unobserve(entry.target);
-console.log(`Observer stopped for ${functionName}`);
-}
-});
-};
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-observer.observe(animationWrapper);
-});
-&lt;/script>
-*/}}&lt;/p>
-&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/coffee-bike.jpg" alt="Coffee bike at the conference venue">&lt;/p>
-&lt;p>The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p>
-&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/poster-session.jpg" alt="Conference hall with poster presentations">&lt;/p>
-&lt;p>The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p>
-&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/conference-badge.jpg" alt="BTW25 Conference Badge">&lt;/p>
-&lt;p>The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href="https://fg-dbs.gi.de/">Database and Information Systems Special Interest Group&lt;/a> of the &lt;a href="https://gi.de/">German Informatics Society (GI)&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="https://nikolaselic.me/images/btw25/bamberg-old-town-hall.jpg" alt="Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)">&lt;/p>
-&lt;p>One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href="https://whc.unesco.org/en/list/624/">UNESCO World Heritage Site&lt;/a>. The iconic &lt;a href="https://en.wikipedia.org/wiki/Bamberg_Rathaus">Old Town Hall&lt;/a> built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p></description></item><item><title>Started new role as Teaching Assistant at TUM</title><link>https://nikolaselic.me/news/teaching-assistant-tum/</link><pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/news/teaching-assistant-tum/</guid><description>&lt;p>Excited to announce that I started working as a &lt;strong>Teaching Assistant&lt;/strong> for Introduction to Informatics (SQL and Java) at Technical University of Munich!&lt;/p></description></item><item><title>About</title><link>https://nikolaselic.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/about/</guid><description>&lt;h1 id="about-me">About Me&lt;/h1>
-&lt;p>I write this blog to share my thoughts and experiences with the tech community. My focus areas include ML4Systems, LLMs, security and privacy research, with interests in systems optimization and machine learning workflows.&lt;/p>
-&lt;h2 id="education">Education&lt;/h2>
-&lt;h3 id="technical-university-of-munich">Technical University of Munich&lt;/h3>
-&lt;p>&lt;strong>Master&amp;rsquo;s degree, Computer Science&lt;/strong>&lt;br>
-&lt;em>Curriculum&lt;/em>: &lt;a href="https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/">Major: Machine Learning Minor: Databases, Security/Privacy&lt;/a>&lt;br>
-&lt;em>2021 - 2025&lt;/em>&lt;/p>
-&lt;h3 id="faculty-of-technical-sciences-university-of-novi-sad">Faculty of Technical Sciences, University of Novi Sad&lt;/h3>
-&lt;p>&lt;strong>Bachelor of Engineering with Honours (BE), Data Engineering&lt;/strong>&lt;br>
-&lt;em>Curriculum&lt;/em>: &lt;a href="https://stari.ftn.uns.ac.rs/n515410363/information-engineering">Information Engineering Program&lt;/a>&lt;br>
-&lt;em>Bachelor Thesis&lt;/em>: Blockchain-based Federated Learning&lt;/p>
-&lt;h2 id="work-experience">Work Experience&lt;/h2>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;h3 id="twinu">twinu&lt;/h3>
-&lt;p>&lt;strong>Core Developer&lt;/strong>
-&lt;em>Apr 2023 - Jan 2024&lt;/em> · 10 months
-Munich, Bavaria, Germany · Remote&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;h3 id="twinu-1">twinu&lt;/h3>
-&lt;p>&lt;strong>Core Developer&lt;/strong>
-&lt;em>Feb 2022 - Sep 2022&lt;/em> · 8 months
-Munich, Bavaria, Germany · Remote&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;h3 id="lambdaworks">LambdaWorks&lt;/h3>
-&lt;p>&lt;strong>Software Engineer Intern&lt;/strong>
-&lt;em>Feb 2020 - May 2020&lt;/em> · 4 months
-Novi Sad, Vojvodina, Serbia&lt;/p>
-&lt;h3 id="typhoon-hil-inc">Typhoon HIL, Inc.&lt;/h3>
-&lt;p>&lt;strong>Machine Learning Engineer Intern&lt;/strong>
-&lt;em>Apr 2019 - Dec 2019&lt;/em> · 9 months
-Novi Sad, Vojvodina, Serbia&lt;/p></description></item><item><title>Blogroll</title><link>https://nikolaselic.me/blogroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/blogroll/</guid><description>&lt;h1 id="blogroll">Blogroll&lt;/h1>
-&lt;p>A list of blogs I follow and recommend.&lt;/p></description></item><item><title>CV</title><link>https://nikolaselic.me/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/cv/</guid><description>&lt;h1 id="my-cv">My CV&lt;/h1>
-&lt;p>Professional experience and education details go here.&lt;/p></description></item><item><title>Recipes</title><link>https://nikolaselic.me/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/recipes/</guid><description>&lt;h1 id="recipes">Recipes&lt;/h1>
-&lt;p>A collection of my favorite recipes.&lt;/p></description></item><item><title>Services</title><link>https://nikolaselic.me/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nikolaselic.me/services/</guid><description>&lt;h1 id="services">Services&lt;/h1>
-&lt;p>Here are the professional services I offer.&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>Nikola Selic - Personal Website</title>
+	<link>http://localhost:1314/blog/</link>
+	<description>Recent content in Blog on Nikola Selic - Personal Website</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Mon, 14 Apr 2025 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://localhost:1314/blog/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Started Collaboration with TRL Lab on LLM Research</title>
+		<link>http://localhost:1314/news/trl-lab-collaboration/</link>
+		<pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/news/trl-lab-collaboration/</guid>
+		<description>&lt;p&gt;Excited to announce that I&amp;rsquo;ve started working with the &lt;strong&gt;TRL Lab&lt;/strong&gt; at University of Amsterdam on LLM research! Working as a research student with &lt;a href=&#34;https://www.madelonhulsebos.com&#34;&gt;Prof. Madelon Hulsebos&lt;/a&gt; and &lt;a href=&#34;https://www.daniel-gomm.com&#34;&gt;Daniel Gomm&lt;/a&gt; on generative AI and information retrieval for structured data. Looking forward to visiting Amsterdam during this collaboration!&lt;/p&gt;
+&lt;p&gt;You can find more about the lab and team at &lt;a href=&#34;https://trl-lab.github.io/people/&#34;&gt;TRL Lab People&lt;/a&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>My Experience at BTW25 in Bamberg</title>
+		<link>http://localhost:1314/blog/btw25-conference-experience-bamberg/</link>
+		<pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/blog/btw25-conference-experience-bamberg/</guid>
+		<description>&lt;p&gt;I had such a pleasant time at the &lt;a href=&#34;https://btw2025.uni-bamberg.de/&#34;&gt;BTW conference&lt;/a&gt; at &lt;a href=&#34;https://www.uni-bamberg.de/en/wiai/&#34;&gt;Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a&gt; in &lt;a href=&#34;https://www.bamberg.info/en/&#34;&gt;Bamberg&lt;/a&gt; this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href=&#34;https://www.cs.cit.tum.de/en/dasl/tumuchdata/&#34;&gt;TUMuchData team&lt;/a&gt; for the conference scholarship. Looking forward to the next one in &lt;a href=&#34;https://www.muenchen.de/en&#34;&gt;Munich&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;{{/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  &lt;div class=&#34;d3-animation-wrapper&#34; style=&#34;margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;&#34;&gt;D3.js Animation&lt;/h4&gt;
+    &lt;svg id=&#34;d3-animation-movingCircle-0&#34; class=&#34;d3-animation-container&#34; style=&#34;max-width: 100%; height: auto; display: block; margin: 0 auto;&#34; viewBox=&#34;0 0 750 400&#34; preserveAspectRatio=&#34;xMidYMid meet&#34;&gt;
+        
+        &lt;noscript&gt;JavaScript and SVG support are required to view this D3.js animation.&lt;/noscript&gt;
+    &lt;/svg&gt;
+    &lt;button id=&#34;replay-movingCircle-0&#34; class=&#34;d3-replay-button&#34; style=&#34;margin-top: 10px; padding: 5px 10px; font-size: 0.9em;&#34;&gt;Replay Animation&lt;/button&gt;
+  &lt;/div&gt;
+
+
+  
+  &lt;script src=&#34;https://d3js.org/d3.v7.min.js&#34; defer&gt;&lt;/script&gt;
+
+  
+  &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&#34; crossorigin=&#34;anonymous&#34; referrerpolicy=&#34;no-referrer&#34; defer&gt;&lt;/script&gt;
+
+  
+  &lt;script src=&#34;http://localhost:1314/js/animations/movingCircle.js&#34; defer&gt;&lt;/script&gt;
+
+  
+  &lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+      const containerSelector = &#34;#d3-animation-movingCircle-0&#34;;
+      const replayButtonSelector = &#34;#replay-movingCircle-0&#34;;
+      const functionName = &#34;renderMovingCircleAnimation&#34;;
+      const scriptPath = &#34;\/js\/animations\/movingCircle.js&#34;;
+      const svgElement = document.querySelector(containerSelector);
+
+      if (!svgElement) {
+        console.error(`D3 container ${containerSelector} not found.`);
+        return;
+      }
+
+      const animationWrapper = svgElement.closest(&#39;.d3-animation-wrapper&#39;);
+
+      if (!animationWrapper) {
+          console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+          return;
+      }
+
+      const observerOptions = {
+        root: null, 
+        rootMargin: &#39;0px&#39;,
+        threshold: 0.1 
+      };
+
+      const observerCallback = (entries, observer) =&gt; {
+        entries.forEach(entry =&gt; {
+          if (entry.isIntersecting) {
+            
+            console.log(`Animation ${functionName} intersecting, attempting to run.`);
+            if (typeof window[functionName] === &#39;function&#39;) {
+              try {
+                
+                window[functionName](containerSelector, replayButtonSelector);
+              } catch (error) {
+                console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+                const container = document.querySelector(containerSelector);
+                if (container) container.innerHTML = `&lt;text x=&#39;50%&#39; y=&#39;50%&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;red&#39;&gt;Error rendering: ${functionName}&lt;/text&gt;`;
+              }
+            } else {
+              console.error(`D3 animation function ${functionName} not found. Make sure it&#39;s defined in ${scriptPath} and loaded correctly.`);
+              const container = document.querySelector(containerSelector);
+              if (container) container.innerHTML = `&lt;text x=&#39;50%&#39; y=&#39;50%&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;red&#39;&gt;Error: ${functionName} not found.&lt;/text&gt;`;
+            }
+            
+            observer.unobserve(entry.target);
+            console.log(`Observer stopped for ${functionName}`);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      observer.observe(animationWrapper);
+
+    });
+  &lt;/script&gt;
+  */}}&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href=&#34;https://fg-dbs.gi.de/&#34;&gt;Database and Information Systems Special Interest Group&lt;/a&gt; of the &lt;a href=&#34;https://gi.de/&#34;&gt;German Informatics Society (GI)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href=&#34;https://whc.unesco.org/en/list/624/&#34;&gt;UNESCO World Heritage Site&lt;/a&gt;. The iconic &lt;a href=&#34;https://en.wikipedia.org/wiki/Bamberg_Rathaus&#34;&gt;Old Town Hall&lt;/a&gt; built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Started new role as Teaching Assistant at TUM</title>
+		<link>http://localhost:1314/news/teaching-assistant-tum/</link>
+		<pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/news/teaching-assistant-tum/</guid>
+		<description>&lt;p&gt;Excited to announce that I started working as a &lt;strong&gt;Teaching Assistant&lt;/strong&gt; for Introduction to Informatics (SQL and Java) at Technical University of Munich!&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>About</title>
+		<link>http://localhost:1314/about/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/about/</guid>
+		<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
+&lt;p&gt;I write this blog to share my thoughts and experiences with the tech community. My focus areas include ML4Systems, LLMs, security and privacy research, with interests in systems optimization and machine learning workflows.&lt;/p&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;h3 id=&#34;technical-university-of-munich&#34;&gt;Technical University of Munich&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Master&amp;rsquo;s degree, Computer Science&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Curriculum&lt;/em&gt;: &lt;a href=&#34;https://www.cit.tum.de/en/cit/studies/degree-programs/master-informatics/&#34;&gt;Major: Machine Learning Minor: Databases, Security/Privacy&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;2021 - 2025&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;faculty-of-technical-sciences-university-of-novi-sad&#34;&gt;Faculty of Technical Sciences, University of Novi Sad&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bachelor of Engineering with Honours (BE), Data Engineering&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Curriculum&lt;/em&gt;: &lt;a href=&#34;https://stari.ftn.uns.ac.rs/n515410363/information-engineering&#34;&gt;Information Engineering Program&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Bachelor Thesis&lt;/em&gt;: Blockchain-based Federated Learning&lt;/p&gt;
+&lt;h2 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;twinu&#34;&gt;twinu&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;
+&lt;em&gt;Apr 2023 - Jan 2024&lt;/em&gt; · 10 months
+Munich, Bavaria, Germany · Remote&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;twinu-1&#34;&gt;twinu&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;
+&lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months
+Munich, Bavaria, Germany · Remote&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;lambdaworks&#34;&gt;LambdaWorks&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;
+&lt;em&gt;Feb 2020 - May 2020&lt;/em&gt; · 4 months
+Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+&lt;h3 id=&#34;typhoon-hil-inc&#34;&gt;Typhoon HIL, Inc.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Machine Learning Engineer Intern&lt;/strong&gt;
+&lt;em&gt;Apr 2019 - Dec 2019&lt;/em&gt; · 9 months
+Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Blogroll</title>
+		<link>http://localhost:1314/blogroll/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/blogroll/</guid>
+		<description>&lt;h1 id=&#34;blogroll&#34;&gt;Blogroll&lt;/h1&gt;
+&lt;p&gt;A list of blogs I follow and recommend.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>CV</title>
+		<link>http://localhost:1314/cv/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/cv/</guid>
+		<description>&lt;h1 id=&#34;my-cv&#34;&gt;My CV&lt;/h1&gt;
+&lt;p&gt;Professional experience and education details go here.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Recipes</title>
+		<link>http://localhost:1314/recipes/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/recipes/</guid>
+		<description>&lt;h1 id=&#34;recipes&#34;&gt;Recipes&lt;/h1&gt;
+&lt;p&gt;A collection of my favorite recipes.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Services</title>
+		<link>http://localhost:1314/services/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://localhost:1314/services/</guid>
+		<description>&lt;h1 id=&#34;services&#34;&gt;Services&lt;/h1&gt;
+&lt;p&gt;Here are the professional services I offer.&lt;/p&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>
