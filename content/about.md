@@ -17,11 +17,11 @@ social:
 
 I'm a student at [TUM](https://www.tum.de/) where I work as a Teaching Assistant for Introduction to Informatics. I'm currently a Security Researcher Intern at [Firebolt](https://www.firebolt.io/) and also collaborating with the [TRL Lab](https://trl-lab.github.io/) at [CWI](https://www.cwi.nl/). Previously, I was a Software Engineer Intern at [AWS](https://aws.amazon.com/), where I worked on using ML and NLP for Kernel Security with the EC2 KaOS team. 
 
-My research interests are focused on [ML4Systems](https://ml4sys.org/), LLMs, security and privacy. I'm particularly interested in how machine learning can be applied to improve system performance, reliability, and security, as well as the intersection of large language models with systems research. 
+My research interests are focused on ML4Systems, LLMs, security and privacy. I'm particularly interested in how machine learning can be applied to improve system performance, reliability, and security, as well as the intersection of large language models with systems research. 
 
 I'm actively exploring how modern ML techniques can enhance system design and operation, while also investigating the security and privacy implications of deploying ML models in production systems. My work spans from low-level systems optimization to high-level applications of language models in various domains.
 
-I'm generally interested in ML4Systems, LLMs, security and privacy, with a particular focus on:
+Research interests:
 - Machine Learning for Systems Optimization and Performance  
 - Large Language Models for Code Generation and System Analysis
 - Security and Privacy in ML Systems and Deployments

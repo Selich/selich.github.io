@@ -2,79 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1314/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/collaboration/</loc>
+    <loc>http://localhost:1313/tags/collaboration/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/embeddings/</loc>
+    <loc>http://localhost:1313/tags/embeddings/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/foundation-models/</loc>
+    <loc>http://localhost:1313/tags/foundation-models/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/news/</loc>
+    <loc>http://localhost:1313/news/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/llm/</loc>
+    <loc>http://localhost:1313/tags/llm/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/nl2sql/</loc>
+    <loc>http://localhost:1313/tags/nl2sql/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/research/</loc>
+    <loc>http://localhost:1313/tags/research/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/news/trl-lab-collaboration/</loc>
+    <loc>http://localhost:1313/news/trl-lab-collaboration/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/trl-lab/</loc>
+    <loc>http://localhost:1313/tags/trl-lab/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/academic/</loc>
+    <loc>http://localhost:1313/tags/academic/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/btw25/</loc>
+    <loc>http://localhost:1313/tags/btw25/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/conference/</loc>
+    <loc>http://localhost:1313/tags/conference/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/database/</loc>
+    <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/blog/btw25-conference-experience-bamberg/</loc>
+    <loc>http://localhost:1313/blog/btw25-conference-experience-bamberg/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/career/</loc>
+    <loc>http://localhost:1313/tags/career/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/news/teaching-assistant-tum/</loc>
+    <loc>http://localhost:1313/news/teaching-assistant-tum/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/teaching/</loc>
+    <loc>http://localhost:1313/tags/teaching/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/tum/</loc>
+    <loc>http://localhost:1313/tags/tum/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1314/blogroll/</loc>
+    <loc>http://localhost:1313/blogroll/</loc>
   </url><url>
-    <loc>http://localhost:1314/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1314/cv/</loc>
+    <loc>http://localhost:1313/cv/</loc>
   </url><url>
-    <loc>http://localhost:1314/recipes/</loc>
+    <loc>http://localhost:1313/recipes/</loc>
   </url><url>
-    <loc>http://localhost:1314/services/</loc>
+    <loc>http://localhost:1313/services/</loc>
   </url>
 </urlset>

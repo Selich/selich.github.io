@@ -19,11 +19,12 @@
 .syntax-tree-wrapper {
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto 5px auto;
+  margin: 20px auto 0px auto;
   display: block !important;
   visibility: visible !important;
   background-color: white;
-  padding: 15px;
+  padding: 15px 15px 110px 15px;
+  overflow: visible;
 }
 
 .syntax-tree-title {
@@ -47,13 +48,15 @@
   stroke: transparent;
   stroke-width: 2px;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .node:hover circle {
-  fill: #1a202c;
-  stroke: transparent;
-  transform: scale(1.1);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
 }
+
+
 
 .node text {
   font-family: 'Source Sans Pro', sans-serif;
@@ -63,8 +66,7 @@
 }
 
 .node:hover text {
-  /* font-weight: bold; */
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .link {
@@ -72,11 +74,14 @@
   stroke: #fff;
   stroke-width: 2px;
   transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
 .link:hover {
-  stroke: #cbd5e0;
+  stroke: #90cdf4;
   stroke-width: 3px;
+  opacity: 1;
+  filter: drop-shadow(0 1px 3px rgba(66, 153, 225, 0.3));
 }
 
 .language-title {
@@ -176,6 +181,16 @@
   background-color: #26C6DA; /* More vibrant cyan for sentences */
   padding: 2px 5px;
   border-radius: 3px;
+}
+
+/* Ensure leaf nodes also have hover effects */
+.leaf-node:hover circle {
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
+}
+
+.leaf-node:hover text {
+  font-size: 13px;
 }
 
 @media (prefers-color-scheme: dark) {

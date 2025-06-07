@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Nikola Selic - Personal Website</title>
-	<link>http://localhost:1314/tags/database/</link>
+	<link>http://localhost:1313/tags/database/</link>
 	<description>Recent content in Database on Nikola Selic - Personal Website</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
 	<lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://localhost:1314/tags/database/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
 		<title>Started Collaboration with TRL Lab on LLM Research</title>
-		<link>http://localhost:1314/news/trl-lab-collaboration/</link>
+		<link>http://localhost:1313/news/trl-lab-collaboration/</link>
 		<pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/news/trl-lab-collaboration/</guid>
+		<guid>http://localhost:1313/news/trl-lab-collaboration/</guid>
 		<description>&lt;p&gt;Excited to announce that I&amp;rsquo;ve started working with the &lt;strong&gt;TRL Lab&lt;/strong&gt; at University of Amsterdam on LLM research! Working as a research student with &lt;a href=&#34;https://www.madelonhulsebos.com&#34;&gt;Prof. Madelon Hulsebos&lt;/a&gt; and &lt;a href=&#34;https://www.daniel-gomm.com&#34;&gt;Daniel Gomm&lt;/a&gt; on generative AI and information retrieval for structured data. Looking forward to visiting Amsterdam during this collaboration!&lt;/p&gt;
 &lt;p&gt;You can find more about the lab and team at &lt;a href=&#34;https://trl-lab.github.io/people/&#34;&gt;TRL Lab People&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -23,10 +23,10 @@
 	
 	<item>
 		<title>My Experience at BTW25 in Bamberg</title>
-		<link>http://localhost:1314/blog/btw25-conference-experience-bamberg/</link>
+		<link>http://localhost:1313/blog/btw25-conference-experience-bamberg/</link>
 		<pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/blog/btw25-conference-experience-bamberg/</guid>
+		<guid>http://localhost:1313/blog/btw25-conference-experience-bamberg/</guid>
 		<description>&lt;p&gt;I had such a pleasant time at the &lt;a href=&#34;https://btw2025.uni-bamberg.de/&#34;&gt;BTW conference&lt;/a&gt; at &lt;a href=&#34;https://www.uni-bamberg.de/en/wiai/&#34;&gt;Fakultät Wirtschaftsinformatik und Angewandte Informatik (WIAI)&lt;/a&gt; in &lt;a href=&#34;https://www.bamberg.info/en/&#34;&gt;Bamberg&lt;/a&gt; this week. The organizers were wonderful, and kept me well caffeinated (thank you coffee bike). The lectures and workshops were such a treat for someone who is at the beginning of their research journey. Meeting so many people whose names I only saw on research papers was, as always, quite an experience. Many thanks to the organizers and the speakers. Special thanks to the &lt;a href=&#34;https://www.cs.cit.tum.de/en/dasl/tumuchdata/&#34;&gt;TUMuchData team&lt;/a&gt; for the conference scholarship. Looking forward to the next one in &lt;a href=&#34;https://www.muenchen.de/en&#34;&gt;Munich&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;{{/* 
 
@@ -67,7 +67,7 @@
   &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&#34; crossorigin=&#34;anonymous&#34; referrerpolicy=&#34;no-referrer&#34; defer&gt;&lt;/script&gt;
 
   
-  &lt;script src=&#34;http://localhost:1314/js/animations/movingCircle.js&#34; defer&gt;&lt;/script&gt;
+  &lt;script src=&#34;http://localhost:1313/js/animations/movingCircle.js&#34; defer&gt;&lt;/script&gt;
 
   
   &lt;script&gt;
@@ -128,35 +128,51 @@
     });
   &lt;/script&gt;
   */}}&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
+&lt;!-- 
+Note: Please save the shared images to the following paths to match the post:
+1. Coffee bike image -&gt; static/images/btw25/coffee-bike.jpg
+2. Poster session image -&gt; static/images/btw25/poster-session.jpg
+3. Conference badge image -&gt; static/images/btw25/conference-badge.jpg
+4. Bamberg Old Town Hall image -&gt; static/images/btw25/bamberg-old-town-hall.jpg
+--&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/coffee-bike.jpg&#34; alt=&#34;Coffee bike at the conference venue&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The conference featured an excellent coffee service, which was much appreciated during the long days of presentations and networking.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/poster-session.jpg&#34; alt=&#34;Conference hall with poster presentations&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The poster sessions were particularly valuable, allowing researchers to present their work in an interactive format and engage in detailed discussions with attendees.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/conference-badge.jpg&#34; alt=&#34;BTW25 Conference Badge&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The BTW conference is the most important database conference in the German-speaking area, organized by the &lt;a href=&#34;https://fg-dbs.gi.de/&#34;&gt;Database and Information Systems Special Interest Group&lt;/a&gt; of the &lt;a href=&#34;https://gi.de/&#34;&gt;German Informatics Society (GI)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/btw25/bamberg-old-town-hall.jpg&#34; alt=&#34;Bamberg&amp;rsquo;s Old Town Hall (Altes Rathaus)&#34;&gt;&lt;/p&gt;
 &lt;p&gt;One of the highlights of attending the conference was experiencing the beautiful city of Bamberg, a &lt;a href=&#34;https://whc.unesco.org/en/list/624/&#34;&gt;UNESCO World Heritage Site&lt;/a&gt;. The iconic &lt;a href=&#34;https://en.wikipedia.org/wiki/Bamberg_Rathaus&#34;&gt;Old Town Hall&lt;/a&gt; built on a bridge over the Regnitz River is one of the city&amp;rsquo;s most famous landmarks.&lt;/p&gt;
 </description>
 	</item>
 	
 	<item>
 		<title>Started new role as Teaching Assistant at TUM</title>
-		<link>http://localhost:1314/news/teaching-assistant-tum/</link>
+		<link>http://localhost:1313/news/teaching-assistant-tum/</link>
 		<pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/news/teaching-assistant-tum/</guid>
+		<guid>http://localhost:1313/news/teaching-assistant-tum/</guid>
 		<description>&lt;p&gt;Excited to announce that I started working as a &lt;strong&gt;Teaching Assistant&lt;/strong&gt; for Introduction to Informatics (SQL and Java) at Technical University of Munich!&lt;/p&gt;
 </description>
 	</item>
 	
 	<item>
 		<title>About</title>
-		<link>http://localhost:1314/about/</link>
+		<link>http://localhost:1313/about/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/about/</guid>
-		<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
-&lt;p&gt;I write this blog to share my thoughts and experiences with the tech community. My focus areas include ML4Systems, LLMs, security and privacy research, with interests in systems optimization and machine learning workflows.&lt;/p&gt;
+		<guid>http://localhost:1313/about/</guid>
+		<description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m a student at &lt;a href=&#34;https://www.tum.de/&#34;&gt;TUM&lt;/a&gt; where I work as a Teaching Assistant for Introduction to Informatics. I&amp;rsquo;m currently a Security Researcher Intern at &lt;a href=&#34;https://www.firebolt.io/&#34;&gt;Firebolt&lt;/a&gt; and also collaborating with the &lt;a href=&#34;https://trl-lab.github.io/&#34;&gt;TRL Lab&lt;/a&gt; at &lt;a href=&#34;https://www.cwi.nl/&#34;&gt;CWI&lt;/a&gt;. Previously, I was a Software Engineer Intern at &lt;a href=&#34;https://aws.amazon.com/&#34;&gt;AWS&lt;/a&gt;, where I worked on using ML and NLP for Kernel Security with the EC2 KaOS team.&lt;/p&gt;
+&lt;p&gt;My research interests are focused on &lt;a href=&#34;https://ml4sys.org/&#34;&gt;ML4Systems&lt;/a&gt;, LLMs, security and privacy. I&amp;rsquo;m particularly interested in how machine learning can be applied to improve system performance, reliability, and security, as well as the intersection of large language models with systems research.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m actively exploring how modern ML techniques can enhance system design and operation, while also investigating the security and privacy implications of deploying ML models in production systems. My work spans from low-level systems optimization to high-level applications of language models in various domains.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m generally interested in ML4Systems, LLMs, security and privacy, with a particular focus on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Machine Learning for Systems Optimization and Performance&lt;/li&gt;
+&lt;li&gt;Large Language Models for Code Generation and System Analysis&lt;/li&gt;
+&lt;li&gt;Security and Privacy in ML Systems and Deployments&lt;/li&gt;
+&lt;li&gt;System Design for ML Workloads and Infrastructure&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
 &lt;h3 id=&#34;technical-university-of-munich&#34;&gt;Technical University of Munich&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Master&amp;rsquo;s degree, Computer Science&lt;/strong&gt;&lt;br&gt;
@@ -167,18 +183,70 @@
 &lt;em&gt;Curriculum&lt;/em&gt;: &lt;a href=&#34;https://stari.ftn.uns.ac.rs/n515410363/information-engineering&#34;&gt;Information Engineering Program&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Bachelor Thesis&lt;/em&gt;: Blockchain-based Federated Learning&lt;/p&gt;
 &lt;h2 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397181395/7ca4a65b5df5f85cc2bc7e2e6e0e0cf4.png&#34; alt=&#34;Firebolt Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Security Researcher&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;Firebolt&lt;/strong&gt; · Internship&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Apr 2025 - Present · 3 months&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;&#34;&gt;Munich, Bavaria, Germany · Hybrid&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg&#34; alt=&#34;Technical University of Munich Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Teaching Assistant&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;Technical University of Munich&lt;/strong&gt;&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Dec 2024 - Present · 4 months&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 10px; font-size: 0.9em;&#34;&gt;Introduction to Informatics (SQL and Java)&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg&#34; alt=&#34;Technical University of Munich Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Student Research Assistant&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;Technical University of Munich&lt;/strong&gt;&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Feb 2024 - Present · 1 year 2 months&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;twinu&#34;&gt;twinu&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;
 &lt;em&gt;Apr 2023 - Jan 2024&lt;/em&gt; · 10 months
 Munich, Bavaria, Germany · Remote&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg&#34; alt=&#34;Amazon Web Services (AWS) Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Software Engineer Intern&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;Amazon Web Services (AWS)&lt;/strong&gt; · Internship&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Sep 2022 - Feb 2023 · 6 months&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;&#34;&gt;Dresden, Saxony, Germany · Hybrid&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 0; font-size: 0.9em;&#34;&gt;Using ML and NLP for Kernel Security - Team: AWS EC2 KaOS&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;twinu-1&#34;&gt;twinu&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Core Developer&lt;/strong&gt;
 &lt;em&gt;Feb 2022 - Sep 2022&lt;/em&gt; · 8 months
 Munich, Bavaria, Germany · Remote&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://assets-global.website-files.com/62556985827691ddcbe8f689/62556dc71fd98539f45170f3_KITRO_logo_black.svg&#34; alt=&#34;KITRO Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Software Developer&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;KITRO&lt;/strong&gt;&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Feb 2022 - Sep 2022 · 8 months&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;&#34;&gt;Zurich, Switzerland · Remote&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 0; font-size: 0.9em;&#34;&gt;Skills: Data Engineering · Apache Spark · AWS Lambda · Python · Computer Vision&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;lambdaworks&#34;&gt;LambdaWorks&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Software Engineer Intern&lt;/strong&gt;
 &lt;em&gt;Feb 2020 - May 2020&lt;/em&gt; · 4 months
@@ -187,15 +255,39 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Machine Learning Engineer Intern&lt;/strong&gt;
 &lt;em&gt;Apr 2019 - Dec 2019&lt;/em&gt; · 9 months
 Novi Sad, Vojvodina, Serbia&lt;/p&gt;
+&lt;h2 id=&#34;volunteer-activities&#34;&gt;Volunteer Activities&lt;/h2&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://cidrdb.org/cidr2025/images/cidr2025-logo.svg&#34; alt=&#34;Munich NLP Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Organizer&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;Munich🥨NLP&lt;/strong&gt;&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Apr 2025 - Present · 3 months&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;&#34;&gt;Education&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; align-items: flex-start; margin-bottom: 20px;&#34;&gt;
+  &lt;div style=&#34;flex-shrink: 0; margin-right: 20px;&#34;&gt;
+    &lt;img src=&#34;https://cidrdb.org/cidr2025/images/cidr2025-logo.svg&#34; alt=&#34;CIDR Logo&#34; style=&#34;width: 50px; height: auto; border-radius: 4px;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex-grow: 1;&#34;&gt;
+    &lt;h4 style=&#34;margin-top: 0; margin-bottom: 5px;&#34;&gt;Volunteer&lt;/h4&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em;&#34;&gt;&lt;strong&gt;CIDR (Conference on Innovative Data Systems Research)&lt;/strong&gt;&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;&#34;&gt;Jan 2025 · 1 month&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;&#34;&gt;Science and Technology&lt;/p&gt;
+    &lt;p style=&#34;margin-top: 0; margin-bottom: 0; font-size: 0.9em;&#34;&gt;Volunteer for CIDR 2025 in Amsterdam&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </description>
 	</item>
 	
 	<item>
 		<title>Blogroll</title>
-		<link>http://localhost:1314/blogroll/</link>
+		<link>http://localhost:1313/blogroll/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/blogroll/</guid>
+		<guid>http://localhost:1313/blogroll/</guid>
 		<description>&lt;h1 id=&#34;blogroll&#34;&gt;Blogroll&lt;/h1&gt;
 &lt;p&gt;A list of blogs I follow and recommend.&lt;/p&gt;
 </description>
@@ -203,10 +295,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>CV</title>
-		<link>http://localhost:1314/cv/</link>
+		<link>http://localhost:1313/cv/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/cv/</guid>
+		<guid>http://localhost:1313/cv/</guid>
 		<description>&lt;h1 id=&#34;my-cv&#34;&gt;My CV&lt;/h1&gt;
 &lt;p&gt;Professional experience and education details go here.&lt;/p&gt;
 </description>
@@ -214,10 +306,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>Recipes</title>
-		<link>http://localhost:1314/recipes/</link>
+		<link>http://localhost:1313/recipes/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/recipes/</guid>
+		<guid>http://localhost:1313/recipes/</guid>
 		<description>&lt;h1 id=&#34;recipes&#34;&gt;Recipes&lt;/h1&gt;
 &lt;p&gt;A collection of my favorite recipes.&lt;/p&gt;
 </description>
@@ -225,10 +317,10 @@ Novi Sad, Vojvodina, Serbia&lt;/p&gt;
 	
 	<item>
 		<title>Services</title>
-		<link>http://localhost:1314/services/</link>
+		<link>http://localhost:1313/services/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1314/services/</guid>
+		<guid>http://localhost:1313/services/</guid>
 		<description>&lt;h1 id=&#34;services&#34;&gt;Services&lt;/h1&gt;
 &lt;p&gt;Here are the professional services I offer.&lt;/p&gt;
 </description>
