@@ -13,9 +13,20 @@ social:
   email: "selic.work@gmail.com"
 ---
 
-# About Me
+# About me
 
-I write this blog to share my thoughts and experiences with the tech community. My focus areas include ML4Systems, LLMs, security and privacy research, with interests in systems optimization and machine learning workflows.
+I'm a student at TUM where I work as a Teaching Assistant for Introduction to Informatics. I'm currently a Security Researcher Intern at Firebolt and also collaborating with the TRL Lab at the University of Amsterdam. Previously, I was a Software Engineer Intern at AWS, where I worked on using ML and NLP for Kernel Security with the EC2 KaOS team. 
+
+My research interests are focused on ML4Systems, LLMs, security and privacy. I'm particularly interested in how machine learning can be applied to improve system performance, reliability, and security, as well as the intersection of large language models with systems research. 
+
+I'm actively exploring how modern ML techniques can enhance system design and operation, while also investigating the security and privacy implications of deploying ML models in production systems. My work spans from low-level systems optimization to high-level applications of language models in various domains.
+
+I'm generally interested in ML4Systems, LLMs, security and privacy, with a particular focus on:
+- Machine Learning for Systems Optimization and Performance  
+- Large Language Models for Code Generation and System Analysis
+- Security and Privacy in ML Systems and Deployments
+- System Design for ML Workloads and Infrastructure
+
 
 ## Education
 
@@ -30,6 +41,18 @@ I write this blog to share my thoughts and experiences with the tech community. 
 *Bachelor Thesis*: Blockchain-based Federated Learning
 
 ## Work Experience
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397181395/7ca4a65b5df5f85cc2bc7e2e6e0e0cf4.png" alt="Firebolt Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Security Researcher</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Firebolt</strong> · Internship</p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Apr 2025 - Present · 3 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Munich, Bavaria, Germany · Hybrid</p>
+  </div>
+</div>
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
@@ -99,4 +122,31 @@ Novi Sad, Vojvodina, Serbia
 **Machine Learning Engineer Intern**
 *Apr 2019 - Dec 2019* · 9 months
 Novi Sad, Vojvodina, Serbia
+
+## Volunteer Activities
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://cidrdb.org/cidr2025/images/cidr2025-logo.svg" alt="Munich NLP Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Organizer</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Munich🥨NLP</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Apr 2025 - Present · 3 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Education</p>
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="https://cidrdb.org/cidr2025/images/cidr2025-logo.svg" alt="CIDR Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Volunteer</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>CIDR (Conference on Innovative Data Systems Research)</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Jan 2025 · 1 month</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Science and Technology</p>
+    <p style="margin-top: 0; margin-bottom: 0; font-size: 0.9em;">Volunteer for CIDR 2025 in Amsterdam</p>
+  </div>
+</div>
 
