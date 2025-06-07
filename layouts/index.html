@@ -8,9 +8,7 @@
   {{ range first 3 (where .Site.RegularPages "Section" "news") }}
     {{ if not .Draft }}
     <article class="post-item">
-      <div class="article-content">
-        {{ .Content }}
-      </div>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <div class="article-meta">
         {{ .Date.Format "January 2, 2006" }}
       </div>
