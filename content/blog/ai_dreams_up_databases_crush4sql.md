@@ -1,7 +1,7 @@
 ---
 title: "AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos?"
 date: 2025-04-14
-draft: false
+draft: true
 tags: ["text-to-sql", "llm", "hallucination", "retrieval", "crush4sql", "experiment", "database", "vector search"]
 ---
 

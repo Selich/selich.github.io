@@ -1,5 +1,9 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 
+{{ define "head" }}
+<link rel="stylesheet" href="/css/news.css">
+{{ end }}
+
 {{ define "main" }}
   {{ .Content }}
   
@@ -7,12 +11,26 @@
   <div class="post-list">
   {{ range first 3 (where .Site.RegularPages "Section" "news") }}
     {{ if not .Draft }}
-    <article class="post-item">
-      <div class="article-content">
-        {{ .Content }}
+    <article class="news-post {{ if eq .Title "Started Collaboration with TRL Lab on LLM Research" }}trl-lab{{ else if eq .Title "Started new role as Teaching Assistant at TUM" }}teaching{{ end }}">
+      <div class="news-post-image">
+        {{ if eq .Title "Started Collaboration with TRL Lab on LLM Research" }}
+          <img src="/images/trl-lab-logo.svg" alt="TRL Lab" />
+        {{ else if eq .Title "Started new role as Teaching Assistant at TUM" }}
+          <img src="/images/teaching-assistant.svg" alt="Teaching Assistant" />
+        {{ else }}
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="25" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+            <text x="30" y="35" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="16" font-weight="600">📰</text>
+          </svg>
+        {{ end }}
       </div>
-      <div class="article-meta">
-        {{ .Date.Format "January 2, 2006" }}
+      <div class="news-post-content">
+        <div class="article-content">
+          {{ .Content }}
+        </div>
+        <div class="news-post-meta">
+          {{ .Date.Format "January 2, 2006" }}
+        </div>
       </div>
     </article>
     {{ end }}
@@ -27,8 +45,8 @@
     <article class="post-item">
       <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <div class="article-meta">
-        {{ .Date.Format "January 2, 2006" }} · 
-        {{ .ReadingTime }} mins
+        {{ .Date.Format "January 2, 2006" }} ·
+        {{ math.Round (div (countwords .Content) 200.0) }} mins
       </div>
     </article>
     {{ end }}
