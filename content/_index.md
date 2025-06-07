@@ -8,7 +8,7 @@ menu:
 
 {{< syntax-tree >}}
 
-<div style="text-align: center; margin: 1rem 0 2rem 0;">
+<div style="text-align: center; margin: 0.5rem 0 1.5rem 0;">
   <img src="/images/profile.jpg" alt="Nikola Selic" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <h1 style="margin: 0.5rem 0; font-size: 2rem; color: var(--text-color);">Nikola Selic</h1>
   <p style="margin: 0; font-size: 1.1rem; color: var(--text-muted, #666);">ML4Systems • Security Research • Computer Science Student</p>
