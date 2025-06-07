@@ -19,7 +19,7 @@
 .syntax-tree-wrapper {
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 20px auto 5px auto;
   display: block !important;
   visibility: visible !important;
   background-color: white;
