@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Hi, welcome to my website! I use this tiny part of the internet to share my thoughts about ML4Systems, LLMs, security and privacy. I also plan on writing about history, philosophy, and linguistics."
+description: "Student at TUM working as Teaching Assistant and Security Researcher Intern at Firebolt. Research interests in ML4Systems, LLMs, security and privacy. Collaborating with TRL Lab at CWI."
 layout: "about"
 menu:
   main:
