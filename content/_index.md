@@ -9,9 +9,9 @@ menu:
 {{< syntax-tree >}}
 
 <div style="text-align: center; margin: -120px 0 1rem 0; position: relative; z-index: 10;">
-  <img src="/images/profile.jpg" alt="Nikola Selic" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="/images/profile.png" alt="Nikola Selic" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <h1 style="margin: 0.5rem 0; font-size: 2rem; color: var(--text-color);">Nikola Selic</h1>
-  <p style="margin: 0 0 1rem 0; font-size: 1.1rem; color: var(--text-muted, #666);">ML4Systems <!-- • Security Research --> • Computer Science Student</p>
+  <p style="margin: 0 0 1rem 0; font-size: 1.1rem; color: var(--text-muted, #666);">ML4Systems • Software Developer</p>
   
   <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 1rem;">
     <a href="https://github.com/Selich" target="_blank" style="color: var(--text-muted, #666); font-size: 1.5rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--link-color, #0066cc)'" onmouseout="this.style.color='var(--text-muted, #666)'">
@@ -32,9 +32,10 @@ menu:
   </div>
 </div>
 
-Hi, welcome to my website!. I'm currently an Intern at [Firebolt](https://www.firebolt.io/) and also collaborating with the [TRL Lab](https://trl-lab.github.io/) at [CWI](https://www.cwi.nl/).
+Hi, welcome to my website!
 
 My research interests are focused on ML4Systems, Databases and Security. I'm particularly interested in how machine learning can be applied to improve system performance, reliability, and security, as well as the intersection of large language models with systems research.
+
 
 I enjoy creating visualizations and interactive content - like the syntax tree you see above. I plan to write about my research topics here, as well as my interests in history and linguistics, using visual elements to help explain technical concepts in a more approachable way.
 

@@ -15,8 +15,6 @@ social:
 
 # About me
 
-I'm currently an Intern at [Firebolt](https://www.firebolt.io/) and also collaborating with the [TRL Lab](https://trl-lab.github.io/) at [CWI](https://www.cwi.nl/). Previously, I was a Software Engineer Intern at [AWS](https://aws.amazon.com/), where I worked on using ML and NLP for Kernel Security with the EC2 KaOS team. 
-
 My research interests are focused on ML4Systems, Databases and Security. I'm particularly interested in how machine learning can be applied to improve system performance, reliability, and security, as well as the intersection of large language models with systems research.
 
 Research interests:
@@ -41,7 +39,7 @@ Research interests:
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
-    <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397181395/7ca4a65b5df5f85cc2bc7e2e6e0e0cf4.png" alt="Firebolt Logo" style="width: 50px; height: auto; border-radius: 4px;">
+    <img src="/images/firebolt.svg" alt="Firebolt Logo" style="width: 50px; height: auto; border-radius: 4px;">
   </div>
   <div style="flex-grow: 1;">
     <h4 style="margin-top: 0; margin-bottom: 5px;">Intern</h4> <!-- Security Researcher -->
@@ -74,10 +72,18 @@ Research interests:
   </div>
 </div>
 
-### twinu
-**Core Developer**
-*Apr 2023 - Jan 2024* · 10 months
-Munich, Bavaria, Germany · Remote
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="/images/twinu.jpg" alt="Twinu Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Core Engineer</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Twinu</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Apr 2023 - Jan 2024 · 10 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Munich, Bavaria, Germany · Hybrid</p>
+    <p style="margin-top: 0; margin-bottom: 0; font-size: 0.9em;"></p>
+  </div>
+</div>
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
@@ -92,14 +98,22 @@ Munich, Bavaria, Germany · Remote
   </div>
 </div>
 
-### twinu
-**Core Developer**
-*Feb 2022 - Sep 2022* · 8 months
-Munich, Bavaria, Germany · Remote
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="/images/twinu.jpg" alt="Twinu Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Core Engineer</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Twinu</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Feb 2022 - Sep 2022 · 8 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Munich, Bavaria, Germany · Hybrid</p>
+    <p style="margin-top: 0; margin-bottom: 0; font-size: 0.9em;"></p>
+  </div>
+</div>
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
-    <img src="https://assets-global.website-files.com/62556985827691ddcbe8f689/62556dc71fd98539f45170f3_KITRO_logo_black.svg" alt="KITRO Logo" style="width: 50px; height: auto; border-radius: 4px;">
+    <img src="/images/kitro.png" alt="KITRO Logo" style="width: 50px; height: auto; border-radius: 4px;">
   </div>
   <div style="flex-grow: 1;">
     <h4 style="margin-top: 0; margin-bottom: 5px;">Software Developer</h4>
@@ -110,10 +124,30 @@ Munich, Bavaria, Germany · Remote
   </div>
 </div>
 
-### LambdaWorks
-**Software Engineer Intern**
-*Feb 2020 - May 2020* · 4 months
-Novi Sad, Vojvodina, Serbia
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="/images/lambdaworks.jpeg" alt="LambdaWorks Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Software Engineer Intern</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>LambdaWorks</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Feb 2020 - May 2020 · 4 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Novi Sad, Vojvodina, Serbia</p>
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img src="/images/typhoonhil.svg" alt="Typhoon HIL Logo" style="width: 50px; height: auto; border-radius: 4px;">
+  </div>
+  <div style="flex-grow: 1;">
+    <h4 style="margin-top: 0; margin-bottom: 5px;">Machine Learning Engineer Intern</h4>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em;"><strong>Typhoon HIL, Inc.</strong></p>
+    <p style="margin-top: 0; margin-bottom: 2px; font-size: 0.9em; color: #666;">Apr 2019 - Dec 2019 · 9 months</p>
+    <p style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em; color: #666;">Novi Sad, Vojvodina, Serbia</p>
+  </div>
+</div>
+
 
 ### Typhoon HIL, Inc.
 **Machine Learning Engineer Intern**
@@ -124,7 +158,7 @@ Novi Sad, Vojvodina, Serbia
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
-    <img src="https://cidrdb.org/cidr2025/images/cidr2025-logo.svg" alt="Munich NLP Logo" style="width: 50px; height: auto; border-radius: 4px;">
+    <img src="/images/munichnlp.png" alt="Munich NLP Logo" style="width: 50px; height: auto; border-radius: 4px;">
   </div>
   <div style="flex-grow: 1;">
     <h4 style="margin-top: 0; margin-bottom: 5px;">Organizer</h4>
@@ -136,7 +170,7 @@ Novi Sad, Vojvodina, Serbia
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
-    <img src="https://cidrdb.org/cidr2025/images/cidr2025-logo.svg" alt="CIDR Logo" style="width: 50px; height: auto; border-radius: 4px;">
+    <img src="/images/cidr.png" alt="CIDR Logo" style="width: 50px; height: auto; border-radius: 4px;">
   </div>
   <div style="flex-grow: 1;">
     <h4 style="margin-top: 0; margin-bottom: 5px;">Volunteer</h4>
