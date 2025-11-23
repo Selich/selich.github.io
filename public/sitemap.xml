@@ -2,79 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:50544/blog/ai_dreams_up_databases_crush4sql/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:50544/blog/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/collaboration/</loc>
+    <loc>http://localhost:50544/tags/crush4sql/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/database/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/experiment/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/hallucination/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/llm/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/retrieval/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/text-to-sql/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/vector-search/</loc>
+    <lastmod>2025-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/tags/collaboration/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/embeddings/</loc>
+    <loc>http://localhost:50544/tags/embeddings/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/foundation-models/</loc>
+    <loc>http://localhost:50544/tags/foundation-models/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/news/</loc>
+    <loc>http://localhost:50544/news/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/llm/</loc>
+    <loc>http://localhost:50544/tags/nl2sql/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nl2sql/</loc>
+    <loc>http://localhost:50544/tags/research/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/research/</loc>
+    <loc>http://localhost:50544/news/trl-lab-collaboration/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/news/trl-lab-collaboration/</loc>
+    <loc>http://localhost:50544/tags/trl-lab/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/trl-lab/</loc>
-    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/academic/</loc>
+    <loc>http://localhost:50544/tags/academic/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/btw25/</loc>
+    <loc>http://localhost:50544/tags/btw25/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/conference/</loc>
+    <loc>http://localhost:50544/tags/conference/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/database/</loc>
+    <loc>http://localhost:50544/blog/btw25-conference-experience-bamberg/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/btw25-conference-experience-bamberg/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:50544/autobiography/</loc>
+    <lastmod>2025-02-05T16:48:24+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/career/</loc>
+    <loc>http://localhost:50544/tags/career/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/news/teaching-assistant-tum/</loc>
+    <loc>http://localhost:50544/news/teaching-assistant-tum/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/teaching/</loc>
+    <loc>http://localhost:50544/tags/teaching/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tum/</loc>
+    <loc>http://localhost:50544/tags/tum/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:50544/tags/d3js/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogroll/</loc>
+    <loc>http://localhost:50544/blog/linguistic-trees/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:50544/tags/linguistics/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>http://localhost:50544/tags/programming/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/recipes/</loc>
+    <loc>http://localhost:50544/tags/visualization/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/services/</loc>
+    <loc>http://localhost:50544/blog/math-rendering-example/</loc>
+    <lastmod>2023-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/blog/jupyter-style-code-blocks/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/blog/code-blocks-with-vscode-theme/</loc>
+    <lastmod>2023-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/blog/new-blog-post/</loc>
+    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:50544/about/</loc>
+  </url><url>
+    <loc>http://localhost:50544/blogroll/</loc>
+  </url><url>
+    <loc>http://localhost:50544/categories/</loc>
+  </url><url>
+    <loc>http://localhost:50544/cv/</loc>
+  </url><url>
+    <loc>http://localhost:50544/recipes/</loc>
+  </url><url>
+    <loc>http://localhost:50544/services/</loc>
   </url>
 </urlset>

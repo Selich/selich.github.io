@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50544&amp;path=livereload" data-no-instant defer></script>
 	<title>Math Rendering Example | Nikola Selic - Personal Website</title>
-	<link rel="canonical" href="http://localhost:1313/">
+	<link rel="canonical" href="http://localhost:50544/">
 	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Personal Website RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="/favicon.ico">
@@ -200,6 +200,35 @@ $$</p>
       });
     }
   });
+</script>
+
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  
+  
+  const rootStyle = getComputedStyle(document.documentElement);
+
+  mermaid.initialize({ 
+      startOnLoad: true, 
+      theme: 'base', 
+      themeVariables: {
+        
+        primaryColor: rootStyle.getPropertyValue('--accent-color').trim() || '#f0f7ff',
+        primaryTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        primaryBorderColor: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        lineColor: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        secondaryColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        tertiaryColor: rootStyle.getPropertyValue('--background-color').trim() || '#fff',
+        
+        nodeBorder: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        mainBkg: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        actorBorder: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        actorTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        labelBoxBkgColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa', 
+        fontSize: '14px' 
+      }
+  }); 
 </script>
 </body>
 </html>

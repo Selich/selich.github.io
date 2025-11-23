@@ -1,15 +1,145 @@
-<!doctype html><html lang=en data-theme=light><head><title>AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos? | Nikola Selic - Personal Website</title>
-<link rel=canonical href=https://nikolaselic.me/><link rel=alternate type=application/rss+xml title="Nikola Selic - Personal Website RSS" href=/index.xml><link rel=stylesheet type=text/css href=/style.css><link rel=icon href=/favicon.ico><meta name=description content="Talking to massive, complex databases in plain English? It&rsquo;s a dream for many, but it highlights a fundamental challenge: translating messy, ambiguous human thought into the rigid logic required by SQL. User questions carry intent and context, while databases demand precision. When databases swell to thousands of tables, simply feeding the entire structure to a Language Model (LLM) becomes impractical, making this translation even harder.
-What if, instead of just translating keywords to code, the AI engaged in a more linguistic act, a kind of storytelling? A fascinating paper from EMNLP 2023, CRUSH4SQL [1], explores such an approach. It tackles the scaling problem with a counter-intuitive twist: letting the LLM dream up a simplified schema—a metaphor spun from the query itself—to bridge the gap between fluid user questions and the database&rsquo;s complex reality."><meta name=keywords content="text-to-sql,llm,hallucination,retrieval,crush4sql,experiment,database,vector search"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta charset=utf-8><script type=application/ld+json>{"@context":"https://schema.org","@type":"Person","name":"Nikola Selic","url":"https://nikolaselic.me","sameAs":["https://linkedin.com/in/nikola-selic","https://github.com/Selich","https://twitter.com/nikola_selic","https://bsky.app/profile/nikola.bsky.social","https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en"],"jobTitle":"Student Research Assistant","worksFor":{"@type":"Organization","name":"Technical University of Munich"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Technical University of Munich"},{"@type":"CollegeOrUniversity","name":"Faculty of Technical Sciences, University of Novi Sad"}]}</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js></script><script>hljs.highlightAll()</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous onload=renderMathInElement(document.body)></script><script src=/js/jupyter.js></script></head><body><header class=site-header><div class=header-content><nav class=main-nav><ul><li><a href=/><span class=menuname>Home</span></a></li><li><a href=/about/><span class=menuname>About</span></a></li><li><a class=active href=/blog/><span class=menuname>Blog</span></a></li><li><a href=/services/><span class=menuname>Services</span></a></li><li><a href=/tags/><span class=menuname>Tags</span></a></li></ul></nav></div></header><main><article><h1>AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos?</h1><div class=article-meta>April 14, 2025 ·
-11 mins ·
-2257 words<div class=post-tags><a href=/tags/text-to-sql/ class=post-tag>#text-to-sql</a>
-<a href=/tags/llm/ class=post-tag>#llm</a>
-<a href=/tags/hallucination/ class=post-tag>#hallucination</a>
-<a href=/tags/retrieval/ class=post-tag>#retrieval</a>
-<a href=/tags/crush4sql/ class=post-tag>#crush4sql</a>
-<a href=/tags/experiment/ class=post-tag>#experiment</a>
-<a href=/tags/database/ class=post-tag>#database</a>
-<a href=/tags/vector-search/ class=post-tag>#vector search</a></div></div><p>Talking to massive, complex databases in plain English? It&rsquo;s a dream for many, but it highlights a fundamental challenge: translating messy, ambiguous human thought into the rigid logic required by SQL. User questions carry intent and context, while databases demand precision. When databases swell to thousands of tables, simply feeding the entire structure to a Language Model (LLM) becomes impractical, making this translation even harder.</p><p>What if, instead of just translating keywords to code, the AI engaged in a more <em>linguistic</em> act, a kind of storytelling? A fascinating paper from EMNLP 2023, <a href=https://aclanthology.org/2023.emnlp-main.868/>CRUSH4SQL</a> [1], explores such an approach. It tackles the scaling problem with a counter-intuitive twist: letting the LLM <em>dream</em> up a simplified schema—a metaphor spun from the query itself—to bridge the gap between fluid user questions and the database&rsquo;s complex reality.</p><h2 id=how-the-dream-works-the-crush4sql-method>How the Dream Works: The CRUSH4SQL Method</h2><p>The core idea behind CRUSH4SQL is pretty neat, turning hallucination—often seen as a bug—into a deliberate linguistic strategy, a form of guided dreaming:</p><ol><li><strong>Ask the LLM to Dream:</strong><ul><li>Given the user&rsquo;s question and a few examples (few-shot prompting), the LLM is asked to <em>imagine</em> and narrate the <em>simplest possible</em> database story (schema) that could answer it.</li><li>Crucially, the LLM performs this task <em>without</em> accessing the actual database structure.</li><li><strong>Example:</strong><ul><li>User Question: <code>"Count the number of members in the Bootup Baltimore Club older than 18"</code></li><li>LLM Hallucinates: <code>Club(Name, id, description, location), member_of_club(club id, student id), Student(id, age)</code></li></ul></li><li>The AI crafts this fictional schema, a concise narrative of what the relevant data <em>might</em> look like.</li></ul></li></ol><div class=mermaid-diagram-wrapper><pre class=mermaid>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50544&amp;path=livereload" data-no-instant defer></script>
+	<title>AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos? | Nikola Selic - Personal Website</title>
+	<link rel="canonical" href="http://localhost:50544/">
+	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Personal Website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Talking to massive, complex databases in plain English? It&rsquo;s a dream for many, but it highlights a fundamental challenge: translating messy, ambiguous human thought into the rigid logic required by SQL. User questions carry intent and context, while databases demand precision. When databases swell to thousands of tables, simply feeding the entire structure to a Language Model (LLM) becomes impractical, making this translation even harder.
+What if, instead of just translating keywords to code, the AI engaged in a more linguistic act, a kind of storytelling? A fascinating paper from EMNLP 2023, CRUSH4SQL [1], explores such an approach. It tackles the scaling problem with a counter-intuitive twist: letting the LLM dream up a simplified schema—a metaphor spun from the query itself—to bridge the gap between fluid user questions and the database&rsquo;s complex reality.">
+	<meta name="keywords" content="text-to-sql, llm, hallucination, retrieval, crush4sql, experiment, database, vector search">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	
+	
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Person",
+	  "name": "Nikola Selic",
+	  "url": "https://nikolaselic.me",
+	  "sameAs": [
+	    "https://linkedin.com/in/nikola-selic",
+	    "https://github.com/Selich",
+	    "https://twitter.com/nikola_selic",
+		"https://bsky.app/profile/nikola.bsky.social",
+		"https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en"
+	  ],
+	  "jobTitle": "Student Research Assistant",
+	  "worksFor": {
+	    "@type": "Organization",
+	    "name": "Technical University of Munich"
+	  },
+	  "alumniOf": [
+	    {
+	      "@type": "CollegeOrUniversity",
+	      "name": "Technical University of Munich"
+	    },
+	    {
+	      "@type": "CollegeOrUniversity",
+	      "name": "Faculty of Technical Sciences, University of Novi Sad"
+	    }
+	  ]
+	}
+	</script>
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        
+    
+    <script src="/js/jupyter.js"></script>
+</head>
+<body>
+<header class="site-header">
+	<div class="header-content">
+		<nav class="main-nav">
+    <ul>
+        
+	<li><a href="/"><span class=menuname>Home</span></a></li>
+	<li><a href="/about/"><span class=menuname>About</span></a></li>
+	<li><a class="active" href="/blog/"><span class=menuname>Blog</span></a></li>
+	<li><a href="/services/"><span class=menuname>Services</span></a></li>
+	<li><a href="/tags/"><span class=menuname>Tags</span></a></li>
+        
+    </ul>
+</nav>
+</div>
+</header>
+<main>
+<article>
+
+  
+    <h1>AI Dreams Up Databases: Can Hallucinations Solve SQL Chaos?</h1>
+    
+    <div class="article-meta">
+      
+        April 14, 2025 · 
+      
+      11 mins · 
+      2257 words
+      
+      
+      <div class="post-tags">
+        
+          <a href="/tags/text-to-sql/" class="post-tag">#text-to-sql</a>
+        
+          <a href="/tags/llm/" class="post-tag">#llm</a>
+        
+          <a href="/tags/hallucination/" class="post-tag">#hallucination</a>
+        
+          <a href="/tags/retrieval/" class="post-tag">#retrieval</a>
+        
+          <a href="/tags/crush4sql/" class="post-tag">#crush4sql</a>
+        
+          <a href="/tags/experiment/" class="post-tag">#experiment</a>
+        
+          <a href="/tags/database/" class="post-tag">#database</a>
+        
+          <a href="/tags/vector-search/" class="post-tag">#vector search</a>
+        
+      </div>
+      
+    </div>
+    
+    
+  
+  
+  <p>Talking to massive, complex databases in plain English? It&rsquo;s a dream for many, but it highlights a fundamental challenge: translating messy, ambiguous human thought into the rigid logic required by SQL. User questions carry intent and context, while databases demand precision. When databases swell to thousands of tables, simply feeding the entire structure to a Language Model (LLM) becomes impractical, making this translation even harder.</p>
+<p>What if, instead of just translating keywords to code, the AI engaged in a more <em>linguistic</em> act, a kind of storytelling? A fascinating paper from EMNLP 2023, <a href="https://aclanthology.org/2023.emnlp-main.868/">CRUSH4SQL</a> [1], explores such an approach. It tackles the scaling problem with a counter-intuitive twist: letting the LLM <em>dream</em> up a simplified schema—a metaphor spun from the query itself—to bridge the gap between fluid user questions and the database&rsquo;s complex reality.</p>
+<h2 id="how-the-dream-works-the-crush4sql-method">How the Dream Works: The CRUSH4SQL Method</h2>
+<p>The core idea behind CRUSH4SQL is pretty neat, turning hallucination—often seen as a bug—into a deliberate linguistic strategy, a form of guided dreaming:</p>
+<ol>
+<li><strong>Ask the LLM to Dream:</strong>
+<ul>
+<li>Given the user&rsquo;s question and a few examples (few-shot prompting), the LLM is asked to <em>imagine</em> and narrate the <em>simplest possible</em> database story (schema) that could answer it.</li>
+<li>Crucially, the LLM performs this task <em>without</em> accessing the actual database structure.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>User Question: <code>&quot;Count the number of members in the Bootup Baltimore Club older than 18&quot;</code></li>
+<li>LLM Hallucinates: <code>Club(Name, id, description, location), member_of_club(club id, student id), Student(id, age)</code></li>
+</ul>
+</li>
+<li>The AI crafts this fictional schema, a concise narrative of what the relevant data <em>might</em> look like.</li>
+</ul>
+</li>
+</ol>
+
+<div class="mermaid-diagram-wrapper">
+  <pre class="mermaid">
 sequenceDiagram
     participant UQ as User Question
     participant LDS as Large Database Schema
@@ -24,7 +154,14 @@ sequenceDiagram
     Note right of LDS: Text explains difficulty
     %% Explanation Overlay interaction needs clarification, using Note for now
     %% EO-->>LDS: Text appears explaining difficulty...
-</pre></div><ol start=2><li><strong>Use the Dream as a Map:</strong> Take this &ldquo;hallucinated&rdquo; story—the schema—and turn its key elements (like <code>Club.Name</code>, <code>Student.age</code>) into <a href=https://www.elastic.co/what-is/vector-embedding>vector embeddings</a>, capturing their semantic essence.</li></ol><div class=mermaid-diagram-wrapper><pre class=mermaid>
+</pre>
+</div> 
+<ol start="2">
+<li><strong>Use the Dream as a Map:</strong> Take this &ldquo;hallucinated&rdquo; story—the schema—and turn its key elements (like <code>Club.Name</code>, <code>Student.age</code>) into <a href="https://www.elastic.co/what-is/vector-embedding">vector embeddings</a>, capturing their semantic essence.</li>
+</ol>
+
+<div class="mermaid-diagram-wrapper">
+  <pre class="mermaid">
 sequenceDiagram
     participant UQ as User Question
     participant LLM as Large Language Model
@@ -35,9 +172,16 @@ sequenceDiagram
     LLM-->>HS: Generates: "Club(Name)", ...
     Note right of HS: Text explains LLM generates hypothetical schema
     %% EO-->>HS: Text explains LLM generates...
-</pre></div><ol start=3><li><strong>Find Matching Reality:</strong> Use these dream-vectors as probes in a <a href=https://www.pinecone.io/learn/what-is-similarity-search/>vector similarity search</a> against an index of your <em>real</em> database schema elements. The goal is to retrieve a small <em>subset</em> of actual tables and columns that best <em>collectively match</em> the structure the LLM dreamed up, using a specific objective function (detailed as Eqn. 6 in the paper) that balances coverage and schema graph connectivity within a budget B.</li></ol><div class=mermaid-diagram-wrapper><pre class=mermaid>
+</pre>
+</div> 
+<ol start="3">
+<li><strong>Find Matching Reality:</strong> Use these dream-vectors as probes in a <a href="https://www.pinecone.io/learn/what-is-similarity-search/">vector similarity search</a> against an index of your <em>real</em> database schema elements. The goal is to retrieve a small <em>subset</em> of actual tables and columns that best <em>collectively match</em> the structure the LLM dreamed up, using a specific objective function (detailed as Eqn. 6 in the paper) that balances coverage and schema graph connectivity within a budget B.</li>
+</ol>
+
+<div class="mermaid-diagram-wrapper">
+  <pre class="mermaid">
 graph TD
-    A["Hallucinated Schema<br>(Club.Name, member_of_club.id, ...)"] --> B{Iterate through Elements};
+    A["Hallucinated Schema<br/>(Club.Name, member_of_club.id, ...)"] --> B{Iterate through Elements};
     B -- "For each element" --> C[Generate Embedding];
     C --> D[Dense Retrieval vs Actual Schema Embeddings];
     D --> E{Matches Found?};
@@ -45,22 +189,365 @@ graph TD
     F --> G[Form Candidate Set];
     E -- No --> B;
     G --> H[Explanation: Embeddings used for dense retrieval];
-</pre></div><figure><img src=/images/blog/crush4sql/image.png alt="Figure 1 from Kothyari et al. (2023): Illustration of the CRUSH4SQL workflow, showing the prompt, hallucinated schema K(x), real schema D, collective objective, retrieved subset R(x), and downstream Text2SQL system."><figcaption><p>Figure 1 from Kothyari et al. (2023): Illustration of the CRUSH4SQL workflow, showing the prompt, hallucinated schema K(x), real schema D, collective objective, retrieved subset R(x), and downstream Text2SQL system.</p></figcaption></figure><p><strong>Putting it Together:</strong> The retrieved subset then enables the final step:</p><div class=mermaid-diagram-wrapper><pre class=mermaid>
+</pre>
+</div> 
+<figure><img src="/images/blog/crush4sql/image.png"
+    alt="Figure 1 from Kothyari et al. (2023): Illustration of the CRUSH4SQL workflow, showing the prompt, hallucinated schema K(x), real schema D, collective objective, retrieved subset R(x), and downstream Text2SQL system."><figcaption>
+      <p>Figure 1 from Kothyari et al. (2023): Illustration of the CRUSH4SQL workflow, showing the prompt, hallucinated schema K(x), real schema D, collective objective, retrieved subset R(x), and downstream Text2SQL system.</p>
+    </figcaption>
+</figure>
+
+<p><strong>Putting it Together:</strong> The retrieved subset then enables the final step:</p>
+
+<div class="mermaid-diagram-wrapper">
+  <pre class="mermaid">
 graph TD
     A[Candidate Set] --> B{Evaluate Relevance & Connectivity};
     B -- "Score & Link Elements" --> C[Prioritize Relevant & Connected];
-    C --> D["Final Subset<br>(High Recall, Connected)"];
+    C --> D["Final Subset<br/>(High Recall, Connected)"];
     D --> E[Explanation: Collective retrieval uses relationships];
-</pre></div><p>In essence, the hallucinated schema acts as a linguistic bridge or a focused metaphor. It translates the user&rsquo;s potentially vague question into a simplified, hypothetical structure. This structure, born from the LLM&rsquo;s guided imagination (illustrated in Figure 1 above), provides a pragmatic map—even if not initially &ldquo;true&rdquo;—for navigating the complex reality of the actual data. It flips the script, harnessing the LLM&rsquo;s narrative tendency to find the right data needles in a giant haystack. (While the paper provides examples of retrieved schema elements, it&rsquo;s worth noting that visualizing the final generated SQL query would further clarify the end-to-end impact.)</p><h2 id=the-dreams-potential-what-the-paper-reported>The Dream&rsquo;s Potential: What the Paper Reported</h2><p>The CRUSH4SQL paper doesn&rsquo;t just propose a quirky idea; it demonstrates how this controlled dreaming yields significant results through its specific two-stage process:</p><ul><li><strong>The Initial Dream (Hallucination):</strong> First, the LLM acts like a rapid prototyper, dreaming up a minimal, idealized database schema based <em>only</em> on the user&rsquo;s question (guided by a few examples). This isn&rsquo;t random hallucination; it&rsquo;s a focused imaginative leap to capture the core structure needed, creating a semantic blueprint.</li><li><strong>Connecting Dream to Reality (Collective Retrieval):</strong> Second, this dream-schema isn&rsquo;t the final answer, but a <em>guide</em>. Its elements become semantic probes used to collectively retrieve a small, relevant subset of the <em>actual</em> database schema. This retrieval aims to find real tables and columns that best &ldquo;fulfill&rdquo; the dream&rsquo;s structure, overcoming the challenge of feeding enormous, unwieldy schemas to downstream models.</li><li><strong>Testing Grounds for Big Dreams (New Benchmarks):</strong> To prove this worked on truly complex data landscapes, the authors created new benchmarks with thousands of schema elements: <strong>SpiderUnion</strong> (4,502 elements), <strong>BirdUnion</strong> (798), and the real-world <strong>SocialDB</strong> (a massive 17,844 elements).</li></ul><p><strong>Reported Performance Boosts:</strong></p><p>The core promise is that this dream-guided retrieval is more effective. On their new benchmarks, CRUSH4SQL significantly outperformed prior methods in recalling the necessary &ldquo;gold&rdquo; schema elements, especially when aiming for small, efficient schema subsets:</p><ul><li>On <strong>SpiderUnion</strong>, the dream-guided approach recalled <strong>83%</strong> of needed columns (vs. 77% for the best alternative) with a budget of just ten columns.</li><li>On <strong>BirdUnion</strong>, it hit <strong>76%</strong> recall (vs. 56%) under similar constraints.</li><li>On the massive, real-world <strong>SocialDB</strong>, it recalled <strong>58%</strong> of the necessary <em>tables</em> (vs. 49%).</li></ul><p><strong>Downstream Impact and Prompting:</strong></p><ul><li><strong>Better Dreams, Better SQL:</strong> This improved ability to find the right schema pieces reportedly led directly to more accurate SQL generation when the retrieved subset was passed to a Text-to-SQL model like RESDSQL.</li><li><strong>The Right Kind of Dream:</strong> Crucially, experiments showed that prompting the LLM to specifically dream up a <em>schema</em> worked better than asking it to break down the question in other ways (like identifying variables or relations). The <em>structural</em> nature of the dream was key.</li></ul><p>These compelling results, especially the measured improvements in finding the right data within vast schemas, painted a picture of AI&rsquo;s &ldquo;dreams&rdquo; as a potentially powerful tool. This striking potential motivated an attempt to replicate this linguistic strategy.</p><h2 id=an-experiment-putting-the-dream-to-the-test>An Experiment: Putting the Dream to the Test</h2><p>Intrigued by the paper&rsquo;s findings, an experiment was conducted to try this dream-like approach. The baseline system took the user&rsquo;s query, embedded it directly using vectors, and searched for similar table embeddings in the schema index. This direct approach was then swapped with the CRUSH4SQL-inspired hallucination process.
+</pre>
+</div> 
+<p>In essence, the hallucinated schema acts as a linguistic bridge or a focused metaphor. It translates the user&rsquo;s potentially vague question into a simplified, hypothetical structure. This structure, born from the LLM&rsquo;s guided imagination (illustrated in Figure 1 above), provides a pragmatic map—even if not initially &ldquo;true&rdquo;—for navigating the complex reality of the actual data. It flips the script, harnessing the LLM&rsquo;s narrative tendency to find the right data needles in a giant haystack. (While the paper provides examples of retrieved schema elements, it&rsquo;s worth noting that visualizing the final generated SQL query would further clarify the end-to-end impact.)</p>
+<h2 id="the-dreams-potential-what-the-paper-reported">The Dream&rsquo;s Potential: What the Paper Reported</h2>
+<p>The CRUSH4SQL paper doesn&rsquo;t just propose a quirky idea; it demonstrates how this controlled dreaming yields significant results through its specific two-stage process:</p>
+<ul>
+<li><strong>The Initial Dream (Hallucination):</strong> First, the LLM acts like a rapid prototyper, dreaming up a minimal, idealized database schema based <em>only</em> on the user&rsquo;s question (guided by a few examples). This isn&rsquo;t random hallucination; it&rsquo;s a focused imaginative leap to capture the core structure needed, creating a semantic blueprint.</li>
+<li><strong>Connecting Dream to Reality (Collective Retrieval):</strong> Second, this dream-schema isn&rsquo;t the final answer, but a <em>guide</em>. Its elements become semantic probes used to collectively retrieve a small, relevant subset of the <em>actual</em> database schema. This retrieval aims to find real tables and columns that best &ldquo;fulfill&rdquo; the dream&rsquo;s structure, overcoming the challenge of feeding enormous, unwieldy schemas to downstream models.</li>
+<li><strong>Testing Grounds for Big Dreams (New Benchmarks):</strong> To prove this worked on truly complex data landscapes, the authors created new benchmarks with thousands of schema elements: <strong>SpiderUnion</strong> (4,502 elements), <strong>BirdUnion</strong> (798), and the real-world <strong>SocialDB</strong> (a massive 17,844 elements).</li>
+</ul>
+<p><strong>Reported Performance Boosts:</strong></p>
+<p>The core promise is that this dream-guided retrieval is more effective. On their new benchmarks, CRUSH4SQL significantly outperformed prior methods in recalling the necessary &ldquo;gold&rdquo; schema elements, especially when aiming for small, efficient schema subsets:</p>
+<ul>
+<li>On <strong>SpiderUnion</strong>, the dream-guided approach recalled <strong>83%</strong> of needed columns (vs. 77% for the best alternative) with a budget of just ten columns.</li>
+<li>On <strong>BirdUnion</strong>, it hit <strong>76%</strong> recall (vs. 56%) under similar constraints.</li>
+<li>On the massive, real-world <strong>SocialDB</strong>, it recalled <strong>58%</strong> of the necessary <em>tables</em> (vs. 49%).</li>
+</ul>
+<p><strong>Downstream Impact and Prompting:</strong></p>
+<ul>
+<li><strong>Better Dreams, Better SQL:</strong> This improved ability to find the right schema pieces reportedly led directly to more accurate SQL generation when the retrieved subset was passed to a Text-to-SQL model like RESDSQL.</li>
+<li><strong>The Right Kind of Dream:</strong> Crucially, experiments showed that prompting the LLM to specifically dream up a <em>schema</em> worked better than asking it to break down the question in other ways (like identifying variables or relations). The <em>structural</em> nature of the dream was key.</li>
+</ul>
+<p>These compelling results, especially the measured improvements in finding the right data within vast schemas, painted a picture of AI&rsquo;s &ldquo;dreams&rdquo; as a potentially powerful tool. This striking potential motivated an attempt to replicate this linguistic strategy.</p>
+<h2 id="an-experiment-putting-the-dream-to-the-test">An Experiment: Putting the Dream to the Test</h2>
+<p>Intrigued by the paper&rsquo;s findings, an experiment was conducted to try this dream-like approach. The baseline system took the user&rsquo;s query, embedded it directly using vectors, and searched for similar table embeddings in the schema index. This direct approach was then swapped with the CRUSH4SQL-inspired hallucination process.
 image.png
-Here&rsquo;s a look at the two approaches compared:</p><p><strong>1. Direct Query Embedding:</strong> The user&rsquo;s query is directly converted into a vector to find relevant tables.</p><div class=d3-animation-wrapper style="margin:20px 0;padding:10px;border:1px solid #eee;text-align:center"><h4 style=margin-top:0;margin-bottom:10px;font-weight:400;color:#555>Direct Query Embedding Approach</h4><svg id="d3-animation-direct_retrieval_animation-5" class="d3-animation-container" style="max-width:100%;height:auto;display:block;margin:0 auto" viewBox="0 0 900 400"><noscript>JavaScript and SVG support are required to view this D3.js animation.</noscript></svg>
-<button id=replay-direct_retrieval_animation-5 class=d3-replay-button style="margin-top:10px;padding:5px 10px;font-size:.9em">Replay Animation</button></div><script src=https://d3js.org/d3.v7.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js crossorigin=anonymous referrerpolicy=no-referrer defer></script><script src=/js/animations/direct_retrieval_animation.js defer></script><script>document.addEventListener("DOMContentLoaded",function(){const t="#d3-animation-direct_retrieval_animation-5",o="#replay-direct_retrieval_animation-5",e="renderDirectRetrievalAnimation",i="/js/animations/direct_retrieval_animation.js",n=document.querySelector(t);if(!n){console.error(`D3 container ${t} not found.`);return}const s=n.closest(".d3-animation-wrapper");if(!s){console.error(`Could not find .d3-animation-wrapper for ${t}`);return}const a={root:null,rootMargin:"0px",threshold:.1},r=(n,s)=>{n.forEach(n=>{if(n.isIntersecting){if(console.log(`Animation ${e} intersecting, attempting to run.`),typeof window[e]=="function")try{window[e](t,o)}catch(s){console.error(`Error executing D3 animation function ${e} for ${t}:`,s);const n=document.querySelector(t);n&&(n.innerHTML=`<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${e}</text>`)}else{console.error(`D3 animation function ${e} not found. Make sure it's defined in ${i} and loaded correctly.`);const n=document.querySelector(t);n&&(n.innerHTML=`<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${e} not found.</text>`)}s.unobserve(n.target),console.log(`Observer stopped for ${e}`)}})},c=new IntersectionObserver(r,a);c.observe(s)})</script><p><strong>2. Schema Hallucination:</strong> The LLM first generates its <em>imagined</em>, potential schema from the query (guided by few-shot examples), and <em>that</em> schema is embedded to retrieve a relevant subset of real tables.</p><div class=d3-animation-wrapper style="margin:20px 0;padding:10px;border:1px solid #eee;text-align:center"><h4 style=margin-top:0;margin-bottom:10px;font-weight:400;color:#555>Schema Hallucination Approach</h4><svg id="d3-animation-hallucination_retrieval_animation-7" class="d3-animation-container" style="max-width:100%;height:auto;display:block;margin:0 auto" viewBox="0 0 750 800"><noscript>JavaScript and SVG support are required to view this D3.js animation.</noscript></svg>
-<button id=replay-hallucination_retrieval_animation-7 class=d3-replay-button style="margin-top:10px;padding:5px 10px;font-size:.9em">Replay Animation</button></div><script src=https://d3js.org/d3.v7.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js crossorigin=anonymous referrerpolicy=no-referrer defer></script><script src=/js/animations/hallucination_retrieval_animation.js defer></script><script>document.addEventListener("DOMContentLoaded",function(){const t="#d3-animation-hallucination_retrieval_animation-7",o="#replay-hallucination_retrieval_animation-7",e="renderHallucinationRetrievalAnimation",i="/js/animations/hallucination_retrieval_animation.js",n=document.querySelector(t);if(!n){console.error(`D3 container ${t} not found.`);return}const s=n.closest(".d3-animation-wrapper");if(!s){console.error(`Could not find .d3-animation-wrapper for ${t}`);return}const a={root:null,rootMargin:"0px",threshold:.1},r=(n,s)=>{n.forEach(n=>{if(n.isIntersecting){if(console.log(`Animation ${e} intersecting, attempting to run.`),typeof window[e]=="function")try{window[e](t,o)}catch(s){console.error(`Error executing D3 animation function ${e} for ${t}:`,s);const n=document.querySelector(t);n&&(n.innerHTML=`<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${e}</text>`)}else{console.error(`D3 animation function ${e} not found. Make sure it's defined in ${i} and loaded correctly.`);const n=document.querySelector(t);n&&(n.innerHTML=`<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${e} not found.</text>`)}s.unobserve(n.target),console.log(`Observer stopped for ${e}`)}})},c=new IntersectionObserver(r,a);c.observe(s)})</script><p><strong>The Setup:</strong></p><ul><li><strong>Embedding Model:</strong> <code>msmarco-distilbert-base-v4</code> (SentenceTransformer) for both query and schema/table embeddings.</li><li><strong>Hallucination Engine:</strong> A locally hosted <code>llama3.1:latest</code> via Ollama, prompted with few-shot examples inspired by the original paper.</li><li><strong>Test Data:</strong> First 50 examples from the <a href=https://yale-lily.github.io/spider>Spider 1.0</a> dev set.</li><li><strong>Metrics:</strong> Precision@5 and Recall@10.</li></ul><h2 id=waking-up-unexpected-results>Waking Up: Unexpected Results</h2><p>Connecting to the local LLM to generate the dreams was smooth, but the retrieval results? Not quite the dream that might be expected based on the paper.</p><pre tabindex=0><code>--- Evaluation Summary (50 examples processed) ---
+Here&rsquo;s a look at the two approaches compared:</p>
+<p><strong>1. Direct Query Embedding:</strong> The user&rsquo;s query is directly converted into a vector to find relevant tables.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+    <h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">Direct Query Embedding Approach</h4>
+    <svg id="d3-animation-direct_retrieval_animation-5" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 900 400" preserveAspectRatio="xMidYMid meet">
+        
+        <noscript>JavaScript and SVG support are required to view this D3.js animation.</noscript>
+    </svg>
+    <button id="replay-direct_retrieval_animation-5" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation</button>
+  </div>
+
+
+  
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  
+  <script src="/js/animations/direct_retrieval_animation.js" defer></script>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const containerSelector = "#d3-animation-direct_retrieval_animation-5";
+      const replayButtonSelector = "#replay-direct_retrieval_animation-5";
+      const functionName = "renderDirectRetrievalAnimation";
+      const scriptPath = "\/js\/animations\/direct_retrieval_animation.js";
+      const svgElement = document.querySelector(containerSelector);
+
+      if (!svgElement) {
+        console.error(`D3 container ${containerSelector} not found.`);
+        return;
+      }
+
+      const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+
+      if (!animationWrapper) {
+          console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+          return;
+      }
+
+      const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            
+            console.log(`Animation ${functionName} intersecting, attempting to run.`);
+            if (typeof window[functionName] === 'function') {
+              try {
+                
+                window[functionName](containerSelector, replayButtonSelector);
+              } catch (error) {
+                console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+                const container = document.querySelector(containerSelector);
+                if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}</text>`;
+              }
+            } else {
+              console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+              const container = document.querySelector(containerSelector);
+              if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.</text>`;
+            }
+            
+            observer.unobserve(entry.target);
+            console.log(`Observer stopped for ${functionName}`);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      observer.observe(animationWrapper);
+
+    });
+  </script>
+ 
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+    <h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">Example Anime.js Animation</h4>
+    <svg id="d3-animation-example_animation-6" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 200 400" preserveAspectRatio="xMidYMid meet">
+        
+        <noscript>JavaScript and SVG support are required to view this D3.js animation.</noscript>
+    </svg>
+    <button id="replay-example_animation-6" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation</button>
+  </div>
+
+
+  
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  
+  <script src="/js/animations/example_animation.js" defer></script>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const containerSelector = "#d3-animation-example_animation-6";
+      const replayButtonSelector = "#replay-example_animation-6";
+      const functionName = "renderExampleAnimation";
+      const scriptPath = "\/js\/animations\/example_animation.js";
+      const svgElement = document.querySelector(containerSelector);
+
+      if (!svgElement) {
+        console.error(`D3 container ${containerSelector} not found.`);
+        return;
+      }
+
+      const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+
+      if (!animationWrapper) {
+          console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+          return;
+      }
+
+      const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            
+            console.log(`Animation ${functionName} intersecting, attempting to run.`);
+            if (typeof window[functionName] === 'function') {
+              try {
+                
+                window[functionName](containerSelector, replayButtonSelector);
+              } catch (error) {
+                console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+                const container = document.querySelector(containerSelector);
+                if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}</text>`;
+              }
+            } else {
+              console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+              const container = document.querySelector(containerSelector);
+              if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.</text>`;
+            }
+            
+            observer.unobserve(entry.target);
+            console.log(`Observer stopped for ${functionName}`);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      observer.observe(animationWrapper);
+
+    });
+  </script>
+  -->
+<p><strong>2. Schema Hallucination:</strong> The LLM first generates its <em>imagined</em>, potential schema from the query (guided by few-shot examples), and <em>that</em> schema is embedded to retrieve a relevant subset of real tables.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <div class="d3-animation-wrapper" style="margin: 20px 0; padding: 10px; border: 1px solid #eee; text-align: center;">
+    <h4 style="margin-top: 0; margin-bottom: 10px; font-weight: normal; color: #555;">Schema Hallucination Approach</h4>
+    <svg id="d3-animation-hallucination_retrieval_animation-7" class="d3-animation-container" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" viewBox="0 0 750 800" preserveAspectRatio="xMidYMid meet">
+        
+        <noscript>JavaScript and SVG support are required to view this D3.js animation.</noscript>
+    </svg>
+    <button id="replay-hallucination_retrieval_animation-7" class="d3-replay-button" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em;">Replay Animation</button>
+  </div>
+
+
+  
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  
+  <script src="/js/animations/hallucination_retrieval_animation.js" defer></script>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const containerSelector = "#d3-animation-hallucination_retrieval_animation-7";
+      const replayButtonSelector = "#replay-hallucination_retrieval_animation-7";
+      const functionName = "renderHallucinationRetrievalAnimation";
+      const scriptPath = "\/js\/animations\/hallucination_retrieval_animation.js";
+      const svgElement = document.querySelector(containerSelector);
+
+      if (!svgElement) {
+        console.error(`D3 container ${containerSelector} not found.`);
+        return;
+      }
+
+      const animationWrapper = svgElement.closest('.d3-animation-wrapper');
+
+      if (!animationWrapper) {
+          console.error(`Could not find .d3-animation-wrapper for ${containerSelector}`);
+          return;
+      }
+
+      const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            
+            console.log(`Animation ${functionName} intersecting, attempting to run.`);
+            if (typeof window[functionName] === 'function') {
+              try {
+                
+                window[functionName](containerSelector, replayButtonSelector);
+              } catch (error) {
+                console.error(`Error executing D3 animation function ${functionName} for ${containerSelector}:`, error);
+                const container = document.querySelector(containerSelector);
+                if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error rendering: ${functionName}</text>`;
+              }
+            } else {
+              console.error(`D3 animation function ${functionName} not found. Make sure it's defined in ${scriptPath} and loaded correctly.`);
+              const container = document.querySelector(containerSelector);
+              if (container) container.innerHTML = `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='red'>Error: ${functionName} not found.</text>`;
+            }
+            
+            observer.unobserve(entry.target);
+            console.log(`Observer stopped for ${functionName}`);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      observer.observe(animationWrapper);
+
+    });
+  </script>
+ 
+<p><strong>The Setup:</strong></p>
+<ul>
+<li><strong>Embedding Model:</strong> <code>msmarco-distilbert-base-v4</code> (SentenceTransformer) for both query and schema/table embeddings.</li>
+<li><strong>Hallucination Engine:</strong> A locally hosted <code>llama3.1:latest</code> via Ollama, prompted with few-shot examples inspired by the original paper.</li>
+<li><strong>Test Data:</strong> First 50 examples from the <a href="https://yale-lily.github.io/spider">Spider 1.0</a> dev set.</li>
+<li><strong>Metrics:</strong> Precision@5 and Recall@10.</li>
+</ul>
+<h2 id="waking-up-unexpected-results">Waking Up: Unexpected Results</h2>
+<p>Connecting to the local LLM to generate the dreams was smooth, but the retrieval results? Not quite the dream that might be expected based on the paper.</p>
+<pre tabindex="0"><code>--- Evaluation Summary (50 examples processed) ---
 Average Metrics:
        Method  QueryID   DB_ID     P@1     P@3     P@5    R@5     R@10    R@20   CR@10   CR@20  ReciprocalRank
  Direct Query    24.50  107.22  0.4000  0.5533  0.5880 0.5880  0.7478  0.8740  0.5800  0.7600          0.5313
 Hallucinated Schema    24.50  107.22  0.1400  0.2867  0.3240 0.3240  0.4489  0.5900  0.2800  0.4400          0.2295
-</code></pre><p><em>(Results from running dense_retrieval.py on first 50 dev examples)</em></p><p>The straightforward, direct query embedding method actually performed much better in this setup than the schema hallucination approach inspired by CRUSH4SQL.</p><h2 id=why-the-disappointing-results-verbose-dreams>Why the Disappointing Results? Verbose Dreams</h2><p>A quick look at the LLM&rsquo;s output quickly revealed the likely culprit. The LLM was prompted to dream up a clean, minimal schema structure (like <code>Customer(id, name, address)</code>). Instead, the <code>llama3.1</code> instance provided the entire backstory of its imagined database, complete with lengthy narrative explanations:</p><pre tabindex=0><code># Example Hallucinated Output from llama3.1:latest for &#34;find customer names and addresses&#34;
+</code></pre><p><em>(Results from running dense_retrieval.py on first 50 dev examples)</em></p>
+<p>The straightforward, direct query embedding method actually performed much better in this setup than the schema hallucination approach inspired by CRUSH4SQL.</p>
+<h2 id="why-the-disappointing-results-verbose-dreams">Why the Disappointing Results? Verbose Dreams</h2>
+<p>A quick look at the LLM&rsquo;s output quickly revealed the likely culprit. The LLM was prompted to dream up a clean, minimal schema structure (like <code>Customer(id, name, address)</code>). Instead, the <code>llama3.1</code> instance provided the entire backstory of its imagined database, complete with lengthy narrative explanations:</p>
+<pre tabindex="0"><code># Example Hallucinated Output from llama3.1:latest for &#34;find customer names and addresses&#34;
 
 Hallucinated Schema: Here is a minimal schema for a relational database that can answer the given natural language questions:
 
@@ -72,13 +559,94 @@ CREATE TABLE Customer (
   name VARCHAR(255),
   address VARCHAR(255)
 );
-</code></pre><p>This schema has two tables:</p><ul><li><code>Customer</code>: stores information about customers&mldr;</li><li><code>Instructor</code>: stores information about instructors&mldr;
-&mldr;</li></ul><p>Embedding this entire rambling explanation, complete with <code>CREATE TABLE</code> statements and descriptive paragraphs, likely muddied the waters. The resulting vector ended up representing the surrounding textual narrative more than the core schema structure needed for effective similarity search.</p><h2 id=next-steps-refining-the-dream>Next Steps: Refining the Dream</h2><p>This little experiment serves as a great reminder that a compelling theoretical idea like CRUSH4SQL needs careful implementation. Getting the LLM to dream <em>productively</em>—outputting just the concise, structural metaphor—is key. It also highlights a fascinating aspect of modern LLMs: their internal &lsquo;guesses&rsquo; or &lsquo;dreams&rsquo;, even if not perfectly formed, <em>can</em> be useful tools for navigating complexity, but they need to be channeled correctly. The challenge lies in harnessing this mechanistic creativity: guiding the AI to provide the useful schema structure rather than the full, rambling story.</p><p>Where to go from here? Potential next steps for refining this dream-based approach include:</p><ol><li><strong>Better Prompting:</strong> The prompts used in the paper (see examples in its Appendix) could be modified. Can prompts be crafted that more strictly enforce the desired output format (e.g., <code>Table(Col1, Col2)</code>) across different query types or LLMs? Experimenting with the number and style of in-context examples seems crucial.</li><li><strong>Smarter Parsing:</strong> The LLM output (even if prompted for structure) might still contain extra text. Developing robust parsing logic (e.g., using regular expressions or structured parsing libraries) to reliably extract <em>only</em> the schema definition (<code>t.c1</code> format elements) before embedding is essential for implementation.</li><li><strong>Model Tinkering & Parameters:</strong> Different LLMs might have different hallucination tendencies. Beyond model choice, adjusting generation parameters could be key. For instance, using a lower <code>temperature</code> (the paper mentions temp=0 for some experiments for reproducibility) might yield cleaner, more focused, and deterministic dreams.</li></ol><p>It&rsquo;s all part of the fun (and sometimes frustration) of experimenting with LLMs. The potential of the dream-based approach remains intriguing, but unlocking it requires persistence and refinement. Further visualizations, like comparing effective vs. verbose hallucinations or mapping the embedding space, could also aid understanding.</p><h2 id=crush4sql-in-the-broader-landscape>CRUSH4SQL in the Broader Landscape</h2><p>It&rsquo;s helpful to place CRUSH4SQL in the context of other Text-to-SQL techniques:</p><ul><li><strong>vs. Dense Passage Retrieval (DPR):</strong> Unlike methods that directly retrieve schema elements or documentation based on the query embedding alone, CRUSH uses the <em>hallucinated schema</em> as an intermediate representation for retrieval probes.</li><li><strong>vs. Question Decomposition:</strong> Some methods break the user question into sub-questions for retrieval. CRUSH differs by generating a holistic target <em>schema structure</em> first.</li><li><strong>vs. Fine-Tuning:</strong> Approaches involving fine-tuning large models on specific schemas can be powerful but may require significant training data and struggle with adapting to new or rapidly changing databases. CRUSH, being retrieval-based, could potentially offer more adaptability.</li><li><strong>vs. Other Retrieval Augmentation:</strong> Methods like MURRE explore multi-hop retrieval and iterative refinement. CRUSH offers a unique take by using hallucination to define the initial target for a collective retrieval step, rather than solely relying on iterative query-based steps.</li><li><strong>Relation to Chain-of-Thought (CoT):</strong> While CRUSH doesn&rsquo;t explicitly generate a step-by-step reasoning chain like typical CoT prompting, the hallucination phase <em>implicitly</em> involves the LLM reasoning about the necessary schema structure. The subsequent collective retrieval step then acts upon this implicitly reasoned structure.</li></ul><p>Understanding these distinctions highlights CRUSH4SQL&rsquo;s novel contribution: using controlled hallucination as a specific mechanism to guide schema subset retrieval for large databases.</p><h2 id=conclusion-the-dream-needs-careful-guidance>Conclusion: The Dream Needs Careful Guidance</h2><p>Ultimately, the experiment served as a practical reality check on an exciting theoretical concept. While the idea of leveraging LLM hallucination as a linguistic bridge to navigate complex schemas remains compelling, the results highlight a critical bottleneck: <strong>controlling the nature of the dream.</strong> The CRUSH4SQL approach, as reported in the paper, hinges on the LLM generating a clean, concise, structural metaphor—not a verbose narrative.</p><p>The local Llama 3.1 model used in this specific setup acted more like an over-enthusiastic storyteller than a precise architect, drowning the useful signal (the dream schema) in noise (explanatory text). This doesn&rsquo;t invalidate the core CRUSH4SQL idea, but it underscores the crucial role of implementation details: prompt engineering, output parsing, and potentially model selection or fine-tuning are paramount.</p><p>Looking ahead, the path involves figuring out how to refine this process. Can the LLM be forced to dream more productively with stricter prompts? Can the essential structure be reliably extracted from its output? Or is a different kind of model needed altogether? Text-to-SQL over large databases remains a significant challenge. While harnessing AI&rsquo;s &ldquo;dreams&rdquo; offers a tantalizing path, it&rsquo;s clear that significant engineering and refinement are needed to turn those dreams into consistently reliable results.</p><h2 id=references>References</h2><p>[1] Kothyari, Mayank, et al. &ldquo;CRUSH4SQL: Collective Retrieval Using Schema Hallucination For Text2SQL.&rdquo; <em>Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing</em>. Association for Computational Linguistics, 2023. (<a href=https://aclanthology.org/2023.emnlp-main.868/>ACL Anthology</a>, <a href=https://arxiv.org/abs/2311.01173>arXiv</a>)</p><div id=nextprev><a href=/blog/btw25-conference-experience-bamberg/><div id=prevart>Previous:<br>My Experience at BTW25 in Bamberg</div></a></div><div style=clear:both class=taglist>Related<br><a id=tag_text-to-sql href=https://nikolaselic.me/tags/text-to-sql>Text-to-Sql</a> &#183; <a id=tag_llm href=https://nikolaselic.me/tags/llm>Llm</a> &#183; <a id=tag_hallucination href=https://nikolaselic.me/tags/hallucination>Hallucination</a> &#183; <a id=tag_retrieval href=https://nikolaselic.me/tags/retrieval>Retrieval</a> &#183; <a id=tag_crush4sql href=https://nikolaselic.me/tags/crush4sql>Crush4sql</a> &#183; <a id=tag_experiment href=https://nikolaselic.me/tags/experiment>Experiment</a> &#183; <a id=tag_database href=https://nikolaselic.me/tags/database>Database</a> &#183; <a id="tag_vector search" href=https://nikolaselic.me/tags/vector-search>Vector Search</a></div></article></main><footer><a href=/rss>RSS</a> ·
-<a href=https://x.com/nikola_selic>X (formerly Twitter)</a> ·
-<a href=https://github.com/Selich>GitHub</a> ·
-<a href=https://www.linkedin.com/in/nikola-selic>LinkedIn</a> ·
-<a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en">Google Scholar</a> ·
-<a href=https://bsky.app/profile/nikolaselic.bsky.social>Bluesky</a></footer><script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("theme-toggle");document.documentElement.setAttribute("data-theme","light"),e&&(e.textContent="🌙"),localStorage.setItem("theme","light"),e&&e.addEventListener("click",()=>{let t="light";document.documentElement.getAttribute("data-theme")==="light"?(document.documentElement.setAttribute("data-theme","dark"),t="dark",e.textContent="☀️"):(document.documentElement.setAttribute("data-theme","light"),e.textContent="🌙"),localStorage.setItem("theme",t)})})</script><script type=module>
+</code></pre><p>This schema has two tables:</p>
+<ul>
+<li><code>Customer</code>: stores information about customers&hellip;</li>
+<li><code>Instructor</code>: stores information about instructors&hellip;
+&hellip;</li>
+</ul>
+<p>Embedding this entire rambling explanation, complete with <code>CREATE TABLE</code> statements and descriptive paragraphs, likely muddied the waters. The resulting vector ended up representing the surrounding textual narrative more than the core schema structure needed for effective similarity search.</p>
+<h2 id="next-steps-refining-the-dream">Next Steps: Refining the Dream</h2>
+<p>This little experiment serves as a great reminder that a compelling theoretical idea like CRUSH4SQL needs careful implementation. Getting the LLM to dream <em>productively</em>—outputting just the concise, structural metaphor—is key. It also highlights a fascinating aspect of modern LLMs: their internal &lsquo;guesses&rsquo; or &lsquo;dreams&rsquo;, even if not perfectly formed, <em>can</em> be useful tools for navigating complexity, but they need to be channeled correctly. The challenge lies in harnessing this mechanistic creativity: guiding the AI to provide the useful schema structure rather than the full, rambling story.</p>
+<p>Where to go from here? Potential next steps for refining this dream-based approach include:</p>
+<ol>
+<li><strong>Better Prompting:</strong> The prompts used in the paper (see examples in its Appendix) could be modified. Can prompts be crafted that more strictly enforce the desired output format (e.g., <code>Table(Col1, Col2)</code>) across different query types or LLMs? Experimenting with the number and style of in-context examples seems crucial.</li>
+<li><strong>Smarter Parsing:</strong> The LLM output (even if prompted for structure) might still contain extra text. Developing robust parsing logic (e.g., using regular expressions or structured parsing libraries) to reliably extract <em>only</em> the schema definition (<code>t.c1</code> format elements) before embedding is essential for implementation.</li>
+<li><strong>Model Tinkering &amp; Parameters:</strong> Different LLMs might have different hallucination tendencies. Beyond model choice, adjusting generation parameters could be key. For instance, using a lower <code>temperature</code> (the paper mentions temp=0 for some experiments for reproducibility) might yield cleaner, more focused, and deterministic dreams.</li>
+</ol>
+<p>It&rsquo;s all part of the fun (and sometimes frustration) of experimenting with LLMs. The potential of the dream-based approach remains intriguing, but unlocking it requires persistence and refinement. Further visualizations, like comparing effective vs. verbose hallucinations or mapping the embedding space, could also aid understanding.</p>
+<h2 id="crush4sql-in-the-broader-landscape">CRUSH4SQL in the Broader Landscape</h2>
+<p>It&rsquo;s helpful to place CRUSH4SQL in the context of other Text-to-SQL techniques:</p>
+<ul>
+<li><strong>vs. Dense Passage Retrieval (DPR):</strong> Unlike methods that directly retrieve schema elements or documentation based on the query embedding alone, CRUSH uses the <em>hallucinated schema</em> as an intermediate representation for retrieval probes.</li>
+<li><strong>vs. Question Decomposition:</strong> Some methods break the user question into sub-questions for retrieval. CRUSH differs by generating a holistic target <em>schema structure</em> first.</li>
+<li><strong>vs. Fine-Tuning:</strong> Approaches involving fine-tuning large models on specific schemas can be powerful but may require significant training data and struggle with adapting to new or rapidly changing databases. CRUSH, being retrieval-based, could potentially offer more adaptability.</li>
+<li><strong>vs. Other Retrieval Augmentation:</strong> Methods like MURRE explore multi-hop retrieval and iterative refinement. CRUSH offers a unique take by using hallucination to define the initial target for a collective retrieval step, rather than solely relying on iterative query-based steps.</li>
+<li><strong>Relation to Chain-of-Thought (CoT):</strong> While CRUSH doesn&rsquo;t explicitly generate a step-by-step reasoning chain like typical CoT prompting, the hallucination phase <em>implicitly</em> involves the LLM reasoning about the necessary schema structure. The subsequent collective retrieval step then acts upon this implicitly reasoned structure.</li>
+</ul>
+<p>Understanding these distinctions highlights CRUSH4SQL&rsquo;s novel contribution: using controlled hallucination as a specific mechanism to guide schema subset retrieval for large databases.</p>
+<h2 id="conclusion-the-dream-needs-careful-guidance">Conclusion: The Dream Needs Careful Guidance</h2>
+<p>Ultimately, the experiment served as a practical reality check on an exciting theoretical concept. While the idea of leveraging LLM hallucination as a linguistic bridge to navigate complex schemas remains compelling, the results highlight a critical bottleneck: <strong>controlling the nature of the dream.</strong> The CRUSH4SQL approach, as reported in the paper, hinges on the LLM generating a clean, concise, structural metaphor—not a verbose narrative.</p>
+<p>The local Llama 3.1 model used in this specific setup acted more like an over-enthusiastic storyteller than a precise architect, drowning the useful signal (the dream schema) in noise (explanatory text). This doesn&rsquo;t invalidate the core CRUSH4SQL idea, but it underscores the crucial role of implementation details: prompt engineering, output parsing, and potentially model selection or fine-tuning are paramount.</p>
+<p>Looking ahead, the path involves figuring out how to refine this process. Can the LLM be forced to dream more productively with stricter prompts? Can the essential structure be reliably extracted from its output? Or is a different kind of model needed altogether? Text-to-SQL over large databases remains a significant challenge. While harnessing AI&rsquo;s &ldquo;dreams&rdquo; offers a tantalizing path, it&rsquo;s clear that significant engineering and refinement are needed to turn those dreams into consistently reliable results.</p>
+<h2 id="references">References</h2>
+<p>[1] Kothyari, Mayank, et al. &ldquo;CRUSH4SQL: Collective Retrieval Using Schema Hallucination For Text2SQL.&rdquo; <em>Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing</em>. Association for Computational Linguistics, 2023. (<a href="https://aclanthology.org/2023.emnlp-main.868/">ACL Anthology</a>, <a href="https://arxiv.org/abs/2311.01173">arXiv</a>)</p>
+
+
+<div id="nextprev">
+<a href="/news/trl-lab-collaboration/"><div id="prevart">Previous:<br>Started Collaboration with TRL Lab on LLM Research</div></a>
+</div>
+<div style="clear:both" class=taglist>Related<br><a id="tag_text-to-sql" href="http://localhost:50544/tags/text-to-sql">Text-to-Sql</a> &middot; <a id="tag_llm" href="http://localhost:50544/tags/llm">Llm</a> &middot; <a id="tag_hallucination" href="http://localhost:50544/tags/hallucination">Hallucination</a> &middot; <a id="tag_retrieval" href="http://localhost:50544/tags/retrieval">Retrieval</a> &middot; <a id="tag_crush4sql" href="http://localhost:50544/tags/crush4sql">Crush4sql</a> &middot; <a id="tag_experiment" href="http://localhost:50544/tags/experiment">Experiment</a> &middot; <a id="tag_database" href="http://localhost:50544/tags/database">Database</a> &middot; <a id="tag_vector search" href="http://localhost:50544/tags/vector-search">Vector Search</a></div>
+</article>
+</main>
+
+<footer>
+    <a href="/rss">RSS</a> · 
+    <a href="https://x.com/nikola_selic">X (formerly Twitter)</a> · 
+    <a href="https://github.com/Selich">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/nikola-selic">LinkedIn</a> · 
+    <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en">Google Scholar</a> · 
+    <a href="https://bsky.app/profile/nikolaselic.bsky.social">Bluesky</a>
+</footer> 
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    
+    document.documentElement.setAttribute('data-theme', 'light');
+    if (themeToggle) {
+      themeToggle.textContent = '🌙';
+    }
+    
+    
+    localStorage.setItem('theme', 'light');
+    
+    
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        let theme = 'light';
+        
+        if (document.documentElement.getAttribute('data-theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          theme = 'dark';
+          themeToggle.textContent = '☀️';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          themeToggle.textContent = '🌙';
+        }
+        
+        
+        localStorage.setItem('theme', theme);
+      });
+    }
+  });
+</script>
+
+
+<script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   
   
@@ -104,4 +672,6 @@ CREATE TABLE Customer (
         fontSize: '14px' 
       }
   }); 
-</script></body></html>
+</script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50544&amp;path=livereload" data-no-instant defer></script>
 	<title>Exploring Linguistics: Syntax Trees Across Languages | Nikola Selic - Personal Website</title>
-	<link rel="canonical" href="http://localhost:1313/">
+	<link rel="canonical" href="http://localhost:50544/">
 	<link rel='alternate' type='application/rss+xml' title="Nikola Selic - Personal Website RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	<link rel="icon" href="/favicon.ico">
@@ -173,9 +173,9 @@ Below is an interactive visualization showing how a simple introduction (&ldquo;
 
 <div id="nextprev">
 <a href="/blog/math-rendering-example/"><div id="prevart">Previous:<br>Math Rendering Example</div></a>
-<a href="/autobiography/"><div id="nextart">Next:<br>Autobiography</div></a>
+<a href="/news/teaching-assistant-tum/"><div id="nextart">Next:<br>Started new role as Teaching Assistant at TUM</div></a>
 </div>
-<div style="clear:both" class=taglist>Related<br><a id="tag_linguistics" href="http://localhost:1313/tags/linguistics">Linguistics</a> &middot; <a id="tag_programming" href="http://localhost:1313/tags/programming">Programming</a> &middot; <a id="tag_d3js" href="http://localhost:1313/tags/d3js">D3js</a> &middot; <a id="tag_visualization" href="http://localhost:1313/tags/visualization">Visualization</a></div>
+<div style="clear:both" class=taglist>Related<br><a id="tag_linguistics" href="http://localhost:50544/tags/linguistics">Linguistics</a> &middot; <a id="tag_programming" href="http://localhost:50544/tags/programming">Programming</a> &middot; <a id="tag_d3js" href="http://localhost:50544/tags/d3js">D3js</a> &middot; <a id="tag_visualization" href="http://localhost:50544/tags/visualization">Visualization</a></div>
 </article>
 </main>
 
@@ -222,6 +222,35 @@ Below is an interactive visualization showing how a simple introduction (&ldquo;
       });
     }
   });
+</script>
+
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  
+  
+  const rootStyle = getComputedStyle(document.documentElement);
+
+  mermaid.initialize({ 
+      startOnLoad: true, 
+      theme: 'base', 
+      themeVariables: {
+        
+        primaryColor: rootStyle.getPropertyValue('--accent-color').trim() || '#f0f7ff',
+        primaryTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        primaryBorderColor: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        lineColor: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        secondaryColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        tertiaryColor: rootStyle.getPropertyValue('--background-color').trim() || '#fff',
+        
+        nodeBorder: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
+        mainBkg: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        actorBorder: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
+        actorTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
+        labelBoxBkgColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa', 
+        fontSize: '14px' 
+      }
+  }); 
 </script>
 </body>
 </html>
