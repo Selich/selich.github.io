@@ -62,13 +62,9 @@ Thesis: **Blockchain-based Federated Learning**
 
 ### Centrum Wiskunde & Informatica
 
-**Research Stay**, August–September 2025 · Amsterdam, Netherlands<br>
-Research on LLMs, Text-to-SQL, and table retrieval
-
-### TRL Lab, University of Amsterdam
-
-**Research Student**, 2025<br>
+**Research Student, TRL Lab**, 2025 · Amsterdam, Netherlands<br>
 Worked with Prof. Madelon Hulsebos and Daniel Gomm on generative AI and information retrieval for structured data<br>
+Completed a research stay from August to September 2025 focused on LLMs, Text-to-SQL, and table retrieval<br>
 [TRL Lab people](https://trl-lab.github.io/people/)
 
 ### Firebolt

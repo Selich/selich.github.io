@@ -20,9 +20,10 @@ I study how language models can find and reason over the right information. My w
   </article>
 
   <article class="research-project" id="cwi-research-stay">
-    <p class="card-label">Research Stay · CWI · Aug–Sep 2025</p>
-    <h2>Table Retrieval for Text-to-SQL</h2>
-    <p>Research at Centrum Wiskunde & Informatica in Amsterdam on LLMs, Text-to-SQL, and retrieving relevant tables for database interaction.</p>
+    <p class="card-label">Research Collaboration & Stay · CWI / TRL Lab · 2025</p>
+    <h2>Retrieval for Structured Data and Text-to-SQL</h2>
+    <p>Research at Centrum Wiskunde & Informatica in Amsterdam with Prof. Madelon Hulsebos and Daniel Gomm on generative AI, information retrieval for structured data, Text-to-SQL, and retrieving relevant tables for database interaction. The collaboration included a research stay from August to September 2025.</p>
+    <p class="card-links"><a href="https://trl-lab.github.io/people/" target="_blank" rel="noopener noreferrer">TRL Lab</a> · <a href="/news/cwi-research-stay/">Research stay</a> · <a href="/news/trl-lab-collaboration/">Collaboration update</a></p>
   </article>
 
   <article class="research-project" id="pluramath">
@@ -32,10 +33,4 @@ I study how language models can find and reason over the right information. My w
     <p class="card-links"><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://github.com/TUM-NLP/pluramath" target="_blank" rel="noopener noreferrer">Code</a> · <a href="https://huggingface.co/datasets/tum-nlp/PluraMath" target="_blank" rel="noopener noreferrer">Dataset</a></p>
   </article>
 
-  <article class="research-project" id="trl-lab">
-    <p class="card-label">Research Collaboration · 2025</p>
-    <h2>Retrieval for Structured Data</h2>
-    <p>Research student with the TRL Lab at the University of Amsterdam, working with Prof. Madelon Hulsebos and Daniel Gomm on generative AI and information retrieval for structured data.</p>
-    <p class="card-links"><a href="https://trl-lab.github.io/people/" target="_blank" rel="noopener noreferrer">TRL Lab</a> · <a href="/news/trl-lab-collaboration/">Collaboration update</a></p>
-  </article>
 </div>

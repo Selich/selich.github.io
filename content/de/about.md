@@ -59,13 +59,9 @@ Abschlussarbeit: **Blockchain-basiertes Federated Learning**
 
 ### Centrum Wiskunde & Informatica
 
-**Forschungsaufenthalt**, August–September 2025 · Amsterdam, Niederlande<br>
-Forschung zu LLMs, Text-to-SQL und Table Retrieval
-
-### TRL Lab, Universität Amsterdam
-
-**Research Student**, 2025<br>
+**Research Student, TRL Lab**, 2025 · Amsterdam, Niederlande<br>
 Zusammenarbeit mit Prof. Madelon Hulsebos und Daniel Gomm zu generativer KI und Information Retrieval für strukturierte Daten<br>
+Forschungsaufenthalt von August bis September 2025 mit Schwerpunkt LLMs, Text-to-SQL und Table Retrieval<br>
 [TRL Lab People](https://trl-lab.github.io/people/)
 
 ### Firebolt
