@@ -9,7 +9,7 @@ menu:
 {{< syntax-tree >}}
 
 <section class="home-hero">
-  <img src="/images/profile-320-2026.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
+  <img src="/images/profile-320-fingerprint.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
   <p class="eyebrow">Information Retrieval · LLMs · Data Systems</p>
   <h1>Nikola Selic</h1>
   <p class="home-role">Research Engineer working on Information Retrieval, LLMs & Data Systems</p>
@@ -17,7 +17,7 @@ menu:
   <div class="hero-actions">
     <a href="/research/" class="primary-action">Research</a>
     <a href="/about/#experience" class="secondary-action">Experience</a>
-    <a href="/blog/" class="secondary-action">Writing</a>
+    <a href="mailto:selic.work@gmail.com" class="secondary-action">Contact</a>
   </div>
   <div class="home-socials">
     <a href="https://github.com/Selich" target="_blank" rel="noopener noreferrer">GitHub</a>

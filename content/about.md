@@ -25,10 +25,16 @@ Before focusing on retrieval, I worked across data engineering, software systems
 
 ## Research focus
 
-- Information retrieval for language models
-- Hybrid, table, and structured-data retrieval
-- Multilingual reasoning evaluation
-- LLMs for code and system analysis
+**Information Retrieval & RAG**<br>
+Sparse, dense, and hybrid retrieval; retrieval evaluation.
+
+**LLMs & Structured Data**<br>
+Table retrieval, Text-to-SQL, and reasoning over structured information.
+
+**Reliable AI Systems**<br>
+Evaluation and systems aspects of deploying LLM-based applications.
+
+Broader interests include databases, distributed systems, security, and machine learning for systems.
 
 ## Education
 
