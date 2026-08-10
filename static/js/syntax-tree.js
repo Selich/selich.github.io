@@ -340,13 +340,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("transform", d => `translate(${d.x},${d.y})`)
       .style("opacity", 0);
       
-    // Add circles to nodes
-    nodeGroups.append("circle")
-      .attr("r", 0)
-      .attr("fill", d => d.depth === 0 ? "#f0f4ff" : "#2d3748")  // Root node slightly different
-      .attr("stroke", "transparent")
-      .attr("stroke-width", 2);
-    
     // Helper function to get background color based on part of speech
     function getBackgroundColor(d) {
       const nodeName = d.data.name;
@@ -590,9 +583,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .transition()
             .delay(delay)
             .duration(600)
-            .style("opacity", 1)
-            .select("circle")
-            .attr("r", 20);
+            .style("opacity", 1);
           
           // Fade in the text
           d3.selectAll(nodesByDepth[depth])
