@@ -176,7 +176,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: inherit;
+	font-family: var(--font-display);
 	font-weight: 600;
 	margin-top: 36px;
 	margin-bottom: 20px;
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 .research-project h2,
 .post-item h2,
 .post-item h3 {
-	font-family: var(--font-sans);
+	font-family: var(--font-display);
 	font-weight: 600;
 	letter-spacing: -0.015em;
 }
@@ -243,6 +243,33 @@ article li a {
 img {
 	max-width: 100%;
 	margin: 20px 0;
+}
+
+.post-image-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+	margin: 28px 0;
+}
+
+.post-image-grid figure {
+	margin: 0;
+}
+
+.post-image-grid img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	margin: 0;
+	border-radius: 6px;
+	object-fit: cover;
+}
+
+.post-image-grid figcaption {
+	margin-top: 7px;
+	color: var(--meta-text-color);
+	font-size: 0.78rem;
+	text-align: center;
 }
 
 footer {
@@ -1177,6 +1204,10 @@ blockquote {
 
     .home-socials {
         justify-content: center;
+    }
+
+    .post-image-grid {
+        grid-template-columns: 1fr;
     }
 
     .recent-item {
