@@ -10,23 +10,23 @@ menu:
 
 <section class="home-hero">
   <div class="home-hero-copy">
-    <p class="eyebrow">Information Retrieval · LLMs · Data Systems</p>
     <h1>Nikola Selic</h1>
+    <p class="name-pronunciation">/nǐkola sělitɕ/</p>
     <p class="home-lead">I completed my master’s studies at TUM, where I wrote my thesis on hybrid retrieval under the supervision of Jakob Sturm and Prof. Georg Groh. My current focus is hybrid retrieval, LLMs, RAG, and retrieval over structured data.</p>
     <p class="home-lead">Beyond information retrieval, I am interested in information theory, measure theory, mathematical logic, and linguistics. I am always open to collaborating on interesting projects—feel free to reach out for a chat.</p>
     <div class="hero-actions">
       <a href="/research/" class="primary-action">View my work</a>
-      <div class="hero-links">
-        <a href="/about/">About</a>
-        <span>·</span>
-        <a href="mailto:selic.work@gmail.com">Contact</a>
-      </div>
     </div>
     <div class="home-socials">
+      <a href="/about/">About</a>
+      <span>·</span>
+      <a href="mailto:selic.work@gmail.com">Contact</a>
+      <span>·</span>
       <a href="https://github.com/Selich" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span>·</span>
+      <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+      <span>·</span>
       <a href="https://www.linkedin.com/in/nikola-selic" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://bsky.app/profile/nikola.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
-      <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
     </div>
   </div>
   <img src="/images/profile-320-fingerprint.webp" alt="Portrait of Nikola Selic" class="home-profile" width="184" height="184" fetchpriority="high" decoding="async">

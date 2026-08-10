@@ -13,7 +13,7 @@
     --header-bg: #fff;
     --active-link: #0066cc;
     --body-font: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --display-font: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --display-font: "Instrument Serif", Georgia, "Times New Roman", serif;
     --mono-font: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
     --surface-color: #f7f8fa;
     
@@ -891,7 +891,7 @@ blockquote {
     position: relative;
     z-index: 10;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 220px;
+    grid-template-columns: minmax(0, 1fr) 250px;
     align-items: center;
     gap: 48px;
     margin: -80px auto 40px;
@@ -899,8 +899,8 @@ blockquote {
 }
 
 .home-profile {
-    width: 184px;
-    height: 184px;
+    width: 225px;
+    height: 225px;
     margin: 0 auto;
     border: 4px solid var(--background-color);
     border-radius: 50%;
@@ -912,7 +912,14 @@ blockquote {
     margin: 8px 0 12px;
 }
 
-.eyebrow,
+.name-pronunciation {
+    margin: -6px 0 16px;
+    color: var(--meta-text-color);
+    font-family: var(--mono-font);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+}
+
 .card-label {
     margin: 0;
     color: var(--meta-text-color);
@@ -942,24 +949,6 @@ blockquote {
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 14px;
-}
-
-.hero-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: var(--meta-text-color);
-    font-size: 0.88rem;
-}
-
-.hero-links a {
-    color: var(--meta-text-color);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.hero-links a:hover {
-    color: var(--link-color);
 }
 
 .primary-action,
@@ -1000,6 +989,12 @@ blockquote {
     color: var(--link-color);
     text-decoration: none;
     opacity: 1;
+}
+
+.home-socials span {
+    color: var(--meta-text-color);
+    font-size: 0.7rem;
+    opacity: 0.55;
 }
 
 .card-links {
@@ -1158,8 +1153,8 @@ blockquote {
 
     .home-profile {
         order: -1;
-        width: 168px;
-        height: 168px;
+        width: 184px;
+        height: 184px;
         margin-right: auto;
         margin-left: auto;
     }

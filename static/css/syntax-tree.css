@@ -73,10 +73,10 @@
 
 .link {
   fill: none;
-  stroke: #a3aab3;
+  stroke: #8f99a5;
   stroke-width: 1.5px;
   transition: all 0.3s ease;
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 .link:hover {
