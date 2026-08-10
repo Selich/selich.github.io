@@ -1,7 +1,7 @@
 ---
 title: "Über mich"
-seoTitle: "Über Nikola Selic — Research Engineer"
-description: "Über Nikola Selic, Research Engineer mit Schwerpunkt Information Retrieval, LLMs, strukturierte Daten und zuverlässige KI-Systeme."
+seoTitle: "Über Nikola Selic — AI Research Engineer"
+description: "Über Nikola Selic, AI Research Engineer in München mit Schwerpunkt Information Retrieval, LLMs, strukturierte Daten und zuverlässige KI-Systeme."
 type: "page"
 layout: "about"
 url: "/de/about/"

@@ -1,7 +1,7 @@
 ---
 title: "Home"
-seoTitle: "Nikola Selic — Research Engineer | Information Retrieval & LLMs"
-description: "Nikola Selic is a research engineer working on information retrieval, LLMs, RAG, structured data, and AI systems. Explore research, projects, and technical writing."
+seoTitle: "Nikola Selic — AI Research Engineer | Information Retrieval & LLMs"
+description: "Nikola Selic is an AI research engineer in Munich working on information retrieval, LLMs, RAG, structured data, and reliable AI systems."
 menu:
   main:
     weight: 1
