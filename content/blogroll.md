@@ -1,7 +1,4 @@
 ---
 title: "Blogroll"
+draft: true
 ---
-
-# Blogroll
-
-A list of blogs I follow and recommend. 

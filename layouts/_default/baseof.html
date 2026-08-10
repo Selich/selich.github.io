@@ -2,7 +2,7 @@
 <html lang="{{ .Site.Language }}" data-theme="light">
 <head>
 	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-	<link rel="canonical" href="{{ .Site.BaseURL }}">
+	<link rel="canonical" href="{{ .Permalink }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/style.css'>
 	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
@@ -28,11 +28,8 @@
 		"https://bsky.app/profile/nikola.bsky.social",
 		"https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en"
 	  ],
-	  "jobTitle": "Student Research Assistant",
-	  "worksFor": {
-	    "@type": "Organization",
-	    "name": "Technical University of Munich"
-	  },
+	  "jobTitle": "Researcher and Software Engineer",
+	  "image": "https://nikolaselic.com/images/profile.png",
 	  "alumniOf": [
 	    {
 	      "@type": "CollegeOrUniversity",

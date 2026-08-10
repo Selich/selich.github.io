@@ -1,7 +1,4 @@
 ---
 title: "Recipes"
+draft: true
 ---
-
-# Recipes
-
-A collection of my favorite recipes. 

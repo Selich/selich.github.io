@@ -3,24 +3,24 @@
 {{ define "main" }}
   <div class="about-container">
     <div class="profile-container">
-      <img src="/images/profile2.jpg" alt="Profile Image" class="profile-image">
+      <img src="/images/profile.png" alt="Portrait of Nikola Selic" class="profile-image">
       <div class="social-links">
         {{ with .Params.social.github }}
-        <a href="https://github.com/{{ . }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
         {{ end }}
         {{ with .Params.social.twitter }}
-        <a href="https://twitter.com/{{ . }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
         {{ end }}
         {{ with .Params.social.linkedin }}
-        <a href="https://linkedin.com/in/{{ . }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         {{ end }}
         {{ with .Params.social.bluesky }}
-        <a href="https://bsky.app/profile/{{ . }}" target="_blank" title="Bluesky"><i class="fas fa-cloud"></i></a>
+        <a href="https://bsky.app/profile/{{ . }}" target="_blank" rel="noopener noreferrer" title="Bluesky"><i class="fas fa-cloud"></i></a>
         {{ end }}
         {{ with .Params.social.email }}
-        <a href="mailto:{{ . }}" target="_blank" title="Email"><i class="far fa-envelope"></i></a>
+        <a href="mailto:{{ . }}" title="Email"><i class="far fa-envelope"></i></a>
         {{ end }}
-        <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
       </div>
     </div>
     <div class="bio-container">

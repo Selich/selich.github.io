@@ -396,10 +396,6 @@ blockquote {
 	clear: both;
 }
 
-/* For NEXTPREV.HTML */
-#nextprev {
-	/* The container for both the previous and next articles. */
-}
 #prevart {
 	float: left;
 	text-align: left;
@@ -856,17 +852,142 @@ blockquote {
   margin: 0 auto; /* Center SVG if wrapper is wider */
 }
 
-/* Optional: Style for sequence diagrams which can get wide */
-.mermaid-diagram-wrapper .sequenceDiagram text {
-    /* Adjust font size if needed for sequence diagrams */
-    /* font-size: 12px; */ 
+.home-hero {
+    position: relative;
+    z-index: 10;
+    margin: -120px auto 56px;
+    text-align: center;
 }
 
-/* Ensure mermaid background matches site (if needed) */
-[data-theme="light"] .mermaid-diagram-wrapper svg {
-    /* background-color: #ffffff; /* Or your light theme background */
+.home-profile {
+    width: 152px;
+    height: 152px;
+    margin: 0 auto 20px;
+    border: 4px solid var(--background-color);
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-[data-theme="dark"] .mermaid-diagram-wrapper svg {
-     /* background-color: #282c34; /* Or your dark theme background */
+.home-hero h1 {
+    margin: 8px 0 12px;
+}
+
+.eyebrow,
+.card-label {
+    margin: 0;
+    color: var(--meta-text-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.home-lead {
+    max-width: 650px;
+    margin: 0 auto 24px;
+    color: var(--blockquote-color);
+    font-size: 1.15rem;
+}
+
+.hero-actions,
+.home-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-actions {
+    margin-bottom: 20px;
+}
+
+.primary-action,
+.secondary-action {
+    padding: 9px 16px;
+    border: 1px solid var(--link-color);
+    border-radius: 6px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.primary-action {
+    background: var(--link-color);
+    color: var(--background-color);
+}
+
+.secondary-action {
+    background: var(--background-color);
+    color: var(--link-color);
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.home-socials a {
+    color: var(--meta-text-color);
+    font-size: 1.25rem;
+}
+
+.home-socials a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 24px 0 36px;
+}
+
+.featured-card {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg-color);
+}
+
+.featured-card h3 {
+    margin: 8px 0 10px;
+    font-size: 1.18rem;
+}
+
+.featured-card p:last-child {
+    margin: 0;
+    color: var(--blockquote-color);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 17px;
+    }
+
+    .site-header,
+    main {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .home-hero {
+        margin-top: -80px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        display: block;
+    }
+
+    .profile-container {
+        width: 180px;
+        margin: 0 auto 32px;
+    }
 }

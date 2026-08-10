@@ -2,7 +2,7 @@
 title: "Blog"
 menu:
   main:
-    weight: 3
+    weight: 4
 ---
 
 All my blog posts are listed below. 

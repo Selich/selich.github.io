@@ -1,10 +1,4 @@
 ---
 title: "Services"
-menu:
-  main:
-    weight: 4
+draft: true
 ---
-
-# Services
-
-Here are the professional services I offer. 

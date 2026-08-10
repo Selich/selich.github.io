@@ -36,13 +36,7 @@
       {{ if and (in .Params.tags "conference") .Params.location }}
         <div class="mini-location">
           <p><strong>Location:</strong> {{ .Params.location.name }}</p>
-          <a href="https://www.google.com/maps?q={{ .Params.location.coords }}" target="_blank">
-            <img 
-              src="https://maps.googleapis.com/maps/api/staticmap?center={{ .Params.location.coords }}&zoom={{ .Params.location.zoom }}&size=400x200&maptype=roadmap&markers=color:red%7C{{ .Params.location.coords }}&key=AIzaSyDemKW-e-yxGY6MLOQ92CuRqolxYnnYUTU" 
-              alt="Map showing {{ .Params.location.name }}" 
-              class="mini-map-img"
-            />
-          </a>
+          <a href="https://www.google.com/maps?q={{ .Params.location.coords }}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
         </div>
       {{ end }}
     </article>
