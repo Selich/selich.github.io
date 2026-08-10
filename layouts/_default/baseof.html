@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}" data-theme="light">
+<html lang="{{ with .Params.lang }}{{ . }}{{ else }}{{ .Site.Language }}{{ end }}" data-theme="light">
 <head>
 	{{- $pageTitle := .Site.Title -}}
 	{{- if .Params.seoTitle -}}
@@ -21,8 +21,14 @@
 	{{- with .Params.image -}}
 		{{- $socialImage = . | absURL -}}
 	{{- end -}}
+	{{- $isArticle := and .IsPage (or (eq .Section "blog") (eq .Section "news")) -}}
 	<title>{{ $pageTitle }}</title>
 	<link rel="canonical" href="{{ .Permalink }}">
+	{{ with .Params.translations -}}
+	<link rel="alternate" hreflang="en" href="{{ .en | absURL }}">
+	<link rel="alternate" hreflang="de" href="{{ .de | absURL }}">
+	<link rel="alternate" hreflang="x-default" href="{{ .en | absURL }}">
+	{{ end -}}
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,13 +45,13 @@
 	<meta property="og:url" content="{{ .Permalink }}">
 	<meta property="og:site_name" content="Nikola Selic">
 	<meta property="og:image" content="{{ $socialImage }}">
-	<meta property="og:type" content="{{ if and .IsPage (eq .Section "blog") }}article{{ else }}website{{ end }}">
+	<meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
 	<meta name="twitter:card" content="{{ if .Params.image }}summary_large_image{{ else }}summary{{ end }}">
 	<meta name="twitter:title" content="{{ $pageTitle }}">
 	<meta name="twitter:description" content="{{ $description }}">
 	<meta name="twitter:image" content="{{ $socialImage }}">
 	<meta name="twitter:creator" content="@nikola_selic">
-	{{ if and .IsPage (eq .Section "blog") -}}
+	{{ if $isArticle -}}
 	<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
 	<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 	{{ end -}}
@@ -92,19 +98,19 @@
 			"author" (dict "@id" "https://nikolaselic.com/#nikola")
 		-}}
 		{{- $structuredData = dict "@context" "https://schema.org" "@graph" (slice $website $person) -}}
-	{{- else if eq .RelPermalink "/about/" -}}
+	{{- else if .Params.profilePage -}}
 		{{- $structuredData = dict
 			"@context" "https://schema.org"
 			"@type" "ProfilePage"
-			"@id" "https://nikolaselic.com/about/#profile"
+			"@id" (printf "%s#profile" .Permalink)
 			"url" .Permalink
 			"name" $pageTitle
 			"description" $description
 			"mainEntity" $person
 		-}}
-	{{- else if and .IsPage (eq .Section "blog") -}}
+	{{- else if $isArticle -}}
 		{{- $article := dict
-			"@type" "BlogPosting"
+			"@type" (cond (eq .Section "news") "NewsArticle" "BlogPosting")
 			"@id" (printf "%s#article" .Permalink)
 			"mainEntityOfPage" .Permalink
 			"headline" .Title

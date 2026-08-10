@@ -3,6 +3,11 @@ title: "About"
 seoTitle: "About Nikola Selic — Research Engineer"
 description: "About Nikola Selic, a research engineer focused on information retrieval, LLMs, structured data, and reliable AI systems."
 layout: "about"
+lang: "en"
+profilePage: true
+translations:
+  en: "/about/"
+  de: "/de/about/"
 aliases:
   - "/cv/"
 menu:

@@ -27,6 +27,13 @@
       </div>
     </div>
     <div class="bio-container">
+      {{ with .Params.translations }}
+      <nav class="language-switcher" aria-label="Language selection">
+        <a href="{{ .en }}" hreflang="en" lang="en"{{ if eq $.Params.lang "en" }} class="active" aria-current="page"{{ end }}>EN</a>
+        <span>/</span>
+        <a href="{{ .de }}" hreflang="de" lang="de"{{ if eq $.Params.lang "de" }} class="active" aria-current="page"{{ end }}>DE</a>
+      </nav>
+      {{ end }}
       {{ .Content }}
     </div>
   </div>
