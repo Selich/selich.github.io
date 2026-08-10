@@ -38,26 +38,22 @@ menu:
       <div><i></i><b>→</b><span>dense</span><b>↗ rank</b></div>
     </div>
     <p class="card-label">Master’s Thesis</p>
-    <h3><a href="/news/hybrid-retrieval-thesis/">Hybrid retrieval</a></h3>
-    <p>Research on combining sparse and dense retrieval for more effective information access.</p>
-    <p class="card-links"><a href="/research/#hybrid-retrieval">Overview</a> · <a href="/news/hybrid-retrieval-thesis/">Update</a></p>
+    <h3><a href="/research/#hybrid-retrieval">Hybrid retrieval</a></h3>
+    <p>Combining sparse and dense retrieval for more effective information access.</p>
+    <p class="card-links"><a href="/research/#hybrid-retrieval">View research →</a></p>
   </article>
   <article class="featured-card">
     <div class="research-artifact schema-artifact" aria-hidden="true">
-      <div><span>users</span><span>orders</span><span>events</span></div>
-      <p>question → selected schema</p>
+      <span>question</span><b>→</b><span>retrieval</span><b>→</b><span>schema</span><b>→</b><span>LLM / SQL</span>
     </div>
     <p class="card-label">Research · CWI</p>
     <h3><a href="/research/#cwi-research-stay">Table retrieval for Text-to-SQL</a></h3>
-    <p>Research on helping language models identify relevant structured information for database interaction.</p>
-    <p class="card-links"><a href="/research/#cwi-research-stay">Project</a></p>
+    <p>Helping language models identify relevant tables and schemas for database interaction.</p>
+    <p class="card-links"><a href="/research/#cwi-research-stay">View research →</a></p>
   </article>
   <article class="featured-card">
-    <div class="research-artifact language-artifact" aria-hidden="true">
-      <span style="--bar: 42px">SR</span>
-      <span style="--bar: 34px">SK</span>
-      <span style="--bar: 28px">AM</span>
-      <span style="--bar: 38px">EL</span>
+    <div class="research-artifact evaluation-artifact" aria-hidden="true">
+      <span>18 languages</span><b>→</b><span>27 LLMs</span><b>→</b><span>evaluation</span>
     </div>
     <p class="card-label">Research · Multilingual LLMs</p>
     <h3><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">PluraMath</a></h3>
