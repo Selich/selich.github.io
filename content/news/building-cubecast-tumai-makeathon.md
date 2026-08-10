@@ -1,5 +1,5 @@
 ---
-title: "Built Cubecast at the TUM.ai Makeathon"
+title: "Participated in the TUM.ai Makeathon"
 date: 2026-04-19
 description: "Our team built Cubecast, a supply-chain disruption copilot, and placed sixth in the Spherecast challenge at the TUM.ai Makeathon 2026."
 image: "/images/tumai-makeathon/cubecast.webp"
@@ -13,7 +13,7 @@ I had a great time at the [TUM.ai Makeathon 2026](https://makeathon.tum-ai.com/)
 
 Our team built **Cubecast**, a copilot for supply-chain disruption analysis in consumer packaged goods sourcing. It ingests a supplier delay email, extracts the disruption signal with an LLM, links it to supplier and product entities through a cognee knowledge graph and SQLite data, identifies the affected raw material, simulates the disruption, and suggests alternative suppliers and rerouting options.
 
-<img src="/images/tumai-makeathon/cubecast.webp" alt="Cubecast graph view showing a supplier disruption and its effect on a raw material" width="900" height="960" loading="lazy" decoding="async">
+<img class="news-feature-image" src="/images/tumai-makeathon/cubecast.webp" alt="Cubecast graph view showing a supplier disruption and its effect on a raw material" width="900" height="960" loading="lazy" decoding="async">
 
 We placed **6th out of approximately 45 teams** in the Spherecast challenge.
 

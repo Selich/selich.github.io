@@ -245,6 +245,15 @@ img {
 	margin: 20px 0;
 }
 
+.news-feature-image {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	margin: 28px auto;
+	border-radius: 6px;
+}
+
 .post-image-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
