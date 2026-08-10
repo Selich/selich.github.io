@@ -889,7 +889,7 @@ blockquote {
 .home-hero {
     position: relative;
     z-index: 10;
-    margin: -30px auto 40px;
+    margin: -80px auto 40px;
     text-align: center;
 }
 
@@ -1275,7 +1275,7 @@ blockquote {
     }
 
     .home-hero {
-        margin-top: -20px;
+        margin-top: -50px;
     }
 
     .home-profile {
