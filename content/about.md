@@ -2,6 +2,8 @@
 title: "About"
 description: "Nikola Selic is a researcher and software engineer working across machine learning, databases, retrieval, and secure systems."
 layout: "about"
+aliases:
+  - "/cv/"
 menu:
   main:
     weight: 2
@@ -87,5 +89,5 @@ Helping connect students, researchers, and industry practitioners in Munich
 **Volunteer, CIDR 2025** · January 2025<br>
 Conference on Innovative Data Systems Research, Amsterdam
 
-For a concise overview, see my [CV](/cv/). You can also find my work on [GitHub](https://github.com/Selich) and [Google Scholar](https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en).
+You can also find my work on [GitHub](https://github.com/Selich) and [Google Scholar](https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en).
 

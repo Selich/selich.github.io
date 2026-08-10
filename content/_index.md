@@ -9,28 +9,20 @@ menu:
 {{< syntax-tree >}}
 
 <section class="home-hero">
-  <img src="/images/profile.png" alt="Portrait of Nikola Selic" class="home-profile">
+  <img src="/images/profile.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
   <p class="eyebrow">Machine learning · Databases · Information retrieval</p>
   <h1>Nikola Selic</h1>
   <p class="home-lead">I am a researcher and software engineer interested in building intelligent, reliable systems at the intersection of machine learning and data management.</p>
   <div class="hero-actions">
     <a href="/about/" class="primary-action">About me</a>
-    <a href="/cv/" class="secondary-action">View CV</a>
+    <a href="/about/#experience" class="secondary-action">Experience</a>
     <a href="mailto:selic.work@gmail.com" class="secondary-action">Get in touch</a>
   </div>
   <div class="home-socials">
-    <a href="https://github.com/Selich" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/nikola-selic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://bsky.app/profile/nikola.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
-      <i class="fas fa-cloud"></i>
-    </a>
-    <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-      <i class="fas fa-graduation-cap"></i>
-    </a>
+    <a href="https://github.com/Selich" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/nikola-selic" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://bsky.app/profile/nikola.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+    <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
   </div>
 </section>
 

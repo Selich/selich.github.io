@@ -29,7 +29,7 @@
 		"https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en"
 	  ],
 	  "jobTitle": "Researcher and Software Engineer",
-	  "image": "https://nikolaselic.com/images/profile.png",
+	  "image": "https://nikolaselic.com/images/profile.webp",
 	  "alumniOf": [
 	    {
 	      "@type": "CollegeOrUniversity",
@@ -43,23 +43,6 @@
 	}
 	</script>
 	
-	<!-- Font Awesome for social icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	
-	<!-- Highlight.js for syntax highlighting -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
-	<script>hljs.highlightAll();</script>
-	
-	<!-- KaTeX for math rendering -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-        
-    <!-- Custom JavaScript -->
-    <script src="/js/jupyter.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -80,68 +63,30 @@
 {{ partial "footer.html" . }}
 {{ end }}
 
-<script>
-  // Always use light mode
-  document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    
-    // Always set light theme
-    document.documentElement.setAttribute('data-theme', 'light');
-    if (themeToggle) {
-      themeToggle.textContent = '🌙';
-    }
-    
-    // Store light theme preference
-    localStorage.setItem('theme', 'light');
-    
-    // Toggle theme when the button is clicked (functionality preserved)
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        let theme = 'light';
-        
-        if (document.documentElement.getAttribute('data-theme') === 'light') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          theme = 'dark';
-          themeToggle.textContent = '☀️';
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-          themeToggle.textContent = '🌙';
-        }
-        
-        // Save the preference
-        localStorage.setItem('theme', theme);
-      });
-    }
-  });
-</script>
-
-<!-- Mermaid.js Import and Initialization (Corrected URL + Theming) -->
+{{ if in .RawContent "{{< mermaid >}}" }}
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  
-  // Get computed style for root element to access CSS variables
   const rootStyle = getComputedStyle(document.documentElement);
 
   mermaid.initialize({ 
       startOnLoad: true, 
-      theme: 'base', // Use base theme and apply variables for better control
+      theme: 'base',
       themeVariables: {
-        // Primary colors from your CSS vars (light mode defaults)
         primaryColor: rootStyle.getPropertyValue('--accent-color').trim() || '#f0f7ff',
         primaryTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
         primaryBorderColor: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
         lineColor: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
         secondaryColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
         tertiaryColor: rootStyle.getPropertyValue('--background-color').trim() || '#fff',
-        // Specific overrides if needed
         nodeBorder: rootStyle.getPropertyValue('--border-color').trim() || '#e0e0e0',
         mainBkg: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
         actorBorder: rootStyle.getPropertyValue('--link-color').trim() || '#0066cc',
         actorTextColor: rootStyle.getPropertyValue('--text-color').trim() || '#333',
-        labelBoxBkgColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa', // Background for labels
-        fontSize: '14px' // Slightly larger font size
+        labelBoxBkgColor: rootStyle.getPropertyValue('--code-bg-color').trim() || '#f6f8fa',
+        fontSize: '14px'
       }
   }); 
 </script>
+{{ end }}
 </body>
 </html>
