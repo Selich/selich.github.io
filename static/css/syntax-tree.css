@@ -86,7 +86,8 @@
   filter: none;
 }
 
-.node:hover .text-bg {
+.node:hover .text-bg,
+.temp-word:hover .text-bg {
   stroke: #7d8794;
   stroke-width: 1px;
 }
@@ -200,7 +201,8 @@
   transform: none;
 }
 
-.leaf-node:hover text {
+.leaf-node:hover text,
+.temp-word:hover text {
   font-size: 13px;
 }
 
