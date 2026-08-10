@@ -15,7 +15,7 @@ social:
   email: "selic.work@gmail.com"
 ---
 
-# About
+<h1 class="section-title">About</h1>
 
 I am interested in a simple question: **how do we give language models access to the right information?**
 

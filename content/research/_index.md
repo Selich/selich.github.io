@@ -6,7 +6,7 @@ menu:
     weight: 2
 ---
 
-# Research
+<h1 class="section-title">Research</h1>
 
 I study how language models can find and reason over the right information. My work connects information retrieval, structured data, multilingual evaluation, and systems engineering.
 
