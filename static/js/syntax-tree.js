@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const compact = containerWidth <= 480;
     const margin = compact
-      ? {top: 20, right: 18, bottom: 70, left: 18}
-      : {top: 30, right: 10, bottom: 100, left: 10};
+      ? {top: 15, right: 18, bottom: 50, left: 18}
+      : {top: 20, right: 10, bottom: 55, left: 10};
     const width = containerWidth - margin.left - margin.right;
     const height = containerHeight - margin.top - margin.bottom;
     
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const title = svg.append("text")
     .attr("class", "language-title")
     .attr("x", width / 2)
-    .attr("y", -20)
+    .attr("y", -8)
     .attr("text-anchor", "middle")
     .attr("font-size", "18px")
     .attr("font-weight", "bold");
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const sentenceText = svg.append("text")
     .attr("class", "sentence-text")
     .attr("x", width / 2)
-    .attr("y", height + 30)
+    .attr("y", height + 20)
     .attr("text-anchor", "middle")
     .attr("font-size", "16px");
     
@@ -170,13 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const languageIndicator = svg.append("text")
     .attr("class", "language-indicator")
     .attr("x", width / 2)
-    .attr("y", height + 60)
+    .attr("y", height + 40)
     .attr("text-anchor", "middle")
     .attr("font-size", "16px")
     .attr("opacity", 0);
   
   // Create tree layout
-  let treeLayout = d3.tree().size([width, height - 60]);
+  let treeLayout = d3.tree().size([width, height - 40]);
   
   // Resize handler for responsive behavior
   function handleResize() {
@@ -190,12 +190,12 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`);
     
     // Update tree layout
-    treeLayout = d3.tree().size([width, height - 60]);
+    treeLayout = d3.tree().size([width, height - 40]);
     
     // Update text positions
     title.attr("x", width / 2);
-    sentenceText.attr("x", width / 2).attr("y", height + 30);
-    languageIndicator.attr("x", width / 2).attr("y", height + 60);
+    sentenceText.attr("x", width / 2).attr("y", height + 20);
+    languageIndicator.attr("x", width / 2).attr("y", height + 40);
     
     // If there's a current tree displayed, redraw it
     if (currentTreeIndex >= 0 && currentTreeIndex < trees.length) {

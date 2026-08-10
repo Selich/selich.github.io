@@ -1,0 +1,23 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  <div class="news-timeline">
+    {{ range .Pages.ByDate.Reverse.GroupByDate "2006" }}
+      <section class="timeline-year">
+        <h2>{{ .Key }}</h2>
+        <div>
+          {{ range .Pages }}
+            <article class="timeline-entry">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                <span>{{ upper (.Date.Format "Jan") }}</span>
+                <b>{{ .Date.Format "02" }}</b>
+              </time>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+{{ end }}
