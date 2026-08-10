@@ -12,7 +12,8 @@ menu:
   <div class="home-hero-copy">
     <p class="eyebrow">Information Retrieval · LLMs · Data Systems</p>
     <h1>Nikola Selic</h1>
-    <p class="home-lead">I build and study systems that help language models find and reason over complex information, from hybrid retrieval to structured data and code.</p>
+    <p class="home-lead">I completed my master’s studies at TUM, where I wrote my thesis on hybrid retrieval under the supervision of Jakob Sturm and Prof. Georg Groh. My current focus is hybrid retrieval, LLMs, RAG, and retrieval over structured data.</p>
+    <p class="home-lead">Beyond information retrieval, I am interested in information theory, measure theory, mathematical logic, and linguistics. I am always open to collaborating on interesting projects—feel free to reach out for a chat.</p>
     <div class="hero-actions">
       <a href="/research/" class="primary-action">View my work</a>
       <div class="hero-links">
