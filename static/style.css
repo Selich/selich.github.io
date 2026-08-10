@@ -424,11 +424,13 @@ blockquote {
 }
 
 .profile-image {
-    width: 205px;
-    height: 205px;
+    display: block;
+    width: 152px;
+    height: 152px;
+    margin: 0 auto 20px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid var(--border-color);
+    border: 4px solid var(--background-color);
 }
 
 .bio-container {
