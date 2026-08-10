@@ -907,15 +907,6 @@ blockquote {
     margin: 8px 0 12px;
 }
 
-.home-role {
-    max-width: 720px;
-    margin: 0 auto 12px;
-    color: var(--text-color);
-    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-    font-weight: 650;
-    line-height: 1.35;
-}
-
 .eyebrow,
 .card-label {
     margin: 0;
@@ -1009,12 +1000,13 @@ blockquote {
 .featured-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
     gap: 16px;
     margin: 24px 0 36px;
 }
 
 .featured-card {
-    padding: 20px;
+    padding: 16px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background: var(--card-bg-color);
@@ -1022,8 +1014,8 @@ blockquote {
 }
 
 .featured-card h3 {
-    margin: 8px 0 10px;
-    font-size: 1.18rem;
+    margin: 7px 0 8px;
+    font-size: 1.1rem;
 }
 
 .featured-card h3 a {
@@ -1036,21 +1028,21 @@ blockquote {
 }
 
 .research-artifact {
-    min-height: 92px;
-    margin: -20px -20px 18px;
-    padding: 18px 20px;
+    min-height: 58px;
+    margin: -16px -16px 14px;
+    padding: 11px 16px;
     border-bottom: 1px solid var(--border-color);
     background: var(--surface-color);
     color: #4b5563;
     font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-    font-size: 0.72rem;
+    font-size: 0.66rem;
 }
 
 .retrieval-artifact {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .retrieval-artifact div {
@@ -1083,7 +1075,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
 }
 
 .schema-artifact div {
@@ -1102,7 +1094,8 @@ blockquote {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    gap: 12px;
+    min-height: 58px;
+    gap: 9px;
 }
 
 .language-artifact span {
@@ -1112,7 +1105,7 @@ blockquote {
     justify-content: center;
     width: 28px;
     height: var(--bar);
-    min-height: 34px;
+    min-height: 24px;
     padding-bottom: 4px;
     border: 1px solid #cfd5dc;
     border-bottom: 2px solid #7b8794;
@@ -1123,13 +1116,13 @@ blockquote {
 .featured-card > p:not(.card-label):not(.card-links) {
     margin: 0;
     color: var(--blockquote-color);
-    font-size: 0.92rem;
-    line-height: 1.5;
+    font-size: 0.88rem;
+    line-height: 1.45;
 }
 
 .card-links {
-    margin: 16px 0 0;
-    font-size: 0.82rem;
+    margin: 12px 0 0;
+    font-size: 0.78rem;
     font-weight: 650;
 }
 

@@ -12,7 +12,6 @@ menu:
   <img src="/images/profile-320-fingerprint.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
   <p class="eyebrow">Information Retrieval · LLMs · Data Systems</p>
   <h1>Nikola Selic</h1>
-  <p class="home-role">Research Engineer working on Information Retrieval, LLMs & Data Systems</p>
   <p class="home-lead">I build and study systems that help language models find and reason over complex information, from hybrid retrieval to structured data and code.</p>
   <div class="hero-actions">
     <a href="/research/" class="primary-action">View my work</a>
@@ -55,10 +54,10 @@ menu:
   </article>
   <article class="featured-card">
     <div class="research-artifact language-artifact" aria-hidden="true">
-      <span style="--bar: 72%">SR</span>
-      <span style="--bar: 56%">SK</span>
-      <span style="--bar: 44%">AM</span>
-      <span style="--bar: 63%">EL</span>
+      <span style="--bar: 42px">SR</span>
+      <span style="--bar: 34px">SK</span>
+      <span style="--bar: 28px">AM</span>
+      <span style="--bar: 38px">EL</span>
     </div>
     <p class="card-label">Research · Multilingual LLMs</p>
     <h3><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">PluraMath</a></h3>
