@@ -1,7 +1,9 @@
 ---
 title: "My Experience at BTW25 in Bamberg"
 date: 2025-03-10
-draft: false
+description: "Reflections from BTW25 and the German-speaking database research community in Bamberg."
+aliases:
+  - "/blog/btw25-conference-experience-bamberg/"
 tags: ["conference", "database", "academic", "btw25"]
 location:
   name: "Bamberg, Germany"

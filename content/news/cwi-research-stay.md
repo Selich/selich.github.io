@@ -6,7 +6,7 @@ image: "/images/cwi-research-stay/cwi-building.webp"
 tags: ["research", "CWI", "LLMs", "Text-to-SQL", "table retrieval"]
 ---
 
-From August to September 2025, I completed a research stay with the **TRL Lab at Centrum Wiskunde & Informatica (CWI)** in Amsterdam as part of my work on LLMs, Text-to-SQL, and table retrieval.
+From August to September 2025, I completed a research stay with the [TRL Lab](https://trl-lab.github.io/) at **Centrum Wiskunde & Informatica (CWI)** in Amsterdam. I worked with [Madelon Hulsebos](https://www.madelonhulsebos.com/) and [Daniel Gomm](https://www.daniel-gomm.com/) on LLMs, Text-to-SQL, and table retrieval.
 
 <div class="post-image-grid">
   <figure>

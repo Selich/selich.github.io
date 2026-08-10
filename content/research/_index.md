@@ -9,8 +9,6 @@ menu:
 
 <h1 class="section-title">Research</h1>
 
-I study how language models can find and reason over the right information. My work connects information retrieval, structured data, multilingual evaluation, and systems engineering. Related technical explanations and project notes are available under [Writing](/blog/).
-
 <div class="research-list">
   <article class="research-project" id="hybrid-retrieval">
     <p class="card-label">Master’s Thesis · 2026</p>
