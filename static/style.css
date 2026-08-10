@@ -1015,31 +1015,6 @@ blockquote {
     color: var(--blockquote-color);
 }
 
-.experience-strip {
-    margin: 20px 0 48px;
-    padding: 24px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.experience-strip p {
-    margin: 0;
-}
-
-.experience-strip .experience-names {
-    margin: 8px 0 6px;
-    color: var(--text-color);
-    font-size: clamp(1.2rem, 3vw, 1.55rem);
-    font-weight: 650;
-    letter-spacing: 0.04em;
-}
-
-.experience-strip p:last-child {
-    color: var(--meta-text-color);
-    font-size: 0.9rem;
-}
-
 .recent-section {
     margin: 48px 0;
 }

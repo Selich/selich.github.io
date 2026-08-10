@@ -9,7 +9,7 @@ menu:
 {{< syntax-tree >}}
 
 <section class="home-hero">
-  <img src="/images/profile-320.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
+  <img src="/images/profile-320-2026.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
   <p class="eyebrow">Information Retrieval · LLMs · Data Systems</p>
   <h1>Nikola Selic</h1>
   <p class="home-role">Research Engineer working on Information Retrieval, LLMs & Data Systems</p>
@@ -49,9 +49,3 @@ menu:
     <p class="card-links"><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://github.com/TUM-NLP/pluramath" target="_blank" rel="noopener noreferrer">Code</a> · <a href="https://huggingface.co/datasets/tum-nlp/PluraMath" target="_blank" rel="noopener noreferrer">Dataset</a></p>
   </article>
 </div>
-
-<section class="experience-strip">
-  <p class="eyebrow">Experience</p>
-  <p class="experience-names">AWS · Firebolt · CWI · TUM</p>
-  <p>Systems and security → LLM engineering → information retrieval and structured data</p>
-</section>
