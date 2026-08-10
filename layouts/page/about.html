@@ -14,6 +14,9 @@
         {{ with .Params.social.linkedin }}
         <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         {{ end }}
+        {{ with .Params.social.xing }}
+        <a href="https://www.xing.com/profile/{{ . }}" target="_blank" rel="noopener noreferrer">XING</a>
+        {{ end }}
         {{ with .Params.social.bluesky }}
         <a href="https://bsky.app/profile/{{ . }}" target="_blank" rel="noopener noreferrer">Bluesky</a>
         {{ end }}

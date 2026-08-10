@@ -9,7 +9,7 @@
       <a href="/news/">News archive</a>
     </div>
     <div class="recent-list">
-    {{ range first 3 (where (where .Site.RegularPages "Section" "news") "Params.featured" true) }}
+    {{ range first 5 (where .Site.RegularPages "Section" "news") }}
       <article class="recent-item">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>

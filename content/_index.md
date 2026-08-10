@@ -28,6 +28,8 @@ menu:
       <a href="https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
       <span>·</span>
       <a href="https://www.linkedin.com/in/nikola-selic" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span>·</span>
+      <a href="https://www.xing.com/profile/Nikola_Selic" target="_blank" rel="noopener noreferrer">XING</a>
     </div>
   </div>
   <img src="/images/profile-320-fingerprint.webp" alt="Portrait of Nikola Selic" class="home-profile" width="184" height="184" fetchpriority="high" decoding="async">

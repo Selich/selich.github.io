@@ -11,6 +11,7 @@ menu:
 social:
   github: "Selich"
   linkedin: "nikola-selic"
+  xing: "Nikola_Selic"
   twitter: "nikola_selic"
   bluesky: "nikola.bsky.social"
   email: "selic.work@gmail.com"
@@ -18,9 +19,11 @@ social:
 
 <h1 class="section-title">About</h1>
 
-I am interested in a simple question: **how do we give language models access to the right information?**
+I completed my master’s studies at [TUM](https://www.tum.de/), where I wrote my thesis on **hybrid retrieval** under the supervision of [Jakob Sturm](https://soc.cit.tum.de/persons/jakob-sturm/) and [Prof. Dr. Georg Groh](https://www.professoren.tum.de/groh-georg).
 
-My work approaches this through information retrieval, databases, and systems, from hybrid retrieval and structured data to multilingual evaluation and LLM-based code analysis.
+My current focus is hybrid retrieval, LLMs, RAG, and retrieval over structured data. I am especially interested in how language models can find and reason over the right information.
+
+Beyond information retrieval, my interests include information theory, measure theory, mathematical logic, and linguistics. I am always open to collaborating on interesting projects.
 
 Before focusing on retrieval, I worked across data engineering, software systems, and security, including kernel-security work at AWS and LLM-assisted program analysis at Firebolt. That background shapes how I think about reliable AI systems today.
 
@@ -35,7 +38,7 @@ Table retrieval, Text-to-SQL, and reasoning over structured information.
 **Reliable AI Systems**<br>
 Evaluation and systems aspects of deploying LLM-based applications.
 
-Broader interests include databases, distributed systems, security, and machine learning for systems.
+My broader technical background includes databases, distributed systems, security, and machine learning for systems.
 
 ## Education
 
