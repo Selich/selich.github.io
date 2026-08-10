@@ -3,6 +3,8 @@ title: "Research Stay at CWI"
 date: 2025-08-01
 description: "A research stay at CWI focused on LLMs, Text-to-SQL, and table retrieval."
 image: "/images/cwi-research-stay/cwi-building.webp"
+aliases:
+  - "/news/trl-lab-collaboration/"
 tags: ["research", "CWI", "LLMs", "Text-to-SQL", "table retrieval"]
 ---
 
