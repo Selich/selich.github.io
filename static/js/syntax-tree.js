@@ -126,7 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
     
-    const margin = {top: 30, right: 10, bottom: 100, left: 10};
+    const compact = containerWidth <= 480;
+    const margin = compact
+      ? {top: 20, right: 18, bottom: 70, left: 18}
+      : {top: 30, right: 10, bottom: 100, left: 10};
     const width = containerWidth - margin.left - margin.right;
     const height = containerHeight - margin.top - margin.bottom;
     
@@ -396,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const textNodes = nodeGroups.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .style("font-size", "14px") // Bigger font size
+      .style("font-size", width <= 444 ? "12px" : "14px")
       .attr("dominant-baseline", "middle") // Center text vertically
       .style("padding", "2px 5px") // Add padding inside the text
       .text(d => d.data.name)
@@ -441,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("transform", (d, i) => {
         // Evenly space words across a narrower width to make them closer together
         const totalWords = leafNodes.length;
-        const usableWidth = width * 0.4; // Use 40% of width to keep words closer together
+        const usableWidth = width * (width <= 444 ? 0.92 : 0.4);
         const step = usableWidth / (totalWords - 1 || 1); // Avoid division by zero
         
         // For single word, center it
@@ -468,7 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tempTextNodes = tempWords.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .style("font-size", "28px")
+      .style("font-size", width <= 444 ? "20px" : "28px")
       .text(d => d.data.name)
       .style("fill", "#000")
       .on("click", function(event, d) {
