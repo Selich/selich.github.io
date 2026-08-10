@@ -249,6 +249,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateTree(data) {
     // Convert data to hierarchy
     const root = d3.hierarchy(data);
+    const nodeFontSize = Math.max(11, Math.min(14, width * 0.035));
+    const wordFontSize = Math.max(16, Math.min(28, width * 0.055));
     
     // Layout the tree
     treeLayout(root);
@@ -399,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const textNodes = nodeGroups.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .style("font-size", width <= 444 ? "12px" : "14px")
+      .style("font-size", `${nodeFontSize}px`)
       .attr("dominant-baseline", "middle") // Center text vertically
       .style("padding", "2px 5px") // Add padding inside the text
       .text(d => d.data.name)
@@ -471,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tempTextNodes = tempWords.append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .style("font-size", width <= 444 ? "20px" : "28px")
+      .style("font-size", `${wordFontSize}px`)
       .text(d => d.data.name)
       .style("fill", "#000")
       .on("click", function(event, d) {
@@ -494,19 +496,23 @@ document.addEventListener('DOMContentLoaded', function() {
           .attr("height", bbox.height + padding * 2);
       }
     });
+
+    if (width <= 444) {
+      const wordWidths = tempTextNodes.nodes().map(node => node.getBBox().width + 12);
+      const gap = 10;
+      const totalWidth = wordWidths.reduce((sum, wordWidth) => sum + wordWidth, 0) + gap * Math.max(0, wordWidths.length - 1);
+      let cursor = Math.max(4, (width - totalWidth) / 2);
+      const positions = wordWidths.map(wordWidth => {
+        const position = cursor + wordWidth / 2;
+        cursor += wordWidth + gap;
+        return position;
+      });
+
+      tempWords.attr("transform", (d, i) => `translate(${positions[i]}, ${height - 20})`);
+    }
     
-    // Add background circles but keep them invisible initially
-    tempWords.append("circle")
-      .attr("r", 40) // Increased from 30 to 40 for leaf nodes
-      .attr("fill", "white")
-      .attr("stroke", "transparent")
-      .attr("stroke-width", 2)
-      .style("opacity", 0) // Hide initially
-      .lower(); // Make sure circle is behind text
-    
-    // Move the rectangles behind the text but in front of the circles
+    // Move the rectangles behind the text
     tempWords.selectAll("rect.text-bg").lower();
-    tempWords.selectAll("circle").lower();
     
     // Function to group nodes by depth level
     function groupNodesByDepth(nodes) {
@@ -555,25 +561,19 @@ document.addEventListener('DOMContentLoaded', function() {
       .style("opacity", 1);
     
     // 2. After a short delay, animate the temporary words to their positions in the tree
-    tempWords.transition()
+    const wordMoveTransition = tempWords.transition()
       .delay(1500) // Delay a bit longer to allow the fade-in to complete
       .duration(1200)
-      .attr("transform", d => `translate(${d.x}, ${height - 20})`) // Keep y position fixed at height-20
-      .on("end", function() {
-        // After words have moved to position, NOW show the color backgrounds
-        tempWords.select("rect.text-bg")
-          .transition()
-          .duration(600)
-          .style("opacity", 0.6) // Reduced opacity to make them less overwhelming
-          .on("end", function() {
-            // Then fade in the circles
-            tempWords.select("circle")
-              .transition()
-              .duration(600)
-              .style("opacity", 1)
-              .on("end", animateTreeStructure);
-          });
-      });
+      .attr("transform", d => `translate(${d.x}, ${height - 20})`);
+
+    wordMoveTransition.end()
+      .then(() => tempWords.select("rect.text-bg")
+        .transition()
+        .duration(600)
+        .style("opacity", 0.6)
+        .end())
+      .then(animateTreeStructure)
+      .catch(() => {});
     
     // 3. Next, build the rest of the tree structure from leaves to root
     function animateTreeStructure() {
@@ -632,16 +632,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Function to cycle through trees
   function cycleTree() {
-    console.log("Cycling to next language, current index:", currentTreeIndex);
     // Clear any existing intervals to prevent multiple intervals
     if (cycleInterval) {
       clearTimeout(cycleInterval);
       cycleInterval = null;
     }
-    
-    // Start by showing which language is next
-    const nextLanguage = trees[(currentTreeIndex + 1) % trees.length].language;
-    console.log("Next language will be:", nextLanguage);
     
     // Fade out the entire tree
     svg.selectAll(".nodes-group, .links-group, .temp-word")
@@ -651,14 +646,11 @@ document.addEventListener('DOMContentLoaded', function() {
       .on("end", function() {
         // Only process once to avoid multiple callbacks
         if (cycleInterval === null) {
-          console.log("Fade out complete, building new tree");
-          
           // Remove old elements completely
           svg.selectAll(".nodes-group, .links-group, .temp-word").remove();
           
           // Update to the next tree
           currentTreeIndex = (currentTreeIndex + 1) % trees.length;
-          console.log("Current tree index is now:", currentTreeIndex);
           
           // Set flag to prevent multiple executions
           cycleInterval = -1;
@@ -667,35 +659,11 @@ document.addEventListener('DOMContentLoaded', function() {
           updateTree(trees[currentTreeIndex]);
           
           // Schedule next cycle
-          console.log("Scheduling next cycle in 15 seconds");
           cycleInterval = setTimeout(cycleTree, 15000);
         }
       });
   }
   
   // Start the first cycle after initial tree is shown
-  console.log("Initial tree (English) shown, scheduling first cycle in 15 seconds");
   cycleInterval = setTimeout(cycleTree, 15000);
-  
-  // Failsafe - force a cycle every 30 seconds if nothing is happening
-  setInterval(function() {
-    console.log("Checking animation state...");
-    
-    // If there are no animation elements or we've been waiting too long
-    const allElements = svg.selectAll(".nodes-group, .links-group, .temp-word").nodes();
-    const currentTime = new Date().getTime();
-    
-    // If no elements exist or it's been over 25 seconds since the last cycle
-    if (allElements.length === 0 || (cycleInterval !== null && cycleInterval !== -1)) {
-      console.log("Animation may be stuck, restarting cycle");
-      if (cycleInterval) {
-        clearTimeout(cycleInterval);
-      }
-      cycleInterval = null;
-      cycleTree();
-    }
-  }, 30000);
-  
-  // Log to help debugging
-  console.log("Syntax tree initialized with " + trees.length + " languages");
 }); 

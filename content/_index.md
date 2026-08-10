@@ -9,7 +9,7 @@ menu:
 {{< syntax-tree >}}
 
 <section class="home-hero">
-  <img src="/images/profile.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
+  <img src="/images/profile-320.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
   <p class="eyebrow">Machine learning · Databases · Information retrieval</p>
   <h1>Nikola Selic</h1>
   <p class="home-lead">I am a researcher and software engineer interested in building intelligent, reliable systems at the intersection of machine learning and data management.</p>
