@@ -1,6 +1,7 @@
 ---
 title: "Research"
-description: "Research by Nikola Selic across information retrieval, large language models, and data systems."
+seoTitle: "Research — Nikola Selic | Information Retrieval, LLMs & Data Systems"
+description: "Research by Nikola Selic on hybrid retrieval, table retrieval for Text-to-SQL, multilingual LLM evaluation, and reliable AI systems."
 menu:
   main:
     weight: 2
@@ -8,7 +9,7 @@ menu:
 
 <h1 class="section-title">Research</h1>
 
-I study how language models can find and reason over the right information. My work connects information retrieval, structured data, multilingual evaluation, and systems engineering.
+I study how language models can find and reason over the right information. My work connects information retrieval, structured data, multilingual evaluation, and systems engineering. Related technical explanations and project notes are available under [Writing](/blog/).
 
 <div class="research-list">
   <article class="research-project" id="hybrid-retrieval">

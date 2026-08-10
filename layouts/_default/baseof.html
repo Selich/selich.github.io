@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}" data-theme="light">
 <head>
-	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+	{{- $pageTitle := .Site.Title -}}
+	{{- if .Params.seoTitle -}}
+		{{- $pageTitle = .Params.seoTitle -}}
+	{{- else if eq .Kind "404" -}}
+		{{- $pageTitle = "Page not found — Nikola Selic" -}}
+	{{- else if not .IsHome -}}
+		{{- $pageTitle = printf "%s — Nikola Selic" .Title -}}
+	{{- end -}}
+	{{- $description := .Params.description -}}
+	{{- if not $description -}}
+		{{- if eq .Kind "404" -}}
+			{{- $description = "The requested page could not be found. Explore Nikola Selic’s research and technical writing." -}}
+		{{- else -}}
+			{{- $description = .Summary | plainify | truncate 160 -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $socialImage := "/images/profile-320-fingerprint.webp" | absURL -}}
+	{{- with .Params.image -}}
+		{{- $socialImage = . | absURL -}}
+	{{- end -}}
+	<title>{{ $pageTitle }}</title>
 	<link rel="canonical" href="{{ .Permalink }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,42 +30,99 @@
 	<link rel='stylesheet' type='text/css' href='/style.css?v={{ now.Unix }}'>
 	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
 	{{ end -}}
-	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+	<meta name="description" content="{{ $description }}">
+	<meta name="author" content="Nikola Selic">
 	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+	{{ end -}}
+	<meta property="og:title" content="{{ $pageTitle }}">
+	<meta property="og:description" content="{{ $description }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:site_name" content="Nikola Selic">
+	<meta property="og:image" content="{{ $socialImage }}">
+	<meta property="og:type" content="{{ if and .IsPage (eq .Section "blog") }}article{{ else }}website{{ end }}">
+	<meta name="twitter:card" content="{{ if .Params.image }}summary_large_image{{ else }}summary{{ end }}">
+	<meta name="twitter:title" content="{{ $pageTitle }}">
+	<meta name="twitter:description" content="{{ $description }}">
+	<meta name="twitter:image" content="{{ $socialImage }}">
+	<meta name="twitter:creator" content="@nikola_selic">
+	{{ if and .IsPage (eq .Section "blog") -}}
+	<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+	<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 	{{ end -}}
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
-	
-	<!-- Schema.org Person markup -->
+
+	{{- $person := dict
+		"@type" "Person"
+		"@id" "https://nikolaselic.com/#nikola"
+		"name" "Nikola Selic"
+		"alternateName" "Nikola Selić"
+		"url" "https://nikolaselic.com/"
+		"jobTitle" "Research Engineer"
+		"image" ("https://nikolaselic.com/images/profile-320-fingerprint.webp")
+		"sameAs" (slice
+			"https://www.linkedin.com/in/nikola-selic"
+			"https://github.com/Selich"
+			"https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en"
+			"https://bsky.app/profile/nikola.bsky.social"
+		)
+		"knowsAbout" (slice
+			"Information Retrieval"
+			"Large Language Models"
+			"Retrieval-Augmented Generation"
+			"Databases"
+			"Text-to-SQL"
+			"Machine Learning"
+		)
+		"alumniOf" (slice
+			(dict "@type" "CollegeOrUniversity" "name" "Technical University of Munich")
+			(dict "@type" "CollegeOrUniversity" "name" "Faculty of Technical Sciences, University of Novi Sad")
+		)
+	-}}
+	{{- $structuredData := $person -}}
+	{{- if .IsHome -}}
+		{{- $website := dict
+			"@type" "WebSite"
+			"@id" "https://nikolaselic.com/#website"
+			"url" "https://nikolaselic.com/"
+			"name" "Nikola Selic"
+			"description" $description
+			"author" (dict "@id" "https://nikolaselic.com/#nikola")
+		-}}
+		{{- $structuredData = dict "@context" "https://schema.org" "@graph" (slice $website $person) -}}
+	{{- else if eq .RelPermalink "/about/" -}}
+		{{- $structuredData = dict
+			"@context" "https://schema.org"
+			"@type" "ProfilePage"
+			"@id" "https://nikolaselic.com/about/#profile"
+			"url" .Permalink
+			"name" $pageTitle
+			"description" $description
+			"mainEntity" $person
+		-}}
+	{{- else if and .IsPage (eq .Section "blog") -}}
+		{{- $article := dict
+			"@type" "BlogPosting"
+			"@id" (printf "%s#article" .Permalink)
+			"mainEntityOfPage" .Permalink
+			"headline" .Title
+			"description" $description
+			"datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+			"dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+			"author" (dict "@id" "https://nikolaselic.com/#nikola")
+			"publisher" (dict "@id" "https://nikolaselic.com/#nikola")
+		-}}
+		{{- with .Params.image -}}
+			{{- $article = merge $article (dict "image" (. | absURL)) -}}
+		{{- end -}}
+		{{- $structuredData = dict "@context" "https://schema.org" "@graph" (slice $article $person) -}}
+	{{- else -}}
+		{{- $structuredData = dict "@context" "https://schema.org" "@graph" (slice $person) -}}
+	{{- end -}}
 	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Person",
-	  "name": "Nikola Selic",
-	  "url": "https://nikolaselic.com",
-	  "sameAs": [
-	    "https://linkedin.com/in/nikola-selic",
-	    "https://github.com/Selich",
-	    "https://twitter.com/nikola_selic",
-		"https://bsky.app/profile/nikola.bsky.social",
-		"https://scholar.google.com/citations?user=AfDUD-gAAAAJ&hl=en"
-	  ],
-	  "jobTitle": "Research Engineer",
-	  "image": "https://nikolaselic.com/images/profile-320-fingerprint.webp",
-	  "alumniOf": [
-	    {
-	      "@type": "CollegeOrUniversity",
-	      "name": "Technical University of Munich"
-	    },
-	    {
-	      "@type": "CollegeOrUniversity",
-	      "name": "Faculty of Technical Sciences, University of Novi Sad"
-	    }
-	  ]
-	}
+	{{ $structuredData | jsonify | safeJS }}
 	</script>
-	
 </head>
 <body>
 <header class="site-header">

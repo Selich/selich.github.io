@@ -1,6 +1,7 @@
 ---
 title: "About"
-description: "Nikola Selic is a research engineer working on information retrieval, large language models, and data systems."
+seoTitle: "About Nikola Selic — Research Engineer"
+description: "About Nikola Selic, a research engineer focused on information retrieval, LLMs, structured data, and reliable AI systems."
 layout: "about"
 aliases:
   - "/cv/"

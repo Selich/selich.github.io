@@ -1,6 +1,8 @@
 title = "Nikola Selic — Research Engineer"
 baseURL = 'https://nikolaselic.com'
 languageCode = 'en-us'
+enableRobotsTXT = true
+enableGitInfo = true
 
 [params]
   # "relatedtext" is the text that appears above the tag list at the bottom of pages.
