@@ -3,39 +3,19 @@
 {{ define "main" }}
   {{ .Content }}
   
-  <h2>Latest news</h2>
-  <div class="news-list">
-  {{ range first 3 (where .Site.RegularPages "Section" "news") }}
-    {{ if not .Draft }}
-    <article class="news-item">
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      <div class="news-meta">
-        {{ .Date.Format "January 2, 2006" }}
-      </div>
-      <div class="news-summary">
-        {{ .Summary }}
-      </div>
-    </article>
+  <section class="recent-section">
+    <div class="section-heading">
+      <h2>Recent</h2>
+      <a href="/news/">News archive</a>
+    </div>
+    <div class="recent-list">
+    {{ range first 3 (where (where .Site.RegularPages "Section" "news") "Params.featured" true) }}
+      <article class="recent-item">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </article>
     {{ end }}
-  {{ end }}
-  </div>
-  <p><a href="/news/">View all news updates</a></p>
-  
-  <h2>Latest posts</h2>
-  <div class="post-list">
-  {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
-    {{ if not .Draft }}
-    <article class="post-item">
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      <div class="article-meta">
-        {{ .Date.Format "January 2, 2006" }} · 
-        {{ math.Round (div (countwords .Content) 200.0) }} mins
-      </div>
-      <div class="post-summary">
-        {{ .Summary }}
-      </div>
-    </article>
-    {{ end }}
-  {{ end }}
-  </div>
+    </div>
+    <p class="writing-link">Longer technical notes and visual explanations live under <a href="/blog/">Writing</a>.</p>
+  </section>
 {{ end }} 

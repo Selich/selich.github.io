@@ -1,8 +1,9 @@
 ---
-title: "Blog"
+title: "Writing"
+description: "Technical writing by Nikola Selic on information retrieval, language models, databases, and systems."
 menu:
   main:
-    weight: 4
+    weight: 3
 ---
 
-All my blog posts are listed below. 
+Technical notes, visual explanations, and observations from research and engineering.

@@ -1,0 +1,40 @@
+---
+title: "Research"
+description: "Research by Nikola Selic across information retrieval, large language models, and data systems."
+menu:
+  main:
+    weight: 2
+---
+
+# Research
+
+I study how language models can find and reason over the right information. My work connects information retrieval, structured data, multilingual evaluation, and systems engineering.
+
+<div class="research-list">
+  <article class="research-project" id="hybrid-retrieval">
+    <p class="card-label">Master’s Thesis · 2026</p>
+    <h2>Hybrid Retrieval</h2>
+    <p>Research on combining sparse and dense retrieval for more effective information access. The thesis was completed in August 2026.</p>
+    <p class="card-links"><a href="/news/hybrid-retrieval-thesis/">Thesis update</a></p>
+  </article>
+
+  <article class="research-project" id="cwi-research-stay">
+    <p class="card-label">Research Stay · CWI · Aug–Sep 2025</p>
+    <h2>Table Retrieval for Text-to-SQL</h2>
+    <p>Research at Centrum Wiskunde & Informatica in Amsterdam on LLMs, Text-to-SQL, and retrieving relevant tables for database interaction.</p>
+  </article>
+
+  <article class="research-project" id="pluramath">
+    <p class="card-label">Research · Multilingual LLM Evaluation · 2026</p>
+    <h2>PluraMath</h2>
+    <p><strong>PluraMath: Extending Mathematical Reasoning Evaluation Beyond High-Resource Languages</strong> introduces a human-curated benchmark covering 18 underrepresented languages and evaluates 27 reasoning LLMs. I contributed as a co-author and Serbian-language contributor.</p>
+    <p class="card-links"><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://github.com/TUM-NLP/pluramath" target="_blank" rel="noopener noreferrer">Code</a> · <a href="https://huggingface.co/datasets/tum-nlp/PluraMath" target="_blank" rel="noopener noreferrer">Dataset</a></p>
+  </article>
+
+  <article class="research-project" id="trl-lab">
+    <p class="card-label">Research Collaboration · 2025</p>
+    <h2>Retrieval for Structured Data</h2>
+    <p>Research student with the TRL Lab at the University of Amsterdam, working with Prof. Madelon Hulsebos and Daniel Gomm on generative AI and information retrieval for structured data.</p>
+    <p class="card-links"><a href="https://trl-lab.github.io/people/" target="_blank" rel="noopener noreferrer">TRL Lab</a> · <a href="/news/trl-lab-collaboration/">Collaboration update</a></p>
+  </article>
+</div>

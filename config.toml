@@ -1,4 +1,4 @@
-title = "Nikola Selic - Personal Website"
+title = "Nikola Selic — Research Engineer"
 baseURL = 'https://nikolaselic.com'
 languageCode = 'en-us'
 
@@ -20,8 +20,3 @@ languageCode = 'en-us'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[[menu.main]]
-name = "Tags"
-url = "/tags/"
-weight = 30

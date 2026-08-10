@@ -1,12 +1,12 @@
 ---
 title: "About"
-description: "Nikola Selic is a researcher and software engineer working across machine learning, databases, retrieval, and secure systems."
+description: "Nikola Selic is a research engineer working on information retrieval, large language models, and data systems."
 layout: "about"
 aliases:
   - "/cv/"
 menu:
   main:
-    weight: 2
+    weight: 4
 social:
   github: "Selich"
   linkedin: "nikola-selic"
@@ -15,26 +15,28 @@ social:
   email: "selic.work@gmail.com"
 ---
 
-# About me
+# About
 
-I am a researcher and software engineer working across **machine learning, databases, information retrieval, and secure systems**. I am particularly interested in how learning-based methods can improve system performance, reliability, and usability.
+I am interested in a simple question: **how do we give language models access to the right information?**
 
-My recent work includes hybrid retrieval, generative AI for structured data, and machine learning for systems. I also enjoy teaching and creating visual explanations that make technical ideas easier to understand.
+My work approaches this through information retrieval, databases, and systems, from hybrid retrieval and structured data to multilingual evaluation and LLM-based code analysis.
 
-## Current focus
+Before focusing on retrieval, I worked across data engineering, software systems, and security, including kernel-security work at AWS and LLM-assisted program analysis at Firebolt. That background shapes how I think about reliable AI systems today.
 
-- Hybrid and structured-data retrieval
-- Machine learning for systems optimization
-- Large language models for code and system analysis
-- Security and privacy in ML systems
+## Research focus
+
+- Information retrieval for language models
+- Hybrid, table, and structured-data retrieval
+- Multilingual reasoning evaluation
+- LLMs for code and system analysis
 
 ## Education
 
 ### Technical University of Munich
 
-**M.Sc. Computer Science**, 2021–Present<br>
+**M.Sc. Computer Science** · Enrolled 2021<br>
 Major in Machine Learning; minors in Databases and Security & Privacy<br>
-Thesis topic: **Hybrid retrieval**
+Master’s thesis on **hybrid retrieval**, completed August 2026
 
 ### University of Novi Sad, Faculty of Technical Sciences
 
@@ -43,21 +45,28 @@ Thesis: **Blockchain-based Federated Learning**
 
 ## Experience
 
+### Centrum Wiskunde & Informatica
+
+**Research Stay**, August–September 2025 · Amsterdam, Netherlands<br>
+Research on LLMs, Text-to-SQL, and table retrieval
+
+### TRL Lab, University of Amsterdam
+
+**Research Student**, 2025<br>
+Worked with Prof. Madelon Hulsebos and Daniel Gomm on generative AI and information retrieval for structured data<br>
+[TRL Lab people](https://trl-lab.github.io/people/)
+
 ### Firebolt
 
-**Intern**, April 2025–Present · Munich, Germany
+**Intern**, April–August 2025 · Munich, Germany<br>
+Worked on a custom static-analysis workflow using large language models
 
 ### Technical University of Munich
 
-**Teaching Assistant**, December 2024–Present<br>
+**Teaching Assistant**, December 2024–June 2025<br>
 Introduction to Informatics, with a focus on SQL and Java
 
-**Student Research Assistant**, February 2024–Present
-
-### TRL Lab
-
-**Research collaborator**, 2025–Present<br>
-Generative AI and information retrieval for structured data
+**Student Research Assistant**, February 2024–December 2025
 
 ### Twinu
 

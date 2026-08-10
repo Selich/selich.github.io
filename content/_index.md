@@ -1,6 +1,6 @@
 ---
 title: "Home"
-description: "Nikola Selic is a researcher and software engineer working across machine learning, databases, information retrieval, and secure systems."
+description: "Nikola Selic is a research engineer working on information retrieval, large language models, and data systems."
 menu:
   main:
     weight: 1
@@ -10,13 +10,14 @@ menu:
 
 <section class="home-hero">
   <img src="/images/profile-320.webp" alt="Portrait of Nikola Selic" class="home-profile" width="152" height="152" fetchpriority="high" decoding="async">
-  <p class="eyebrow">Machine learning · Databases · Information retrieval</p>
+  <p class="eyebrow">Information Retrieval · LLMs · Data Systems</p>
   <h1>Nikola Selic</h1>
-  <p class="home-lead">I am a researcher and software engineer interested in building intelligent, reliable systems at the intersection of machine learning and data management.</p>
+  <p class="home-role">Research Engineer working on Information Retrieval, LLMs & Data Systems</p>
+  <p class="home-lead">I build and study systems that help language models find and reason over complex information, from hybrid retrieval to structured data and code.</p>
   <div class="hero-actions">
-    <a href="/about/" class="primary-action">About me</a>
+    <a href="/research/" class="primary-action">Research</a>
     <a href="/about/#experience" class="secondary-action">Experience</a>
-    <a href="mailto:selic.work@gmail.com" class="secondary-action">Get in touch</a>
+    <a href="/blog/" class="secondary-action">Writing</a>
   </div>
   <div class="home-socials">
     <a href="https://github.com/Selich" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -30,20 +31,27 @@ menu:
 
 <div class="featured-grid">
   <article class="featured-card">
-    <p class="card-label">Thesis</p>
+    <p class="card-label">Master’s Thesis</p>
     <h3><a href="/news/hybrid-retrieval-thesis/">Hybrid retrieval</a></h3>
-    <p>Thesis work focused on hybrid retrieval and information retrieval systems.</p>
+    <p>Research on combining sparse and dense retrieval for more effective information access.</p>
+    <p class="card-links"><a href="/research/#hybrid-retrieval">Overview</a> · <a href="/news/hybrid-retrieval-thesis/">Update</a></p>
   </article>
   <article class="featured-card">
-    <p class="card-label">Research</p>
-    <h3><a href="/news/trl-lab-collaboration/">Retrieval for structured data</a></h3>
-    <p>Work with TRL Lab on generative AI and information retrieval for structured data.</p>
+    <p class="card-label">Research · CWI</p>
+    <h3><a href="/research/#cwi-research-stay">Table retrieval for Text-to-SQL</a></h3>
+    <p>Research on helping language models identify relevant structured information for database interaction.</p>
+    <p class="card-links"><a href="/research/#cwi-research-stay">Project</a></p>
   </article>
   <article class="featured-card">
-    <p class="card-label">Writing</p>
-    <h3><a href="/blog/">Technical notes and experiments</a></h3>
-    <p>Visual explanations and practical observations from databases, ML, and systems research.</p>
+    <p class="card-label">Research · Multilingual LLMs</p>
+    <h3><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">PluraMath</a></h3>
+    <p>A benchmark for mathematical reasoning across 18 underrepresented languages, evaluating 27 reasoning LLMs.</p>
+    <p class="card-links"><a href="https://arxiv.org/abs/2607.05992" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://github.com/TUM-NLP/pluramath" target="_blank" rel="noopener noreferrer">Code</a> · <a href="https://huggingface.co/datasets/tum-nlp/PluraMath" target="_blank" rel="noopener noreferrer">Dataset</a></p>
   </article>
 </div>
 
-I use this site to share research milestones, technical experiments, conference notes, and visual explanations. The interactive syntax tree above reflects my interest in making complex ideas easier to explore.
+<section class="experience-strip">
+  <p class="eyebrow">Experience</p>
+  <p class="experience-names">AWS · Firebolt · CWI · TUM</p>
+  <p>Systems and security → LLM engineering → information retrieval and structured data</p>
+</section>

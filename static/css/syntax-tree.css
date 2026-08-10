@@ -1,7 +1,7 @@
 #syntax-tree-container {
   width: 100%;
   max-width: 100%;
-  height: 400px;
+  height: 280px;
   margin: 0px auto;
   border-radius: 8px;
   background-color: white;
@@ -23,11 +23,11 @@
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
-  margin: 20px auto 0px auto;
+  margin: 12px auto 0;
   display: block !important;
   visibility: visible !important;
   background-color: white;
-  padding: 15px 15px 110px 15px;
+  padding: 8px 15px 64px;
   overflow: visible;
 }
 
@@ -207,7 +207,7 @@
 /* Responsive breakpoints */
 @media (max-width: 768px) {
   #syntax-tree-container {
-    height: 320px;
+    height: 250px;
   }
   
   .syntax-tree-wrapper {
@@ -226,7 +226,7 @@
 
 @media (max-width: 480px) {
   #syntax-tree-container {
-    height: 300px;
+    height: 230px;
   }
   
   .syntax-tree-wrapper {
