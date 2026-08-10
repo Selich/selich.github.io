@@ -442,15 +442,21 @@ blockquote {
 
 .social-links {
     display: flex;
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     justify-content: center;
+    width: 100%;
+    margin-top: 12px;
 }
 
 .social-links a {
-    color: #666;
-    font-size: 1.5rem;
+    color: var(--meta-text-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
     transition: color 0.3s ease;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .social-links a:hover {
@@ -993,7 +999,14 @@ blockquote {
     }
 
     .profile-container {
-        width: 180px;
+        width: 100%;
+        max-width: 320px;
         margin: 0 auto 32px;
+    }
+
+    .profile-image {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
