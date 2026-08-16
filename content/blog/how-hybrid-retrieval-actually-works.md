@@ -1,6 +1,7 @@
 ---
 title: "How Hybrid Retrieval Actually Works"
 date: 2026-08-13
+draft: true
 description: "A visual guide to combining lexical and semantic search, from score fusion to rank fusion and reranking."
 tags: ["hybrid retrieval", "information retrieval", "bm25", "embeddings", "reranking"]
 ---
