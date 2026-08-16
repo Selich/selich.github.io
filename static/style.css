@@ -455,6 +455,12 @@ blockquote {
 	font-size: 1.1em !important;
 }
 
+.katex-display {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0.35rem 0;
+}
+
 .math-block {
 	overflow-x: auto;
 	margin: 1em 0;

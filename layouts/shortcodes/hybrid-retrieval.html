@@ -1,0 +1,16 @@
+{{ $view := .Get "view" | default "disagreement" }}
+{{ $id := printf "hybrid-retrieval-%s-%d" $view .Ordinal }}
+{{ $corpus := "data/hybrid-retrieval-documents.json" | relURL }}
+<section
+  id="{{ $id }}"
+  class="hybrid-explorer"
+  data-hybrid-view="{{ $view }}"
+  data-corpus-url="{{ $corpus }}"
+  data-default-query="How can I reduce LLM inference costs?"
+  aria-label="Interactive hybrid retrieval visualization"
+>
+  <div class="hybrid-mount" data-hybrid-mount>
+    <p class="hybrid-loading">Preparing the retrieval explorer…</p>
+  </div>
+  <noscript>This visualization requires JavaScript. The article remains available above and below it.</noscript>
+</section>
